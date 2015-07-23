@@ -38,7 +38,7 @@
 	NSMutableArray *workingValues = [[NSMutableArray alloc] initWithCapacity:self.count];
 	
 	[self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-		id mappedElement = mapBlock([[OCAssociation alloc] initWithKey:key value:obj]);
+		id mappedElement = mapBlock([key asAssociationWithValue:obj]);
 		BOOL mappedElementIsAssociation = [mappedElement isKindOfClass:OCAssociation.class];
 		returnsOnlyAssociations = returnsOnlyAssociations && mappedElementIsAssociation;
 		if (returnsOnlyAssociations && mappedElementIsAssociation) {

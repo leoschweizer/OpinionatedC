@@ -9,3 +9,11 @@
 - (instancetype)initWithKey:(id)key value:(id)value;
 
 @end
+
+
+@interface NSObject (OCAssociationSupport)
+
+- (OCAssociation *)asAssociationWithKey:(id)key;
+- (OCAssociation *)asAssociationWithValue:(id)value;
+
+@end

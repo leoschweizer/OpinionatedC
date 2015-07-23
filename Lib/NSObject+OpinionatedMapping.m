@@ -14,12 +14,16 @@
 @implementation NSArray (OpinionatedMapping)
 
 - (id)map:(id (^)(id))mapBlock {
+	
 	NSMutableArray *workingArray = [NSMutableArray arrayWithCapacity:self.count];
+	
 	[self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 		id mappedElement = mapBlock(obj);
 		[workingArray addObject:mappedElement];
 	}];
+	
 	return [self.class arrayWithArray:workingArray];
+	
 }
 
 @end
@@ -61,14 +65,14 @@
 
 - (id)map:(id (^)(id))mapBlock {
 	
-	NSMutableArray *workingArray = [[NSMutableArray alloc] initWithCapacity:self.count];
+	NSMutableSet *workingSet = [[NSMutableSet alloc] initWithCapacity:self.count];
 	
 	[self enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
 		id mappedElement = mapBlock(obj);
-		[workingArray addObject:mappedElement];
+		[workingSet addObject:mappedElement];
 	}];
 	
-	return [self.class setWithArray:workingArray];
+	return [self.class setWithSet:workingSet];
 	
 }
 

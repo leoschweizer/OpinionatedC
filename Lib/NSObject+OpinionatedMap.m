@@ -1,4 +1,4 @@
-#import "NSObject+OpinionatedMapping.h"
+#import "NSObject+OpinionatedMap.h"
 #import "OCAssociation.h"
 
 

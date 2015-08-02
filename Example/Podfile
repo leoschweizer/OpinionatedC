@@ -1,2 +1,4 @@
+platform :osx
+
 pod 'OpinionatedC', :path => '../'
 

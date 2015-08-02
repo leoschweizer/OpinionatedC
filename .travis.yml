@@ -9,4 +9,4 @@ install:
   - pod install
 
 script:
-  - xcodebuild -workspace Example.xcworkspace -scheme OpinionatedC test | xcpretty -c
+  - xcodebuild -workspace Example.xcworkspace -scheme OpinionatedC test | xcpretty -c && exit ${PIPESTATUS[0]}

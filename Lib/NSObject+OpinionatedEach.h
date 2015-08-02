@@ -25,4 +25,6 @@ typedef void (^OCEachSeparatorBlock)(void);
  */
 - (void)each:(OCEachBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock;
 
+- (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock;
+
 @end

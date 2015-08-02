@@ -1,9 +1,9 @@
 #import <Foundation/Foundation.h>
 
 
-typedef void (^EachBlock)(id each);
-typedef void (^EachWithIndexBlock)(id each, NSUInteger idx);
-typedef void (^EachSeparatorBlock)(void);
+typedef void (^OCEachBlock)(id each);
+typedef void (^OCEachWithIndexBlock)(id each, NSUInteger idx);
+typedef void (^OCEachSeparatorBlock)(void);
 
 
 @interface NSObject (OpinionatedEach)
@@ -11,18 +11,18 @@ typedef void (^EachSeparatorBlock)(void);
 /**
  * Evaluate eachBlock with each of the receiver's elements as the argument.
  */
-- (void)each:(EachBlock)eachBlock;
+- (void)each:(OCEachBlock)eachBlock;
 
 /**
  * Evaluate eachBlock with each of the receiver's elements as the first argument
  * and it's index as the second.
  */
-- (void)eachWithIndex:(EachWithIndexBlock)eachBlock;
+- (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock;
 
 /**
  * Evaluate eachBlock for each element in the collection. Between each pair of 
  * elements, but not before the first or after the last, evaluate the separatorBlock.
  */
-- (void)each:(EachBlock)eachBlock separatedBy:(EachSeparatorBlock)separatorBlock;
+- (void)each:(OCEachBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock;
 
 @end

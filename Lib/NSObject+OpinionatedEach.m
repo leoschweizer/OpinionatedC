@@ -4,7 +4,7 @@
 
 @implementation NSObject (OpinionatedEach)
 
-- (void)each:(EachBlock)eachBlock {
+- (void)each:(OCEachBlock)eachBlock {
 	if ([self conformsToProtocol:@protocol(NSFastEnumeration)]) {
 		for (id each in (id<NSFastEnumeration>)self) {
 			eachBlock(each);
@@ -14,7 +14,7 @@
 	}
 }
 
-- (void)eachWithIndex:(EachWithIndexBlock)eachBlock {
+- (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock {
 	if ([self conformsToProtocol:@protocol(NSFastEnumeration)]) {
 		NSUInteger idx = 0;
 		for (id each in (id<NSFastEnumeration>)self) {
@@ -26,7 +26,7 @@
 	}
 }
 
-- (void)each:(EachBlock)eachBlock separatedBy:(EachSeparatorBlock)separatorBlock {
+- (void)each:(OCEachBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock {
 	if ([self conformsToProtocol:@protocol(NSFastEnumeration)]) {
 		BOOL isFirst = YES;
 		for (id each in (id<NSFastEnumeration>)self) {
@@ -47,14 +47,14 @@
 
 @implementation NSDictionary (OpinionatedEach)
 
-- (void)each:(EachBlock)eachBlock{
+- (void)each:(OCEachBlock)eachBlock{
 	for (id key in self) {
 		id value = [self objectForKey:key];
 		eachBlock([key asAssociationWithValue:value]);
 	}
 }
 
-- (void)eachWithIndex:(EachWithIndexBlock)eachBlock {
+- (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock {
 	NSUInteger idx = 0;
 	for (id key in self) {
 		id value = [self objectForKey:key];
@@ -63,7 +63,7 @@
 	}
 }
 
-- (void)each:(EachBlock)eachBlock separatedBy:(EachSeparatorBlock)separatorBlock {
+- (void)each:(OCEachBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock {
 	BOOL isFirst = YES;
 	for (id key in self) {
 		id value = [self objectForKey:key];

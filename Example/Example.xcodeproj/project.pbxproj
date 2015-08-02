@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		596DAAABC5D2A909BB970B77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050E40281C62F5DB0B766AF1 /* libPods.a */; };
-		B32F1A501B6EAC7D00D25836 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B32F1A4F1B6EAC7D00D25836 /* Tests.m */; };
+		B32F1A501B6EAC7D00D25836 /* EachTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B32F1A4F1B6EAC7D00D25836 /* EachTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		050E40281C62F5DB0B766AF1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		650234C8FBB7F356F0066346 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CFD71EAB2A52080E26679CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B32F1A4A1B6EAC7D00D25836 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32F1A4A1B6EAC7D00D25836 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32F1A4E1B6EAC7D00D25836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B32F1A4F1B6EAC7D00D25836 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		B32F1A4F1B6EAC7D00D25836 /* EachTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EachTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		B32F1A4B1B6EAC7D00D25836 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B32F1A4A1B6EAC7D00D25836 /* Tests.xctest */,
+				B32F1A4A1B6EAC7D00D25836 /* test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 		B32F1A4C1B6EAC7D00D25836 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B32F1A4F1B6EAC7D00D25836 /* Tests.m */,
+				B32F1A4F1B6EAC7D00D25836 /* EachTest.m */,
 				B32F1A4D1B6EAC7D00D25836 /* Supporting Files */,
 			);
 			path = Tests;
@@ -103,7 +103,7 @@
 			);
 			name = test;
 			productName = Tests;
-			productReference = B32F1A4A1B6EAC7D00D25836 /* Tests.xctest */;
+			productReference = B32F1A4A1B6EAC7D00D25836 /* test.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -184,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32F1A501B6EAC7D00D25836 /* Tests.m in Sources */,
+				B32F1A501B6EAC7D00D25836 /* EachTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

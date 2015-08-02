@@ -1,8 +1,15 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSObject (OpinionatedDo)
+typedef void (^EachBlock)(id each);
+typedef void (^EachWithIndexBlock)(id each, NSUInteger idx);
+typedef void (^EachSeparatorBlock)(void);
 
-- (void)each:(void(^)(id element))eachBlock separatedBy:(void(^)(void))separatorBlock;
+
+@interface NSObject (OpinionatedEach)
+
+- (void)each:(EachBlock)eachBlock;
+- (void)eachWithIndex:(EachWithIndexBlock)eachBlock;
+- (void)each:(EachBlock)eachBlock separatedBy:(EachSeparatorBlock)separatorBlock;
 
 @end

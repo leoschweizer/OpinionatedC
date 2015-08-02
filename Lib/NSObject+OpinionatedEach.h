@@ -25,6 +25,11 @@ typedef void (^OCEachSeparatorBlock)(void);
  */
 - (void)each:(OCEachBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock;
 
+/**
+ * Evaluate eachBlock with each of the receiver's elements as the first argument
+ * and it's index as the second. Between each pair of elements, but not before 
+ * the first or after the last, evaluate the separatorBlock.
+ */
 - (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock;
 
 @end

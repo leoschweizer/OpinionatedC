@@ -48,28 +48,6 @@
 
 @implementation NSDictionary (OpinionatedEach)
 
-- (void)each:(OCEachBlock)eachBlock{
-	[self
-		eachWithIndex:^(id each, NSUInteger idx) {
-			eachBlock(each);
-		}
-		separatedBy:nil
-	];
-}
-
-- (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock {
-	[self eachWithIndex:eachBlock separatedBy:nil];
-}
-
-- (void)each:(OCEachBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock {
-	[self
-		eachWithIndex:^(id each, NSUInteger idx) {
-			eachBlock(each);
-		}
-		separatedBy:separatorBlock
-	];
-}
-
 - (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock {
 	NSUInteger idx = 0;
 	for (id key in self) {

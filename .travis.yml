@@ -2,9 +2,5 @@ language: objective-c
 
 podfile: Example/Podfile
 
-before_install:
-  - gem install xcpretty --no-ri --no-rdoc
-  - cd Example
-
-script:
-  - xcodebuild -workspace Example.xcworkspace -scheme OpinionatedC test | xcpretty -c && exit ${PIPESTATUS[0]}
+xcode_workspace: Example/Example.xcworkspace
+xcode_scheme: OpinionatedC

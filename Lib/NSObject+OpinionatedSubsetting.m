@@ -7,7 +7,7 @@
 	return self;
 }
 
-- (id<NSFastEnumeration>)first:(NSUInteger)count {
+- (id)first:(NSUInteger)count {
 	return count > 0 ? @[self] : @[];
 }
 
@@ -20,8 +20,21 @@
 	return [self firstObject];
 }
 
-- (id<NSFastEnumeration>)first:(NSUInteger)count {
+- (id)first:(NSUInteger)count {
 	return [self subarrayWithRange:NSMakeRange(0, MIN(count, self.count))];
+}
+
+@end
+
+
+@implementation NSString (OpinionatedSubsetting)
+
+- (id)first {
+	return [self first:1];
+}
+
+- (id)first:(NSUInteger)count {
+	return [self substringWithRange:NSMakeRange(0, MIN(count, self.length))];
 }
 
 @end

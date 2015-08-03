@@ -4,6 +4,6 @@
 @interface NSObject (OpinionatedSubsetting)
 
 - (id)first;
-- (id<NSFastEnumeration>)first:(NSUInteger)count;
+- (id)first:(NSUInteger)count;
 
 @end

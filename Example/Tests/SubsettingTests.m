@@ -31,4 +31,15 @@
 	XCTAssertEqualObjects(([@[@1, @2] first:4]), (@[@1, @2]));
 }
 
+- (void)testFirstOnString {
+	XCTAssertEqualObjects([@"abc" first], @"a");
+	XCTAssertEqualObjects([@"" first], @"");
+}
+
+- (void)testFirstNOnString {
+	XCTAssertEqualObjects([@"abc" first:2], @"ab");
+	XCTAssertEqualObjects([@"abc" first:4], @"abc");
+	XCTAssertEqualObjects([@"" first:1], @"");
+}
+
 @end

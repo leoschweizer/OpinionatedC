@@ -20,6 +20,50 @@
 	XCTAssertEqualObjects([probeArray firstObject], @12);
 }
 
+- (void)testEachWithIndexOnObject {
+	__block NSUInteger count = 0;
+	id probe = [[NSObject alloc] init];
+	[probe eachWithIndex:^(id each, NSUInteger idx) {
+		XCTAssertEqualObjects(each, probe);
+		XCTAssertEqual(idx, 0);
+		count++;
+	}];
+	XCTAssertEqual(count, 1);
+}
+
+- (void)testEachSeparatedByOnObject {
+	__block NSUInteger eachCount = 0;
+	__block NSUInteger separatorCount = 0;
+	[self
+		each:^(id each) {
+			XCTAssertEqualObjects(each, self);
+			eachCount++;
+		}
+		separatedBy:^{
+			separatorCount++;
+		}
+	];
+	XCTAssertEqual(eachCount, 1);
+	XCTAssertEqual(separatorCount, 0);
+}
+
+- (void)testEachWithIndexSeparatedByOnObject {
+	__block NSUInteger eachCount = 0;
+	__block NSUInteger separatorCount = 0;
+	[@YES
+		eachWithIndex:^(id each, NSUInteger idx) {
+			XCTAssertEqualObjects(each, @YES);
+			XCTAssertEqual(idx, 0);
+			eachCount++;
+		}
+		separatedBy:^{
+			separatorCount++;
+		}
+	];
+	XCTAssertEqual(eachCount, 1);
+	XCTAssertEqual(separatorCount, 0);
+}
+
 - (void)testEachOnArray {
 	__block NSMutableArray *probeArray = [NSMutableArray array];
 	XCTAssertTrue(probeArray.count == 0);

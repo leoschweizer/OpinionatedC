@@ -1,8 +1,11 @@
 #import <Foundation/Foundation.h>
 
 
+typedef id (^OCMapBlock)(id each);
+
+
 @interface NSObject (OpinionatedMapping)
 
-- (id)map:(id (^)(id element))mapBlock;
+- (id)map:(OCMapBlock)mapBlock;
 
 @end

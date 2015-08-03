@@ -4,7 +4,7 @@
 
 @implementation NSObject (OpinionatedMapping)
 
-- (id)map:(id (^)(id))mapBlock {
+- (id)map:(OCMapBlock)mapBlock {
 	return mapBlock(self);
 }
 
@@ -13,7 +13,7 @@
 
 @implementation NSArray (OpinionatedMapping)
 
-- (id)map:(id (^)(id))mapBlock {
+- (id)map:(OCMapBlock)mapBlock {
 	
 	NSMutableArray *workingArray = [NSMutableArray arrayWithCapacity:self.count];
 	
@@ -31,7 +31,7 @@
 
 @implementation NSDictionary (OpinionatedMapping)
 
-- (id)map:(id (^)(id))mapBlock {
+- (id)map:(OCMapBlock)mapBlock {
 	
 	__block BOOL returnsOnlyAssociations = YES;
 	NSMutableArray *workingKeys = [[NSMutableArray alloc] initWithCapacity:self.count];
@@ -63,7 +63,7 @@
 
 @implementation NSSet (OpinionatedMapping)
 
-- (id)map:(id (^)(id))mapBlock {
+- (id)map:(OCMapBlock)mapBlock {
 	
 	NSMutableSet *workingSet = [[NSMutableSet alloc] initWithCapacity:self.count];
 	

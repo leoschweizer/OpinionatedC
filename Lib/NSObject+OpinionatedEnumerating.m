@@ -1,4 +1,4 @@
-#import "NSObject+OpinionatedEach.h"
+#import "NSObject+OpinionatedEnumerating.h"
 #import "OCAssociation.h"
 
 

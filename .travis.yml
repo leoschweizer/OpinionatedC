@@ -1,6 +1,12 @@
 language: objective-c
 
+before_install:
+  - gem install slather -v 1.8
+
 podfile: Example/Podfile
 
 xcode_workspace: Example/Example.xcworkspace
 xcode_scheme: OpinionatedC
+
+after_success:
+  - slather

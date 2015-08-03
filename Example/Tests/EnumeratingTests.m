@@ -3,12 +3,12 @@
 #import <OpinionatedC/OpinionatedC.h>
 
 
-@interface EachTest : XCTestCase
+@interface EnumeratingTests : XCTestCase
 
 @end
 
 
-@implementation EachTest
+@implementation EnumeratingTests
 
 - (void)testEachOnObject {
 	__block NSMutableArray *probeArray = [NSMutableArray array];

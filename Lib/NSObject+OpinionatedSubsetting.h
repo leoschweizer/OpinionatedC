@@ -9,8 +9,9 @@
 - (id)first;
 
 /**
- * Answer the first count elements of the receiver. If the receiver contains
- * less than count elements, answer all of the receiver's elements.
+ * Answer the first count elements as a collection that is like the receiver. 
+ * If the receiver contains less than count elements, answer all of the
+ * receiver's elements.
  */
 - (id)first:(NSUInteger)count;
 

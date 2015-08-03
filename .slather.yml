@@ -1,5 +1,4 @@
 service: travis_ci
 coverage_service: coveralls
 xcodeproj: Example/Example.xcodeproj
-source_directory: Example/Pods/OpinionatedC
-
+source_directory: Lib

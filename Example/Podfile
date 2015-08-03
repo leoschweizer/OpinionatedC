@@ -1,4 +1,6 @@
 platform :osx
 
+plugin 'slather'
+
 pod 'OpinionatedC', :path => '../'
 

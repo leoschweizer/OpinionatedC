@@ -1,7 +1,9 @@
 language: objective-c
 
 before_install:
-  - gem install slather --no-ri --no-rdoc
+  - gem install activesupport --no-ri --no-rdoc
+  - gem install cocoapods -v 0.37.2 --no-ri --no-rdoc
+  - gem install slather -v 1.8 --no-ri --no-rdoc
 
 podfile: Example/Podfile
 

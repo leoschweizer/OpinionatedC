@@ -115,4 +115,24 @@
 	XCTAssertTrue(probeArray.count == 0);
 }
 
+- (void)testEachWithIndexSeparatedByOnDictionary {
+	__block NSUInteger eachCount = 0;
+	__block NSUInteger separatorCount = 0;
+	NSDictionary *sut = @{
+		@0 : @"foo",
+		@1 : @"bar"
+	};
+	[sut
+		eachWithIndex:^(OCAssociation *each, NSUInteger idx) {
+			XCTAssertTrue([each isKindOfClass:OCAssociation.class]);
+			eachCount++;
+		}
+		separatedBy:^{
+			separatorCount++;
+		}
+	];
+	XCTAssertEqual(eachCount, sut.count);
+	XCTAssertEqual(separatorCount, sut.count - 1);
+}
+
 @end

@@ -58,6 +58,7 @@
 			}
 		}
 		eachBlock([key asAssociationWithValue:value], idx);
+		idx++;
 	}
 }
 

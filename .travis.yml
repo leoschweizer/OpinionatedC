@@ -1,7 +1,7 @@
 language: objective-c
 
 before_install:
-  - gem install slather -v 1.8
+  - gem install slather --no-ri --no-rdoc
 
 podfile: Example/Podfile
 

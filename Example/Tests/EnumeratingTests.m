@@ -84,6 +84,25 @@
 	XCTAssertTrue(probeArray.count == 0);
 }
 
+- (void)testEachWithIndexSeparatedByOnArray {
+	__block NSUInteger eachCount = 0;
+	__block NSUInteger separatorCount = 0;
+	__block NSMutableArray *probeArray = [NSMutableArray array];
+	[@[@1, @2, @3]
+		eachWithIndex:^(id each, NSUInteger idx) {
+			[probeArray addObject:@(idx)];
+			eachCount++;
+		}
+		separatedBy:^{
+			[probeArray addObject:@NO];
+			separatorCount++;
+		}
+	];
+	XCTAssertEqual(eachCount, 3);
+	XCTAssertEqual(separatorCount, 2);
+	XCTAssertEqualObjects(probeArray, (@[@0, @NO, @1, @NO, @2]));
+}
+
 - (void)testEachOnDictionary {
 	__block NSMutableArray *keyProbes = [NSMutableArray array];
 	__block NSMutableArray *valueProbes = [NSMutableArray array];

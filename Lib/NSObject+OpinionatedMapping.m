@@ -9,11 +9,11 @@
 	
 	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
 		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
-		id mutableCollection = [this newMutableCollectionInstace];
-		for (id each in [this collectionEnumerator]) {
-			[this addObject:mapBlock(each) toMutableCollection:mutableCollection];
+		id mutableCollection = [this oc_createMutableInstanceOfMyKind];
+		for (id each in [this oc_collectionEnumerator]) {
+			[this oc_addObject:mapBlock(each) toMutableCollection:mutableCollection];
 		}
-		return [this newCollectionFromMutableCollection:mutableCollection];
+		return [this oc_createCollectionOfMyKindFromMutableCollection:mutableCollection];
 	}
 	
 	return mapBlock(self);

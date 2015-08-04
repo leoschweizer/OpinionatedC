@@ -3,10 +3,10 @@
 
 @protocol OCMutableCollectionConstruction <NSObject>
 
-- (id)newMutableCollectionInstace;
-- (NSEnumerator *)collectionEnumerator;
-- (void)addObject:(id)obj toMutableCollection:(id)collection;
-- (id)newCollectionFromMutableCollection:(id)collection;
+- (id)oc_createMutableInstanceOfMyKind;
+- (NSEnumerator *)oc_collectionEnumerator;
+- (void)oc_addObject:(id)obj toMutableCollection:(id)collection;
+- (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection;
 
 @end
 

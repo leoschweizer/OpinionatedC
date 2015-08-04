@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
 
 
-@protocol OCMutableCollectionConstruction <NSFastEnumeration>
+@protocol OCMutableCollectionConstruction <NSObject>
 
 - (id)newMutableCollectionInstace;
+- (id<NSFastEnumeration>)collectionEnumerator;
 - (void)addObject:(id)obj toMutableCollection:(id)collection;
 - (id)newCollectionFromMutableCollection:(id)collection;
 
@@ -11,6 +12,11 @@
 
 
 @interface NSArray (OCMutableCollectionConstruction) <OCMutableCollectionConstruction>
+
+@end
+
+
+@interface NSDictionary (OCMutableCollectionConstruction) <OCMutableCollectionConstruction>
 
 @end
 

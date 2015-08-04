@@ -68,6 +68,13 @@
 	XCTAssertTrue([result isKindOfClass:NSMutableSet.class]);
 }
 
+- (void)testMapOnString {
+	NSString *result = [@"abc" map:^id(id each) {
+		return [each capitalizedString];
+	}];
+	XCTAssertEqualObjects(result, @"ABC");
+}
+
 - (void)testInjectIntoOnArray {
 	id result = [@[@1, @2, @3] inject:@0 into:^id(id running, id each) {
 		return @([running integerValue] + [each integerValue]);
@@ -94,6 +101,13 @@
 		return running;
 	}];
 	XCTAssertNil(result);
+}
+
+- (void)testReduceOnString {
+	NSString *result = [@"abc" reduce:^id(id running, id each) {
+		return each;
+	}];
+	XCTAssertEqualObjects(result, @"c");
 }
 
 @end

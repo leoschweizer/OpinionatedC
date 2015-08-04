@@ -24,3 +24,8 @@
 @interface NSSet (OCMutableCollectionConstruction) <OCMutableCollectionConstruction>
 
 @end
+
+
+@interface NSString (OCMutableCollectionConstruction) <OCMutableCollectionConstruction>
+
+@end

@@ -1,5 +1,6 @@
 #import "OCMutableCollectionConstruction.h"
 #import "NSDictionary+OpinionatedExtensions.h"
+#import "NSString+OpinionatedExtensions.h"
 #import "OCAssociation.h"
 
 
@@ -62,6 +63,30 @@
 
 - (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
 	return [self.class setWithSet:collection];
+}
+
+@end
+
+
+@implementation NSString (OCMutableCollectionConstruction)
+
+- (id)oc_createMutableInstanceOfMyKind {
+	return [NSMutableString stringWithString:@""];
+}
+
+- (NSEnumerator *)oc_collectionEnumerator {
+	return [self characterEnumerator];
+}
+
+- (void)oc_addObject:(id)obj toMutableCollection:(id)collection {
+	[collection appendString:obj];
+}
+
+- (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
+	if ([self isKindOfClass:NSMutableString.class]) {
+		return [NSMutableString stringWithString:collection];
+	}
+	return [NSString stringWithString:collection];
 }
 
 @end

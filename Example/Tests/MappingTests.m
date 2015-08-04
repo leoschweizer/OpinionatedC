@@ -68,4 +68,32 @@
 	XCTAssertTrue([result isKindOfClass:NSMutableSet.class]);
 }
 
+- (void)testInjectIntoOnArray {
+	id result = [@[@1, @2, @3] inject:@0 into:^id(id running, id each) {
+		return @([running integerValue] + [each integerValue]);
+	}];
+	XCTAssertEqualObjects(result, @6);
+}
+
+- (void)testInjectIntoOnEmptyArray {
+	id result = [@[] inject:@"foo" into:^id(id running, id each) {
+		return nil;
+	}];
+	XCTAssertEqualObjects(result, @"foo");
+}
+
+- (void)testInjectIntoOnObject {
+	id result = [@3 inject:@5 into:^id(id running, id each) {
+		return @([running integerValue] * [each integerValue]);
+	}];
+	XCTAssertEqualObjects(result, @15);
+}
+
+- (void)testReduceOnObject {
+	id result = [@5 reduce:^id(id running, id each) {
+		return running;
+	}];
+	XCTAssertNil(result);
+}
+
 @end

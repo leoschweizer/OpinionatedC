@@ -20,4 +20,23 @@
 	
 }
 
+- (id)inject:(id)initialValue into:(OCReduceBlock)reduceBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
+		id running = initialValue;
+		for (id each in [this oc_collectionEnumerator]) {
+			running = reduceBlock(running, each);
+		}
+		return running;
+	}
+	
+	return reduceBlock(initialValue, self);
+	
+}
+
+- (id)reduce:(OCReduceBlock)reduceBlock {
+	return [self inject:nil into:reduceBlock];
+}
+
 @end

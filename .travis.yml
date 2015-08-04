@@ -1,6 +1,10 @@
 language: objective-c
 
-podfile: Example/Podfile
+before_install:
+  - cd Example
+
+install:
+  - pod install
 
 xcode_workspace: Example/Example.xcworkspace
 xcode_scheme: OpinionatedC

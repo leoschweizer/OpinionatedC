@@ -3,3 +3,4 @@
 #import <OpinionatedC/NSObject+OpinionatedMapping.h>
 #import <OpinionatedC/NSObject+OpinionatedEnumerating.h>
 #import <OpinionatedC/NSObject+OpinionatedSubsetting.h>
+#import <OpinionatedC/NSString+OpinionatedExtensions.h>

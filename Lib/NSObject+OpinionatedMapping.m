@@ -1,28 +1,22 @@
 #import "NSObject+OpinionatedMapping.h"
 #import "OCAssociation.h"
+#import "OCMutableCollectionConstruction.h"
 
 
 @implementation NSObject (OpinionatedMapping)
 
 - (id)map:(OCMapBlock)mapBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
+		id mutableCollection = [this newMutableCollectionInstace];
+		for (id each in this) {
+			[this addObject:mapBlock(each) toMutableCollection:mutableCollection];
+		}
+		return [this newCollectionFromMutableCollection:mutableCollection];
+	}
+	
 	return mapBlock(self);
-}
-
-@end
-
-
-@implementation NSArray (OpinionatedMapping)
-
-- (id)map:(OCMapBlock)mapBlock {
-	
-	NSMutableArray *workingArray = [NSMutableArray arrayWithCapacity:self.count];
-	
-	[self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-		id mappedElement = mapBlock(obj);
-		[workingArray addObject:mappedElement];
-	}];
-	
-	return [self.class arrayWithArray:workingArray];
 	
 }
 
@@ -55,24 +49,6 @@
 	}
 	
 	return [NSArray arrayWithArray:workingValues];
-	
-}
-
-@end
-
-
-@implementation NSSet (OpinionatedMapping)
-
-- (id)map:(OCMapBlock)mapBlock {
-	
-	NSMutableSet *workingSet = [[NSMutableSet alloc] initWithCapacity:self.count];
-	
-	[self enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-		id mappedElement = mapBlock(obj);
-		[workingSet addObject:mappedElement];
-	}];
-	
-	return [self.class setWithSet:workingSet];
 	
 }
 

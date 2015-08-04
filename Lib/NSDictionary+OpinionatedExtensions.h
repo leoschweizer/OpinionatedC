@@ -3,6 +3,6 @@
 
 @interface NSDictionary (OpinionatedExtensions)
 
-- (id<NSFastEnumeration>)associations;
+- (NSEnumerator *)associationEnumerator;
 
 @end

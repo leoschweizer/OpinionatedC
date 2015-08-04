@@ -18,7 +18,7 @@
 	}
 	NSMutableDictionary *probes = [NSMutableDictionary dictionary];
 	
-	for (OCAssociation *each in [sut associations]) {
+	for (OCAssociation *each in [sut associationEnumerator]) {
 		XCTAssertTrue([each isKindOfClass:OCAssociation.class]);
 		[probes setObject:each.value forKey:each.key];
 	}

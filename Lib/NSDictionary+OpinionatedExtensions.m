@@ -4,7 +4,7 @@
 
 @implementation NSDictionary (OpinionatedExtensions)
 
-- (id<NSFastEnumeration>)associations {
+- (NSEnumerator *)associationEnumerator {
 	return [OCAssociationEnumerator enumerateDictionary:self];
 }
 

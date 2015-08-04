@@ -9,8 +9,8 @@
 	return [NSMutableArray array];
 }
 
-- (id<NSFastEnumeration>)collectionEnumerator {
-	return self;
+- (NSEnumerator *)collectionEnumerator {
+	return [self objectEnumerator];
 }
 
 - (void)addObject:(id)obj toMutableCollection:(id)collection {
@@ -30,8 +30,8 @@
 	return [NSMutableDictionary dictionary];
 }
 
-- (id<NSFastEnumeration>)collectionEnumerator {
-	return [self associations];
+- (NSEnumerator *)collectionEnumerator {
+	return [self associationEnumerator];
 }
 
 - (void)addObject:(id)obj toMutableCollection:(id)collection {
@@ -52,8 +52,8 @@
 	return [NSMutableSet set];
 }
 
-- (id<NSFastEnumeration>)collectionEnumerator {
-	return self;
+- (NSEnumerator *)collectionEnumerator {
+	return [self objectEnumerator];
 }
 
 - (void)addObject:(id)obj toMutableCollection:(id)collection {

@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface OCAssociationEnumerator : NSObject <NSFastEnumeration>
+@interface OCAssociationEnumerator : NSEnumerator
 
 + (instancetype)enumerateDictionary:(NSDictionary *)dictionary;
 

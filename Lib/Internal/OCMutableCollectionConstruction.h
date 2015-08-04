@@ -4,7 +4,7 @@
 @protocol OCMutableCollectionConstruction <NSObject>
 
 - (id)newMutableCollectionInstace;
-- (id<NSFastEnumeration>)collectionEnumerator;
+- (NSEnumerator *)collectionEnumerator;
 - (void)addObject:(id)obj toMutableCollection:(id)collection;
 - (id)newCollectionFromMutableCollection:(id)collection;
 

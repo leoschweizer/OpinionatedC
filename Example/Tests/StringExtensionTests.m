@@ -1,7 +1,6 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import <OpinionatedC/OpinionatedC.h>
-#import "OCCharacterArray.h"
 
 
 @interface StringExtensionTests : XCTestCase
@@ -13,7 +12,7 @@
 
 - (void)testCharacterEnumeration {
 	NSMutableArray *probes = [NSMutableArray array];
-	for (NSString *c in [@"abc" characters]) {
+	for (NSString *c in [@"abc" characterEnumerator]) {
 		[probes addObject:c];
 	}
 	XCTAssertEqual(probes.count, 3);

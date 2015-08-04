@@ -1,11 +1,11 @@
 #import "NSDictionary+OpinionatedExtensions.h"
-#import "OCAssociationEnumerator.h"
+#import "OCEnumerators.h"
 
 
 @implementation NSDictionary (OpinionatedExtensions)
 
 - (NSEnumerator *)associationEnumerator {
-	return [OCAssociationEnumerator enumerateDictionary:self];
+	return [[OCAssociationEnumerator alloc] initWithDictionary:self];
 }
 
 @end

@@ -3,6 +3,6 @@
 
 @interface NSString (OpinionatedExtensions)
 
-- (NSArray *)characters;
+- (NSEnumerator *)characterEnumerator;
 
 @end

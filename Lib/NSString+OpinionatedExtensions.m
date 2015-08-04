@@ -1,11 +1,11 @@
 #import "NSString+OpinionatedExtensions.h"
-#import "OCCharacterArray.h"
+#import "OCEnumerators.h"
 
 
 @implementation NSString (OpinionatedExtensions)
 
-- (NSArray *)characters {
-	return [OCCharacterArray characterArrayWithString:self];
+- (NSEnumerator *)characterEnumerator {
+	return [[OCCharacterEnumerator alloc] initWithString:self];
 }
 
 @end

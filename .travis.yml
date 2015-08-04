@@ -14,4 +14,4 @@ cache:
   - cocoapods
 
 after_success:
-  - slather
+  - bundle exec slather

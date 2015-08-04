@@ -1,4 +1,5 @@
 #import "NSObject+OpinionatedSubsetting.h"
+#import "OCAssociation.h"
 
 
 @implementation NSObject (OpinionatedSubsetting)
@@ -9,6 +10,10 @@
 
 - (id)first:(NSUInteger)count {
 	return count > 0 ? @[self] : @[];
+}
+
+- (id)select:(OCFilterBlock)selectBlock {
+	return selectBlock(self) ? self : nil;
 }
 
 @end
@@ -22,6 +27,42 @@
 
 - (id)first:(NSUInteger)count {
 	return [self subarrayWithRange:NSMakeRange(0, MIN(count, self.count))];
+}
+
+- (id)select:(OCFilterBlock)selectBlock {
+	NSIndexSet *indices = [self indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+		return selectBlock(obj);
+	}];
+	return [self.class arrayWithArray:[self objectsAtIndexes:indices]];
+}
+
+@end
+
+
+@implementation NSDictionary (OpinionatedSubsetting)
+
+- (id)select:(OCFilterBlock)selectBlock {
+	NSMutableArray *keys = [NSMutableArray array];
+	NSMutableArray *values = [NSMutableArray array];
+	for (id key in self) {
+		id value = [self objectForKey:key];
+		if (selectBlock([key asAssociationWithValue:value])) {
+			[keys addObject:key];
+			[values addObject:value];
+		}
+	}
+	return [self.class dictionaryWithObjects:values forKeys:keys];
+}
+
+@end
+
+
+@implementation NSSet (OpinionatedSubsetting)
+
+- (id)select:(OCFilterBlock)selectBlock {
+	return [self.class setWithSet:[self objectsPassingTest:^BOOL(id obj, BOOL *stop) {
+		return selectBlock(obj);
+	}]];
 }
 
 @end

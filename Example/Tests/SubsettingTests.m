@@ -10,6 +10,34 @@
 
 @implementation SubsettingTests
 
+- (void)testDetectOnObject {
+	id result = [@5 detect:^BOOL(id each) {
+		return YES;
+	}];
+	XCTAssertEqualObjects(result, @5);
+}
+
+- (void)testFailedDetectOnObject {
+	id result = [@5 detect:^BOOL(id each) {
+		return NO;
+	}];
+	XCTAssertNil(result);
+}
+
+- (void)testDetectOnArray {
+	id result = [@[@1, @2, @3, @4] detect:^BOOL(id each) {
+		return [each integerValue] % 2 == 0;
+	}];
+	XCTAssertEqualObjects(result, @2);
+}
+
+- (void)testFailedDetectOnArray {
+	id result = [@[@1, @2] detect:^BOOL(id each) {
+		return NO;
+	}];
+	XCTAssertNil(result);
+}
+
 - (void)testFirstOnObject {
 	XCTAssertEqualObjects([self first], self);
 }

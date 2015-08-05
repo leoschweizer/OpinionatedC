@@ -1,8 +1,25 @@
 #import "NSObject+OpinionatedSubsetting.h"
+#import "OCMutableCollectionConstruction.h"
 #import "OCAssociation.h"
 
 
 @implementation NSObject (OpinionatedSubsetting)
+
+- (id)detect:(OCFilterBlock)detectBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+		NSEnumerator *collectionEnumerator = [(id<OCMutableCollectionConstruction>)self oc_collectionEnumerator];
+		for (id each in collectionEnumerator) {
+			if (detectBlock(each)) {
+				return each;
+			}
+		}
+		return nil;
+	}
+	
+	return detectBlock(self) ? self : nil;
+	
+}
 
 - (id)first {
 	return self;

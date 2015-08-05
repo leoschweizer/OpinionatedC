@@ -7,6 +7,12 @@ typedef BOOL (^OCFilterBlock)(id each);
 @interface NSObject (OpinionatedSubsetting)
 
 /**
+ * Evaluate detectBlock with each of the receiver's elements as the argument.
+ * Answer the first element for which aBlock evaluates to true.
+ */
+- (id)detect:(OCFilterBlock)detectBlock;
+
+/**
  * Answer the first element. If the receiver is empty, answer nil.
  */
 - (id)first;

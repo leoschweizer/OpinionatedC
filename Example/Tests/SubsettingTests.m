@@ -70,6 +70,15 @@
 	XCTAssertEqualObjects([@"" first:1], @"");
 }
 
+- (void)testRejectOnArray {
+	NSArray *result = [@[@1, @2, @3, @4] reject:^BOOL(id each) {
+		return [each integerValue] % 2 == 0;
+	}];
+	XCTAssertEqual(result.count, 2);
+	XCTAssertTrue([result containsObject:@1]);
+	XCTAssertTrue([result containsObject:@3]);
+}
+
 - (void)testSelectOnObject {
 	id result = [@YES select:^BOOL(id each) {
 		return [each boolValue];

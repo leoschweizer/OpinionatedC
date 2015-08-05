@@ -29,6 +29,12 @@
 	return count > 0 ? @[self] : @[];
 }
 
+- (id)reject:(OCFilterBlock)rejectBlock {
+	return [self select:^BOOL(id each) {
+		return !rejectBlock(each);
+	}];
+}
+
 - (id)select:(OCFilterBlock)selectBlock {
 	return selectBlock(self) ? self : nil;
 }

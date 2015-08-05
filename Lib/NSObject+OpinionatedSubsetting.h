@@ -25,6 +25,13 @@ typedef BOOL (^OCFilterBlock)(id each);
 - (id)first:(NSUInteger)count;
 
 /**
+ * Evaluate rejectBlock with each of the receiver's elements as the argument.
+ * Collect into a new collection like the receiver, only those elements for which
+ * rejectBlock evaluates to false. Answer the new collection.
+ */
+- (id)reject:(OCFilterBlock)rejectBlock;
+
+/**
  * Evaluate selectBlock with each of the receiver's elements as the argument.
  * Collect into a new collection like the receiver, only those elements for which
  * selectBlock evaluates to true. Answer the new collection.

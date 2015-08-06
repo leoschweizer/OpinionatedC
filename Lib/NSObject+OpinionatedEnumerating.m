@@ -3,7 +3,7 @@
 #import "OCCollectionCapabilities.h"
 
 
-@implementation NSObject (OpinionatedEach)
+@implementation NSObject (OpinionatedEnumeration)
 
 - (void)each:(OCEachBlock)eachBlock {
 	[self

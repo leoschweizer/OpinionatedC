@@ -6,7 +6,7 @@ typedef void (^OCEachWithIndexBlock)(id each, NSUInteger idx);
 typedef void (^OCEachSeparatorBlock)(void);
 
 
-@interface NSObject (OpinionatedEach)
+@interface NSObject (OpinionatedEnumeration)
 
 /**
  * Evaluate eachBlock with each of the receiver's elements as the argument.

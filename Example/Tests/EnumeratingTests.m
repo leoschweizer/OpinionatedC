@@ -183,4 +183,9 @@
 	XCTAssertFalse([@"a" isEmpty]);
 }
 
+- (void)testIsEmptyOnNull {
+	XCTAssertTrue([[NSNull null] isEmpty]);
+	XCTAssertFalse([[NSNull null] isNotEmpty]);
+}
+
 @end

@@ -27,6 +27,11 @@
 @end
 
 
+@interface NSNull (OCCollectionCapabilities) <OCEnumerableCollection>
+
+@end
+
+
 @interface NSSet (OCCollectionCapabilities) <OCEnumerableCollection, OCMutableCollectionConstruction>
 
 @end

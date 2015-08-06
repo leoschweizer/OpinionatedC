@@ -71,3 +71,12 @@
 }
 
 @end
+
+
+@implementation OCNullEnumerator
+
+- (id)nextObject {
+	return nil;
+}
+
+@end

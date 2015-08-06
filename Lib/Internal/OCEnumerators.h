@@ -13,3 +13,8 @@
 - (instancetype)initWithString:(NSString *)string;
 
 @end
+
+
+@interface OCNullEnumerator : NSEnumerator
+
+@end

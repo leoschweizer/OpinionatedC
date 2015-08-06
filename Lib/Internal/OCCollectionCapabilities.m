@@ -2,6 +2,7 @@
 #import "NSDictionary+OpinionatedExtensions.h"
 #import "NSString+OpinionatedExtensions.h"
 #import "OCAssociation.h"
+#import "OCEnumerators.h"
 
 
 @implementation NSArray (OCCollectionCapabilities)
@@ -20,6 +21,15 @@
 
 - (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
 	return [self.class arrayWithArray:collection];
+}
+
+@end
+
+
+@implementation NSNull (OCCollectionCapabilities)
+
+- (NSEnumerator *)oc_collectionEnumerator {
+	return [[OCNullEnumerator alloc] init];
 }
 
 @end

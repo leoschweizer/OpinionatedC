@@ -1,5 +1,5 @@
 #import "NSObject+OpinionatedSubsetting.h"
-#import "OCMutableCollectionConstruction.h"
+#import "OCCollectionCapabilities.h"
 #import "OCAssociation.h"
 
 
@@ -7,8 +7,8 @@
 
 - (id)detect:(OCFilterBlock)detectBlock {
 	
-	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
-		NSEnumerator *collectionEnumerator = [(id<OCMutableCollectionConstruction>)self oc_collectionEnumerator];
+	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
+		NSEnumerator *collectionEnumerator = [(id<OCEnumerableCollection>)self oc_collectionEnumerator];
 		for (id each in collectionEnumerator) {
 			if (detectBlock(each)) {
 				return each;

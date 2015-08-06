@@ -1,6 +1,6 @@
 #import "NSObject+OpinionatedEnumerating.h"
 #import "OCAssociation.h"
-#import "OCMutableCollectionConstruction.h"
+#import "OCCollectionCapabilities.h"
 
 
 @implementation NSObject (OpinionatedEach)
@@ -28,9 +28,9 @@
 }
 
 - (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock {
-	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
 		NSUInteger idx = 0;
-		for (id each in [(id<OCMutableCollectionConstruction>)self oc_collectionEnumerator]) {
+		for (id each in [(id<OCEnumerableCollection>)self oc_collectionEnumerator]) {
 			if (idx > 0) {
 				if (separatorBlock) {
 					separatorBlock();
@@ -46,8 +46,8 @@
 
 - (BOOL)isEmpty {
 	
-	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
-		for (id __attribute__((unused))each in [(id<OCMutableCollectionConstruction>)self oc_collectionEnumerator]) {
+	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
+		for (id __attribute__((unused))each in [(id<OCEnumerableCollection>)self oc_collectionEnumerator]) {
 			return NO;
 		}
 		return YES;

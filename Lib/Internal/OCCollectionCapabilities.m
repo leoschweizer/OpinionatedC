@@ -1,10 +1,10 @@
-#import "OCMutableCollectionConstruction.h"
+#import "OCCollectionCapabilities.h"
 #import "NSDictionary+OpinionatedExtensions.h"
 #import "NSString+OpinionatedExtensions.h"
 #import "OCAssociation.h"
 
 
-@implementation NSArray (OCMutableCollectionConstruction)
+@implementation NSArray (OCCollectionCapabilities)
 
 - (id)oc_createMutableInstanceOfMyKind {
 	return [NSMutableArray array];
@@ -25,7 +25,7 @@
 @end
 
 
-@implementation NSDictionary (OCMutableCollectionConstruction)
+@implementation NSDictionary (OCCollectionCapabilities)
 
 - (id)oc_createMutableInstanceOfMyKind {
 	return [NSMutableDictionary dictionary];
@@ -47,7 +47,7 @@
 @end
 
 
-@implementation NSSet (OCMutableCollectionConstruction)
+@implementation NSSet (OCCollectionCapabilities)
 
 - (id)oc_createMutableInstanceOfMyKind {
 	return [NSMutableSet set];
@@ -68,7 +68,7 @@
 @end
 
 
-@implementation NSString (OCMutableCollectionConstruction)
+@implementation NSString (OCCollectionCapabilities)
 
 - (id)oc_createMutableInstanceOfMyKind {
 	return [NSMutableString stringWithString:@""];

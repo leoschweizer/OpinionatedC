@@ -1,6 +1,6 @@
 #import "NSObject+OpinionatedMapping.h"
 #import "OCAssociation.h"
-#import "OCMutableCollectionConstruction.h"
+#import "OCCollectionCapabilities.h"
 
 
 @implementation NSObject (OpinionatedMapping)
@@ -22,8 +22,8 @@
 
 - (id)inject:(id)initialValue into:(OCReduceBlock)reduceBlock {
 	
-	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
-		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
+	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
+		id<OCEnumerableCollection> this = (id<OCEnumerableCollection>)self;
 		id running = initialValue;
 		for (id each in [this oc_collectionEnumerator]) {
 			running = reduceBlock(running, each);

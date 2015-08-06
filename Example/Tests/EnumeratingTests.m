@@ -173,4 +173,9 @@
 	XCTAssertTrue([@{ @1 : @"" } isNotEmpty]);
 }
 
+- (void)testIsEmptyOnString {
+	XCTAssertTrue([@"" isEmpty]);
+	XCTAssertFalse([@"a" isEmpty]);
+}
+
 @end

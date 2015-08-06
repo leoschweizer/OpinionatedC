@@ -1,5 +1,6 @@
 #import "NSObject+OpinionatedEnumerating.h"
 #import "OCAssociation.h"
+#import "OCMutableCollectionConstruction.h"
 
 
 @implementation NSObject (OpinionatedEach)
@@ -27,9 +28,9 @@
 }
 
 - (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock {
-	if ([self conformsToProtocol:@protocol(NSFastEnumeration)]) {
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
 		NSUInteger idx = 0;
-		for (id each in (id<NSFastEnumeration>)self) {
+		for (id each in [(id<OCMutableCollectionConstruction>)self oc_collectionEnumerator]) {
 			if (idx > 0) {
 				if (separatorBlock) {
 					separatorBlock();
@@ -45,8 +46,8 @@
 
 - (BOOL)isEmpty {
 	
-	if ([self conformsToProtocol:@protocol(NSFastEnumeration)]) {
-		for (id __attribute__((unused))each in (id<NSFastEnumeration>)self) {
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+		for (id __attribute__((unused))each in [(id<OCMutableCollectionConstruction>)self oc_collectionEnumerator]) {
 			return NO;
 		}
 		return YES;
@@ -58,25 +59,6 @@
 
 - (BOOL)isNotEmpty {
 	return ![self isEmpty];
-}
-
-@end
-
-
-@implementation NSDictionary (OpinionatedEach)
-
-- (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock {
-	NSUInteger idx = 0;
-	for (id key in self) {
-		id value = [self objectForKey:key];
-		if (idx > 0) {
-			if (separatorBlock) {
-				separatorBlock();
-			}
-		}
-		eachBlock([key asAssociationWithValue:value], idx);
-		idx++;
-	}
 }
 
 @end

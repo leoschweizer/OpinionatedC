@@ -10,7 +10,7 @@ typedef id (^OCReduceBlock)(id running, id each);
 /**
  * Accumulate a running value associated with evaluating the argument,
  * reduceBlock, with the current value and the receiver as block arguments.
- * The initial value is the value of the argument initialValue."
+ * The initial value is the value of the argument initialValue.
  * 
  * For example, to sum a collection, use:
  * [@[@1, @2, @3] inject:@0 into:^id(NSNumber *running, NSNumber *current) {

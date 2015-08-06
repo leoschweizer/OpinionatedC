@@ -5,7 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
 [![Platforms](https://img.shields.io/cocoapods/p/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
 
+Undoubtedly, Objective-C has been influenced significantly by Smalltalk. Unfortunately, the forefathers of 
+Objective-C stopped inheriting concepts where stuff gets really interesting (and a pleasure to work with).
 
+OpinionatedC is here to fix that.
+
+Note: This library is pretty much a work in progress. However, it is well tested and already used in production
+as well as in App Store submitted apps.
 
 ## Usage
 The easiest way to include OpinionatedC into your project is through [CocoaPods](http://cocoapods.org/):

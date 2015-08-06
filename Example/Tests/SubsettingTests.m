@@ -199,7 +199,7 @@
 	NSSet *result = [sut select:^BOOL(id each) {
 		return [each unsignedIntegerValue] == 3;
 	}];
-	XCTAssertTrue([result isKindOfClass:sut.class]);
+	XCTAssertTrue([result isMemberOfClass:sut.class]);
 	XCTAssertEqual(result.count, 1);
 	XCTAssertTrue([result containsObject:@3]);
 }

@@ -104,7 +104,7 @@
 }
 
 - (void)testReduceOnString {
-	NSString *result = [@"abc" reduce:^id(id running, id each) {
+	NSString *result = [[NSString stringWithUTF8String:"abc"] reduce:^id(id running, id each) {
 		return each;
 	}];
 	XCTAssertEqualObjects(result, @"c");

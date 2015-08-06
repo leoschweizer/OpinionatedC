@@ -93,7 +93,7 @@
 }
 
 - (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
-	if ([self isKindOfClass:NSMutableString.class]) {
+	if ([self isMemberOfClass:NSMutableString.class]) {
 		return [NSMutableString stringWithString:collection];
 	}
 	return [NSString stringWithString:collection];

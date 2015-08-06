@@ -34,20 +34,56 @@ will yield an instance of `NSArray`. Likewise, doing the same on an `NSMutableAr
 array. However, this behavior is limited by the type system of Objective-C (for instance, this does not work
 at all with `NSString`s).
 
+### Table of Contents
 * **Enumeration**
+  * [`each:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
+  * [`each:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
+  * [`isEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`isNotEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating)
 * **Mapping**
-  * [`map:`](https://github.com/leoschweizer/OpinionatedC#Mapping)
-  * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#Mapping) / [`reduce`](https://github.com/leoschweizer/OpinionatedC#Mapping)
+  * [`map:`](https://github.com/leoschweizer/OpinionatedC#mapping)
+  * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`reduce`](https://github.com/leoschweizer/OpinionatedC#mapping)
 * **Subsetting**
-  * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) 
-  * [`first`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#Subsetting)
-  * [`detect:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#Subsetting)
+  * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 
+  * [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
+  * [`detect:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
 
 
-### Enumeration
+#### Enumerating
+```objectivec
 
+[@[@"foo", @"bar"] each:^(NSString *each) {
+    NSLog(@"%@", each);
+}];
+// => foo
+// => bar
 
-### Mapping
+[@[@"foo", @"bar"] 
+    each:^(NSString *each) {
+        NSLog(@"%@", each);
+    }
+    separatedBy:^{
+        NSLog(@"w00t");
+    }];
+// => foo
+// => w00t
+// => bar
+
+[@"abc" eachWithIndex:^(NSString *each, NSUInteger idx) {
+    NSLog(@"%@ - %@", each, @(idx));
+}];
+// => a - 0
+// => b - 1
+// => c - 2
+
+[@[@"a", @"b", @"c"] isEmpty];
+// => NO
+
+[@"" isEmpty];
+// => YES
+
+```
+
+#### Mapping
 ```objectivec
 [@[@1, @2, @3] map:^id(NSNumber *each) {
     return @([each integerValue] * 2);
@@ -70,17 +106,17 @@ at all with `NSString`s).
 // => @6
 ```
 
-### Subsetting
+#### Subsetting
 ```objectivec
 [@[@1, @2, @3, @4] allSatisfy:^BOOL(NSNumber *each) {
     return [each integerValue] % 2 == 0;
 }];
-// => false
+// => NO
 
 [@"abcdef" anySatisfy:^BOOL(NSString *each) { 
     return [each isEqualToString:@"f"];
 }];
-// => true
+// => YES
 
 [@"abcdef" first:3]
 // => @"abc"

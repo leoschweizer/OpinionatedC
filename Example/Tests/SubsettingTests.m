@@ -225,4 +225,12 @@
 	XCTAssertEqualObjects(result, @"cc");
 }
 
+- (void)testSelectOnMutableString {
+	id result = [[NSMutableString stringWithString:@"abc"] select:^BOOL(id each) {
+		return [each isEqualToString:@"b"];
+	}];
+	XCTAssertTrue([result isKindOfClass:NSMutableString.class]);
+	XCTAssertEqualObjects(result, @"b");
+}
+
 @end

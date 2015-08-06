@@ -21,7 +21,6 @@
 		650234C8FBB7F356F0066346 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CFD71EAB2A52080E26679CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B32F1A4A1B6EAC7D00D25836 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B32F1A4E1B6EAC7D00D25836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumeratingTests.m; sourceTree = "<group>"; };
 		B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubsettingTests.m; sourceTree = "<group>"; };
 		B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTests.m; sourceTree = "<group>"; };
@@ -86,17 +85,8 @@
 				B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */,
 				B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */,
 				B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */,
-				B32F1A4D1B6EAC7D00D25836 /* Supporting Files */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		B32F1A4D1B6EAC7D00D25836 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B32F1A4E1B6EAC7D00D25836 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +258,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -313,7 +302,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;

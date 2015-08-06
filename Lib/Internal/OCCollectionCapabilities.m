@@ -93,10 +93,10 @@
 }
 
 - (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
-	if ([self isMemberOfClass:NSMutableString.class]) {
-		return [NSMutableString stringWithString:collection];
-	}
-	return [NSString stringWithString:collection];
+	// there is no reliable way to distinguish between mutable and immutable
+	// string instances; [self.class stringWithString:collection] would crash
+	// with _NSCFString instances (constant strings)
+	return collection;
 }
 
 @end

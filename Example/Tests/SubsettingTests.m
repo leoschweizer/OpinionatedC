@@ -218,4 +218,11 @@
 	XCTAssertTrue([result isKindOfClass:NSMutableSet.class]);
 }
 
+- (void)testSelectOnString {
+	NSString *result = [@"abcabcabd" select:^BOOL(NSString *each) {
+		return [each isEqualToString:@"c"];
+	}];
+	XCTAssertEqualObjects(result, @"cc");
+}
+
 @end

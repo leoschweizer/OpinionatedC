@@ -46,6 +46,14 @@
 
 - (BOOL)isEmpty {
 	
+	if ([self respondsToSelector:@selector(count)]) {
+		return [(id)self count] == 0;
+	}
+	
+	if ([self respondsToSelector:@selector(length)]) {
+		return [(id)self length] == 0;
+	}
+	
 	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
 		for (id __attribute__((unused))each in [(id<OCEnumerableCollection>)self oc_collectionEnumerator]) {
 			return NO;

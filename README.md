@@ -23,8 +23,26 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
 #import <OpinionatedC/OpinionatedC.h>
 ```
 
-
 ## Features
+* [**Collections**](https://github.com/leoschweizer/OpinionatedC#collections)
+  * [Enumerating](https://github.com/leoschweizer/OpinionatedC#enumerating)
+    * [`each:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
+    * [`each:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
+    * [`isEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`isNotEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating)
+  * [Mapping](https://github.com/leoschweizer/OpinionatedC#mapping)
+    * [`map:`](https://github.com/leoschweizer/OpinionatedC#mapping)
+    * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`reduce`](https://github.com/leoschweizer/OpinionatedC#mapping)
+  * [Subsetting](https://github.com/leoschweizer/OpinionatedC#subsetting)
+    * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 
+    * [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
+    * [`detect:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
+* [**Error Handling**](https://github.com/leoschweizer/OpinionatedC#error-handling)
+  * [`SubclassResponsibility`](https://github.com/leoschweizer/OpinionatedC#error-handling)
+  * [`UnsupportedOperation`](https://github.com/leoschweizer/OpinionatedC#error-handling) / [`ShouldNotOccur`](https://github.com/leoschweizer/OpinionatedC#error-handling)
+  * [`NotYetImplemented`](https://github.com/leoschweizer/OpinionatedC#error-handling)
+  * [`Error()`](https://github.com/leoschweizer/OpinionatedC#error-handling)
+
+#### Collections
 Most of the collection extensions are implemented on the `NSObject` level, with refined behavior for different 
 collection types. Non-collection objects thereby behave like collections with a single element, and `[NSNull null]`
 bahaves like an empty collection.
@@ -34,21 +52,7 @@ will yield an instance of `NSArray`. Likewise, doing the same on an `NSMutableAr
 array. However, this behavior is limited by the type system of Objective-C (for instance, this does not work
 at all with `NSString`s).
 
-### Table of Contents
-* **Enumeration**
-  * [`each:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
-  * [`each:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
-  * [`isEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`isNotEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating)
-* **Mapping**
-  * [`map:`](https://github.com/leoschweizer/OpinionatedC#mapping)
-  * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`reduce`](https://github.com/leoschweizer/OpinionatedC#mapping)
-* **Subsetting**
-  * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 
-  * [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
-  * [`detect:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
-
-
-#### Enumerating
+##### Enumerating
 ```objectivec
 
 [@[@"foo", @"bar"] each:^(NSString *each) {
@@ -83,7 +87,7 @@ at all with `NSString`s).
 
 ```
 
-#### Mapping
+##### Mapping
 ```objectivec
 [@[@1, @2, @3] map:^id(NSNumber *each) {
     return @([each integerValue] * 2);
@@ -106,7 +110,7 @@ at all with `NSString`s).
 // => @6
 ```
 
-#### Subsetting
+##### Subsetting
 ```objectivec
 [@[@1, @2, @3, @4] allSatisfy:^BOOL(NSNumber *each) {
     return [each integerValue] % 2 == 0;
@@ -135,4 +139,44 @@ at all with `NSString`s).
     return [each.key isEqualToNumber:@2];
 }];
 // => @{ @1 : @"foo" }
+```
+
+#### Error Handling
+```objectivec
+@implementation MyAbstractClass
+
+- (NSString *)abstractMethod {
+    SubclassResponsibility;
+}
+
+- (BOOL)methodThatShouldBeImplemented {
+    NotYetImplemented;
+}
+
+- (void)unsupportedMethodFromSuperclass {
+    UnsupportedOperation;
+}
+
+- (NSNumber *)methodWithArg:(NSUInteger)arg {
+    
+    switch (arg) {
+        case 1: return @1;
+        case 2: return @2;
+    }
+    
+    ShouldNotOccur;
+    
+}
+
+- (NSUInteger)method2WithArg:(NSUInteger)arg {
+    if (arg < 10) {
+        return 10;
+    }
+    if (arg < 20) {
+        return 20;
+    }
+    Error(@"arg must be smaller than 20");
+}
+
+@end
 ```

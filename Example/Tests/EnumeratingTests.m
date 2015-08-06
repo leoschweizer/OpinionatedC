@@ -168,7 +168,7 @@
 
 - (void)testIsEmptyOnData {
 	XCTAssertTrue([[NSData data] isEmpty]);
-	XCTAssertFalse([[[NSData alloc] initWithBase64Encoding:@"abc"] isEmpty]);
+	XCTAssertFalse([[[NSData alloc] initWithBase64EncodedString:@"ab" options:NSDataBase64DecodingIgnoreUnknownCharacters] isEmpty]);
 }
 
 - (void)testIsEmptyOnDictionary {

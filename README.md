@@ -6,3 +6,68 @@
 [![Platforms](https://img.shields.io/cocoapods/p/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
 
 
+
+## Usage
+The easiest way to include OpinionatedC into your project is through [CocoaPods](http://cocoapods.org/):
+```
+pod 'OpinionatedC'
+```
+Import the umbrella header everywhere you want to use the sweetness of OpinionatedC:
+```objectivec
+#import <OpinionatedC/OpinionatedC.h>
+```
+
+
+## Features
+Most of the collection extensions are implemented on the `NSObject` level, with refined behavior for different 
+collection types. Non-collection objects thereby behave like collections with a single element, and `[NSNull null]`
+bahaves like an empty collection.
+
+OpinionatedC tries it's best to preserve the types you are operating on. Calling `select:` on an (immutable) `NSArray`
+will yield an instance of `NSArray`. Likewise, doing the same on an `NSMutableArray` instance will yield a mutable
+array. However, this behavior is limited by the type system of Objective-C (for instance, this does not work
+at all with `NSString`s).
+
+* **Enumeration**
+* **Mapping**
+* **Subsetting**
+  * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) 
+  * [`first`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#Subsetting)
+  * [`detect:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#Subsetting)
+
+
+### Enumeration
+
+
+### Mapping
+
+### Subsetting
+```objectivec
+[@[@1, @2, @3, @4] allSatisfy:^BOOL(NSNumber *each) {
+    return [each integerValue] % 2 == 0;
+}];
+// => false
+
+[@"abcdef" anySatisfy:^BOOL(NSString *each) { 
+    return [each isEqualToString:@"f"];
+}];
+// => true
+
+[@"abcdef" first:3]
+// => @"abc"
+
+[@{ @1 : @"foo", @2 : @"bar"} detect:^BOOL(OCAssociation *each) {
+    return [each.key isEqualToNumber:@2];
+}];
+// => an OCAssociation(@2, @"bar")
+
+[@{ @1 : @"foo", @2 : @"bar"} select:^BOOL(OCAssociation *each) {
+    return [each.key isEqualToNumber:@2];
+}];
+// => @{ @2 : @"bar" }
+
+[@{ @1 : @"foo", @2 : @"bar"} reject:^BOOL(OCAssociation *each) {
+    return [each.key isEqualToNumber:@2];
+}];
+// => @{ @1 : @"foo" }
+```

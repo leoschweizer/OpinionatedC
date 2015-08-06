@@ -4,7 +4,7 @@
 @implementation NSObject (OpinionatedExtensions)
 
 - (BOOL)isNull {
-	return [self isEqualTo:[NSNull null]];
+	return [self isEqual:[NSNull null]];
 }
 
 - (BOOL)isNotNull {

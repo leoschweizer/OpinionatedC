@@ -32,4 +32,14 @@ typedef void (^OCEachSeparatorBlock)(void);
  */
 - (void)eachWithIndex:(OCEachWithIndexBlock)eachBlock separatedBy:(OCEachSeparatorBlock)separatorBlock;
 
+/**
+ * Answer if the receiver contains no elements.
+ */
+- (BOOL)isEmpty;
+
+/**
+ * Answer if the receiver contains any elements.
+ */
+- (BOOL)isNotEmpty;
+
 @end

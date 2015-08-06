@@ -154,4 +154,23 @@
 	XCTAssertEqual(separatorCount, sut.count - 1);
 }
 
+- (void)testIsEmptyOnObject {
+	XCTAssertFalse([@5 isEmpty]);
+	XCTAssertTrue([@5 isNotEmpty]);
+}
+
+- (void)testIsEmptyOnArray {
+	XCTAssertTrue([@[] isEmpty]);
+	XCTAssertFalse([@[] isNotEmpty]);
+	XCTAssertFalse([@[@5] isEmpty]);
+	XCTAssertTrue([@[@5] isNotEmpty]);
+}
+
+- (void)testIsEmptyOnDictionary {
+	XCTAssertTrue([@{} isEmpty]);
+	XCTAssertFalse([@{} isNotEmpty]);
+	XCTAssertFalse([@{ @1 : @"" } isEmpty]);
+	XCTAssertTrue([@{ @1 : @"" } isNotEmpty]);
+}
+
 @end

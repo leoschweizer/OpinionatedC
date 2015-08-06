@@ -43,6 +43,23 @@
 	}
 }
 
+- (BOOL)isEmpty {
+	
+	if ([self conformsToProtocol:@protocol(NSFastEnumeration)]) {
+		for (id __attribute__((unused))each in (id<NSFastEnumeration>)self) {
+			return NO;
+		}
+		return YES;
+	}
+	
+	return NO;
+	
+}
+
+- (BOOL)isNotEmpty {
+	return ![self isEmpty];
+}
+
 @end
 
 

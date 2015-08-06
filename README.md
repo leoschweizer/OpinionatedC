@@ -30,6 +30,8 @@ at all with `NSString`s).
 
 * **Enumeration**
 * **Mapping**
+  * [`map:`](https://github.com/leoschweizer/OpinionatedC#Mapping)
+  * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#Mapping) / [`reduce`](https://github.com/leoschweizer/OpinionatedC#Mapping)
 * **Subsetting**
   * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#Subsetting) 
   * [`first`](https://github.com/leoschweizer/OpinionatedC#Subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#Subsetting)
@@ -40,6 +42,27 @@ at all with `NSString`s).
 
 
 ### Mapping
+```objectivec
+[@[@1, @2, @3] map:^id(NSNumber *each) {
+    return @([each integerValue] * 2);
+}];
+// => @[@2, @4, @6]
+
+[@"hello world" map:^id(NSString *each) { 
+    return [each capitalizedString];
+}];
+// => @"HELLO WORLD"
+
+[@{ @1 : @YES } map:^id(OCAssociation *each) { 
+    return [each.key asAssociationWithValue:@NO];
+}];
+// => @{ @1 : @NO }
+
+[@[@1, @2, @3] inject:@0 into:^id(NSNumber *running, NSNumber *each) {
+    return @([running integerValue] + [each integerValue]);
+}];
+// => @6
+```
 
 ### Subsetting
 ```objectivec

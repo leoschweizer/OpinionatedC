@@ -5,6 +5,38 @@
 
 @implementation NSObject (OpinionatedSubsetting)
 
+- (BOOL)allSatisfy:(OCFilterBlock)satisfyBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
+		NSEnumerator *collectionEnumerator = [(id<OCEnumerableCollection>)self oc_collectionEnumerator];
+		for (id each in collectionEnumerator) {
+			if (!satisfyBlock(each)) {
+				return NO;
+			}
+		}
+		return YES;
+	}
+	
+	return satisfyBlock(self);
+	
+}
+
+- (BOOL)anySatisfy:(OCFilterBlock)satisfyBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
+		NSEnumerator *collectionEnumerator = [(id<OCEnumerableCollection>)self oc_collectionEnumerator];
+		for (id each in collectionEnumerator) {
+			if (satisfyBlock(each)) {
+				return YES;
+			}
+		}
+		return NO;
+	}
+	
+	return satisfyBlock(self);
+	
+}
+
 - (id)detect:(OCFilterBlock)detectBlock {
 	
 	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {

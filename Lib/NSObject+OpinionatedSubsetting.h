@@ -7,6 +7,18 @@ typedef BOOL (^OCFilterBlock)(id each);
 @interface NSObject (OpinionatedSubsetting)
 
 /**
+ * Answer true if satisfyBlock answers true for all elements of the receiver.
+ * An empty collection answers true.
+ */
+- (BOOL)allSatisfy:(OCFilterBlock)satisfyBlock;
+
+/**
+ * Answer true if satisfyBlock answers true for any element of the receiver.
+ * An empty collection answers false.
+ */
+- (BOOL)anySatisfy:(OCFilterBlock)satisfyBlock;
+
+/**
  * Evaluate detectBlock with each of the receiver's elements as the argument.
  * Answer the first element for which aBlock evaluates to true.
  */

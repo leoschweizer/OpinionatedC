@@ -10,6 +10,54 @@
 
 @implementation SubsettingTests
 
+- (void)testAllSatisfyOnObject {
+	XCTAssertTrue([@5 allSatisfy:^BOOL(id each) {
+		return [each integerValue] == 5;
+	}]);
+	XCTAssertFalse([@5 allSatisfy:^BOOL(id each) {
+		return [each integerValue] == 6;
+	}]);
+}
+
+- (void)testAllSatisfyOnArray {
+	XCTAssertTrue(([@[@5, @7, @9] allSatisfy:^BOOL(id each) {
+		return [each integerValue] % 2 != 0;
+	}]));
+	XCTAssertFalse(([@[@5, @7, @9] allSatisfy:^BOOL(id each) {
+		return [each integerValue] > 7;
+	}]));
+}
+
+- (void)testAllSatisfyOnEmptyArray {
+	XCTAssertTrue([@[] allSatisfy:^BOOL(id each) {
+		return NO;
+	}]);
+}
+
+- (void)testAnySatisfyOnObject {
+	XCTAssertTrue([@5 anySatisfy:^BOOL(id each) {
+		return [each integerValue] == 5;
+	}]);
+	XCTAssertFalse([@5 anySatisfy:^BOOL(id each) {
+		return [each integerValue] == 6;
+	}]);
+}
+
+- (void)testAnySatisfyOnArray {
+	XCTAssertTrue(([@[@5, @7, @9] anySatisfy:^BOOL(id each) {
+		return [each integerValue] == 7;
+	}]));
+	XCTAssertFalse(([@[@5, @7, @9] anySatisfy:^BOOL(id each) {
+		return [each integerValue] > 10;
+	}]));
+}
+
+- (void)testAnySatisfyOnEmptyArray {
+	XCTAssertFalse([@[] anySatisfy:^BOOL(id each) {
+		return YES;
+	}]);
+}
+
 - (void)testDetectOnObject {
 	id result = [@5 detect:^BOOL(id each) {
 		return YES;

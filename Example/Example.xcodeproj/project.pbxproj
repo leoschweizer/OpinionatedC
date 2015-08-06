@@ -13,6 +13,7 @@
 		B3E3CDEF1B70B8FE00281F20 /* StringExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */; };
 		B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDF31B70C64E00281F20 /* MappingTests.m */; };
 		B3E3CDF91B70CEA600281F20 /* DictionaryExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */; };
+		B3E3CE1D1B7380F100281F20 /* ObjectExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTests.m; sourceTree = "<group>"; };
 		B3E3CDF31B70C64E00281F20 /* MappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTests.m; sourceTree = "<group>"; };
 		B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExtensionTests.m; sourceTree = "<group>"; };
+		B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectExtensionTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */,
 				B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */,
 				B3E3CDF31B70C64E00281F20 /* MappingTests.m */,
+				B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */,
 				B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */,
 				B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */,
 				B32F1A4D1B6EAC7D00D25836 /* Supporting Files */,
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E3CE1D1B7380F100281F20 /* ObjectExtensionTests.m in Sources */,
 				B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */,
 				B32F1A501B6EAC7D00D25836 /* EnumeratingTests.m in Sources */,
 				B3E3CDEF1B70B8FE00281F20 /* StringExtensionTests.m in Sources */,

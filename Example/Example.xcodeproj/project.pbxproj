@@ -14,6 +14,7 @@
 		B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDF31B70C64E00281F20 /* MappingTests.m */; };
 		B3E3CDF91B70CEA600281F20 /* DictionaryExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */; };
 		B3E3CE1D1B7380F100281F20 /* ObjectExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */; };
+		B3E3CE211B73915F00281F20 /* OCEnumerableMockCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		B3E3CDF31B70C64E00281F20 /* MappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTests.m; sourceTree = "<group>"; };
 		B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExtensionTests.m; sourceTree = "<group>"; };
 		B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectExtensionTests.m; sourceTree = "<group>"; };
+		B3E3CE1F1B73915F00281F20 /* OCEnumerableMockCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCEnumerableMockCollection.h; path = "Mock Collections/OCEnumerableMockCollection.h"; sourceTree = "<group>"; };
+		B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCEnumerableMockCollection.m; path = "Mock Collections/OCEnumerableMockCollection.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		B32F1A3F1B6EABDA00D25836 = {
 			isa = PBXGroup;
 			children = (
+				B3E3CE1E1B73914900281F20 /* Mock Collections */,
 				B32F1A4C1B6EAC7D00D25836 /* Tests */,
 				B32F1A4B1B6EAC7D00D25836 /* Products */,
 				64FC7F3A5A6D7C0E27F1D50D /* Pods */,
@@ -87,6 +91,15 @@
 				B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		B3E3CE1E1B73914900281F20 /* Mock Collections */ = {
+			isa = PBXGroup;
+			children = (
+				B3E3CE1F1B73915F00281F20 /* OCEnumerableMockCollection.h */,
+				B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */,
+			);
+			name = "Mock Collections";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +204,7 @@
 			files = (
 				B3E3CE1D1B7380F100281F20 /* ObjectExtensionTests.m in Sources */,
 				B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */,
+				B3E3CE211B73915F00281F20 /* OCEnumerableMockCollection.m in Sources */,
 				B32F1A501B6EAC7D00D25836 /* EnumeratingTests.m in Sources */,
 				B3E3CDEF1B70B8FE00281F20 /* StringExtensionTests.m in Sources */,
 				B3E3CDF91B70CEA600281F20 /* DictionaryExtensionTests.m in Sources */,

@@ -1,6 +1,7 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import <OpinionatedC/OpinionatedC.h>
+#import "OCEnumerableMockCollection.h"
 
 
 @interface EnumeratingTests : XCTestCase
@@ -186,6 +187,10 @@
 - (void)testIsEmptyOnNull {
 	XCTAssertTrue([[NSNull null] isEmpty]);
 	XCTAssertFalse([[NSNull null] isNotEmpty]);
+}
+
+- (void)testIsEmptyOnMockCollection {
+	XCTAssertFalse([[[OCEnumerableMockCollection alloc] init] isEmpty]);
 }
 
 @end

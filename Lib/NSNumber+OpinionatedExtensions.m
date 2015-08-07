@@ -6,7 +6,7 @@
 @implementation NSNumber (OpinionatedExtensions)
 
 - (NSNumber *)atRandom {
-	NSInteger sign = [self isLessThan:@0] ? -1 : 1;
+	NSInteger sign = [self integerValue] < 0 ? -1 : 1;
 	uint32_t limit = abs([self intValue]);
 	int rand = arc4random_uniform(limit);
 	return @(sign * rand);

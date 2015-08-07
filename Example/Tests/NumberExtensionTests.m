@@ -13,16 +13,16 @@
 - (void)testAtRandom {
 	[@1000 timesRepeat:^{
 		NSNumber *result = [@10 atRandom];
-		XCTAssertTrue([result isGreaterThanOrEqualTo:@0]);
-		XCTAssertTrue([result isLessThan:@10]);
+		XCTAssertTrue([result integerValue] >= 0);
+		XCTAssertTrue([result integerValue] < 10);
 	}];
 }
 
 - (void)testNegativeAtRandom {
 	[@1000 timesRepeat:^{
 		NSNumber *result = [@-10 atRandom];
-		XCTAssertTrue([result isGreaterThan:@-10]);
-		XCTAssertTrue([result isLessThanOrEqualTo:@0]);
+		XCTAssertTrue([result integerValue] > -10);
+		XCTAssertTrue([result integerValue] <= 0);
 	}];
 }
 

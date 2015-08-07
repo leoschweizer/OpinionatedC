@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   s.authors      = { 'Leo Schweizer' => 'leonhard.schweizer@gmail.com' }
   s.source       = { :git => 'https://github.com/leoschweizer/OpinionatedC.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '4.0'
-  s.osx.deployment_target = '10.6'
+  s.ios.deployment_target = '4.3'
+  s.osx.deployment_target = '10.7'
 
   s.requires_arc = true
 

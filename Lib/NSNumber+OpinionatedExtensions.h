@@ -8,7 +8,7 @@ typedef void (^OCRepeatWithIndexBlock)(NSUInteger idx);
 @interface NSNumber (OpinionatedExtensions)
 
 /**
- * Answer a random unsigned integer from 1 to self.
+ * Answer a random integer from 0 to self (excluded).
  */
 - (NSNumber *)atRandom;
 

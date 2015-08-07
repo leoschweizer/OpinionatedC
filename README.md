@@ -43,6 +43,7 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`NotYetImplemented`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`Error()`](https://github.com/leoschweizer/OpinionatedC#error-handling)
 * [*NSNumber Extensions**](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
+  * [`atRandom`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`timesRepeat:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`timesRepeatWithIndex:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
 
 #### Collections
@@ -192,6 +193,9 @@ at all with `NSString`s).
 
 #### NSNumber Extensions
 ```objectivec
+[@100 atRandom];
+// => 77
+
 [@3 timesRepeat:^{ 
    NSLog(@"hooray!"); 
 }];

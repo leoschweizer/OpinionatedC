@@ -8,4 +8,5 @@
 
 #import <OpinionatedC/NSObject+OpinionatedExtensions.h>
 #import <OpinionatedC/NSDictionary+OpinionatedExtensions.h>
+#import <OpinionatedC/NSNumber+OpinionatedExtensions.h>
 #import <OpinionatedC/NSString+OpinionatedExtensions.h>

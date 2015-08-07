@@ -1,4 +1,5 @@
 #import "NSNumber+OpinionatedExtensions.h"
+#import "OCInterval.h"
 #import <stdlib.h>
 #import <math.h>
 
@@ -24,6 +25,14 @@
 	for (NSUInteger idx = 1; idx <= count; idx++) {
 		repeatBlock(idx);
 	}
+}
+
+- (OCInterval *)to:(NSNumber *)other {
+	return [self to:other by:@1];
+}
+
+- (OCInterval *)to:(NSNumber *)other by:(NSNumber *)stepSize {
+	return [[OCInterval alloc] initWithFrom:[self integerValue] to:[other integerValue] by:[stepSize integerValue]];
 }
 
 @end

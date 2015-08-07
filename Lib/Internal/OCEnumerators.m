@@ -1,5 +1,6 @@
 #import "OCEnumerators.h"
-#import "OCassociation.h"
+#import "OCAssociation.h"
+#import "OCInterval.h"
 
 
 @interface OCAssociationEnumerator ()
@@ -68,6 +69,51 @@
 	self.currentIndex++;
 	return current;
 	
+}
+
+@end
+
+
+@interface OCIntervalEnumerator ()
+
+@property (nonatomic, readonly) OCInterval *interval;
+@property (nonatomic, readwrite) NSInteger index;
+
+@end
+
+
+@implementation OCIntervalEnumerator
+
+- (instancetype)initWithInterval:(OCInterval *)interval {
+	if (self = [super init]) {
+		_interval = interval;
+		_index = 0;
+	}
+	return self;
+}
+
+- (NSInteger)size {
+	if (self.interval.by < 0) {
+		if (self.interval.from < self.interval.to) {
+			return 0;
+		} else {
+			return (self.interval.to - self.interval.from) / self.interval.by + 1;
+		}
+	} else {
+		if (self.interval.to < self.interval.from) {
+			return 0;
+		} else {
+			return (self.interval.to - self.interval.from) / self.interval.by + 1;
+		}
+	}
+}
+
+- (id)nextObject {
+	NSInteger end = [self size] - 1;
+	if (self.index <= end) {
+		return @(self.interval.from + (self.interval.by * self.index++));
+	}
+	return nil;
 }
 
 @end

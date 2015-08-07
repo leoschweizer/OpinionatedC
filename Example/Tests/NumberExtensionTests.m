@@ -57,4 +57,28 @@
 	XCTAssertEqualObjects([probeArray lastObject], @10);
 }
 
+- (void)testTo {
+	OCInterval *interval = [@1 to:@10];
+	XCTAssertEqual(interval.from, 1);
+	XCTAssertEqual(interval.to, 10);
+	XCTAssertEqual(interval.by, 1);
+}
+
+- (void)testToHigherOrder {
+	NSArray *result = [[@5 to: @7] map:^id(NSNumber *each) {
+		return @([each integerValue] * 2);
+	}];
+	XCTAssertTrue([result isKindOfClass:NSArray.class]);
+	XCTAssertEqual(result.count, 3);
+	XCTAssertEqualObjects([result first], @10);
+	XCTAssertEqualObjects([result lastObject], @14);
+}
+
+- (void)testToBy {
+	OCInterval *interval = [@1 to:@-10 by:@-5];
+	XCTAssertEqual(interval.from, 1);
+	XCTAssertEqual(interval.to, -10);
+	XCTAssertEqual(interval.by, -5);
+}
+
 @end

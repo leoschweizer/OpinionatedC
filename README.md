@@ -1,5 +1,5 @@
 # OpinionatedC
-[![Build Status](https://travis-ci.org/leoschweizer/OpinionatedC.svg)](https://travis-ci.org/leoschweizer/OpinionatedC)
+[![Build Status](https://travis-ci.org/leoschweizer/OpinionatedC.svg?branch=master)](https://travis-ci.org/leoschweizer/OpinionatedC)
 [![Coverage Status](https://coveralls.io/repos/leoschweizer/OpinionatedC/badge.svg?branch=master&service=github)](https://coveralls.io/github/leoschweizer/OpinionatedC?branch=master)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
 [![License](https://img.shields.io/cocoapods/l/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
@@ -42,6 +42,8 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`UnsupportedOperation`](https://github.com/leoschweizer/OpinionatedC#error-handling) / [`ShouldNotOccur`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`NotYetImplemented`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`Error()`](https://github.com/leoschweizer/OpinionatedC#error-handling)
+* [*NSNumber Extensions**](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
+  * [`timesRepeat:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`timesRepeatWithIndex:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
 
 #### Collections
 Most of the collection extensions are implemented on the `NSObject` level, with refined behavior for different 
@@ -185,4 +187,21 @@ at all with `NSString`s).
 }
 
 @end
+```
+
+
+#### NSNumber Extensions
+```objectivec
+[@3 timesRepeat:^{ 
+   NSLog(@"hooray!"); 
+}];
+// => hooray
+// => hooray
+// => hooray
+
+__block NSMutableArray *array = [NSMutableArray array];
+[@10 timesRepeatWithIndex:^(NSUInteger idx) {
+    [array addObject:@(idx)];
+}];
+// => @[@1, @2, @3, @4, @5, @6, @7, @8, @9, @10]
 ```

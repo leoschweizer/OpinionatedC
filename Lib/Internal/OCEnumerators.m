@@ -93,6 +93,11 @@
 }
 
 - (NSInteger)size {
+	
+	if (self.interval.by == 0) {
+		return 0;
+	}
+	
 	if (self.interval.by < 0) {
 		if (self.interval.from < self.interval.to) {
 			return 0;
@@ -106,6 +111,7 @@
 			return (self.interval.to - self.interval.from) / self.interval.by + 1;
 		}
 	}
+	
 }
 
 - (id)nextObject {

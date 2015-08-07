@@ -61,4 +61,14 @@
 	XCTAssertEqualObjects([probeArray lastObject], @-25);
 }
 
+- (void)testIntervalIsEmpty {
+	XCTAssertTrue([[[OCInterval alloc] initWithFrom:0 to:0 by:0] isEmpty]);
+	XCTAssertTrue([[[OCInterval alloc] initWithFrom:0 to:0 by:1] isNotEmpty]);
+	XCTAssertTrue([[[OCInterval alloc] initWithFrom:0 to:10 by:-1] isEmpty]);
+	XCTAssertTrue([[[OCInterval alloc] initWithFrom:0 to:5 by:1] isNotEmpty]);
+	XCTAssertTrue([[[OCInterval alloc] initWithFrom:0 to:5 by:6] isNotEmpty]);
+	XCTAssertTrue([[[OCInterval alloc] initWithFrom:5 to:-5 by:1] isEmpty]);
+	XCTAssertTrue([[[OCInterval alloc] initWithFrom:5 to:-5 by:-3] isNotEmpty]);
+}
+
 @end

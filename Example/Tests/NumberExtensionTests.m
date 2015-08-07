@@ -10,6 +10,29 @@
 
 @implementation NumberExtensionTests
 
+- (void)testAtRandom {
+	[@1000 timesRepeat:^{
+		NSNumber *result = [@10 atRandom];
+		XCTAssertTrue([result isGreaterThanOrEqualTo:@0]);
+		XCTAssertTrue([result isLessThan:@10]);
+	}];
+}
+
+- (void)testNegativeAtRandom {
+	[@1000 timesRepeat:^{
+		NSNumber *result = [@-10 atRandom];
+		XCTAssertTrue([result isGreaterThan:@-10]);
+		XCTAssertTrue([result isLessThanOrEqualTo:@0]);
+	}];
+}
+
+- (void)test0AtRandom {
+	[@1000 timesRepeat:^{
+		NSNumber *result = [@0 atRandom];
+		XCTAssertEqualObjects(result, @0);
+	}];
+}
+
 - (void)testRepeat {
 	__block NSMutableArray *probeArray = [NSMutableArray array];
 	[@10 timesRepeat:^{

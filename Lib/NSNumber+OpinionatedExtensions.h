@@ -8,6 +8,11 @@ typedef void (^OCRepeatWithIndexBlock)(NSUInteger idx);
 @interface NSNumber (OpinionatedExtensions)
 
 /**
+ * Answer a random unsigned integer from 1 to self.
+ */
+- (NSNumber *)atRandom;
+
+/**
  * Evaluate repeatBlock the number of times represented by the receiver.
  */
 - (void)timesRepeat:(OCRepeatBlock)repeatBlock;

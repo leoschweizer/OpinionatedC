@@ -42,7 +42,7 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`UnsupportedOperation`](https://github.com/leoschweizer/OpinionatedC#error-handling) / [`ShouldNotOccur`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`NotYetImplemented`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`Error()`](https://github.com/leoschweizer/OpinionatedC#error-handling)
-* [*NSNumber Extensions**](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
+* [**NSNumber Extensions**](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`atRandom`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`timesRepeat:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`timesRepeatWithIndex:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
 

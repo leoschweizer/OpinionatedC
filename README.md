@@ -31,10 +31,11 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
     * [`isEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`isNotEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating)
   * [Mapping](https://github.com/leoschweizer/OpinionatedC#mapping)
     * [`map:`](https://github.com/leoschweizer/OpinionatedC#mapping)
-    * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`reduce`](https://github.com/leoschweizer/OpinionatedC#mapping)
+    * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`reduce:`](https://github.com/leoschweizer/OpinionatedC#mapping)
   * [Subsetting](https://github.com/leoschweizer/OpinionatedC#subsetting)
     * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 
-    * [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
+    * [`count:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
+	* [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
     * [`detect:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
 * [**Error Handling**](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`SubclassResponsibility`](https://github.com/leoschweizer/OpinionatedC#error-handling)
@@ -121,6 +122,11 @@ at all with `NSString`s).
     return [each isEqualToString:@"f"];
 }];
 // => YES
+
+[@[@"a", @5, @YES, @"b"] count:^BOOL(id each) {
+    return [each isKindOfClass:NSString.class];
+}];
+// => 2
 
 [@"abcdef" first:3]
 // => @"abc"

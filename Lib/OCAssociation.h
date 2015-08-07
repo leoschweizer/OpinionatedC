@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "OCSelectorPrefix.h"
 
 
 @interface OCAssociation : NSObject
@@ -13,7 +14,7 @@
 
 @interface NSObject (OCAssociationSupport)
 
-- (OCAssociation *)asAssociationWithKey:(id)key;
-- (OCAssociation *)asAssociationWithValue:(id)value;
+- (OCAssociation *)OC_PREFIXED(asAssociationWithKey):(id)key;
+- (OCAssociation *)OC_PREFIXED(asAssociationWithValue):(id)value;
 
 @end

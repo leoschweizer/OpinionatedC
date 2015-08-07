@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		596DAAABC5D2A909BB970B77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050E40281C62F5DB0B766AF1 /* libPods.a */; };
 		B32F1A501B6EAC7D00D25836 /* EnumeratingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */; };
+		B36B77F91B73FAC30023BC1D /* PrefixedInclusionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B36B77F81B73FAC30023BC1D /* PrefixedInclusionTests.m */; };
 		B3E3CDE01B6F9D0600281F20 /* SubsettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */; };
 		B3E3CDEF1B70B8FE00281F20 /* StringExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */; };
 		B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDF31B70C64E00281F20 /* MappingTests.m */; };
@@ -23,6 +24,7 @@
 		6CFD71EAB2A52080E26679CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B32F1A4A1B6EAC7D00D25836 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumeratingTests.m; sourceTree = "<group>"; };
+		B36B77F81B73FAC30023BC1D /* PrefixedInclusionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefixedInclusionTests.m; sourceTree = "<group>"; };
 		B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubsettingTests.m; sourceTree = "<group>"; };
 		B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTests.m; sourceTree = "<group>"; };
 		B3E3CDF31B70C64E00281F20 /* MappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTests.m; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */,
 				B3E3CDF31B70C64E00281F20 /* MappingTests.m */,
 				B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */,
+				B36B77F81B73FAC30023BC1D /* PrefixedInclusionTests.m */,
 				B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */,
 				B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */,
 			);
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E3CE1D1B7380F100281F20 /* ObjectExtensionTests.m in Sources */,
+				B36B77F91B73FAC30023BC1D /* PrefixedInclusionTests.m in Sources */,
 				B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */,
 				B3E3CE211B73915F00281F20 /* OCEnumerableMockCollection.m in Sources */,
 				B32F1A501B6EAC7D00D25836 /* EnumeratingTests.m in Sources */,
@@ -276,6 +280,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/OpinionatedC\"",
+					"-DOC_PREFIX=oc_",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -319,6 +331,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/OpinionatedC\"",
+					"-DOC_PREFIX=oc_",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

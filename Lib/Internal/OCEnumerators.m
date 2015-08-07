@@ -1,5 +1,6 @@
 #import "OCEnumerators.h"
 #import "OCassociation.h"
+#import "OCSelectorPrefix.h"
 
 
 @interface OCAssociationEnumerator ()
@@ -33,7 +34,7 @@
 	
 	self.currentIndex++;
 	
-	return [currentKey asAssociationWithValue:currentValue];
+	return [currentKey OC_PREFIXED(asAssociationWithValue):currentValue];
 	
 }
 

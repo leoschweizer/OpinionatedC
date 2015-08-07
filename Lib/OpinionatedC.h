@@ -1,3 +1,5 @@
+#import <OpinionatedC/OCSelectorPrefix.h>
+
 #import <OpinionatedC/OpinionatedMacros.h>
 
 #import <OpinionatedC/OCAssociation.h>

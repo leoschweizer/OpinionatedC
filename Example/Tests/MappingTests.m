@@ -37,7 +37,7 @@
 - (void)testMapOnDictionary {
 	NSDictionary *result = [@{ @0 : @"foo", @1 : @"bar" } map:^id(OCAssociation *each) {
 		XCTAssertTrue([each isKindOfClass:OCAssociation.class]);
-		return [each.value asAssociationWithKey:@([each.key unsignedIntegerValue] * 2)];
+		return [each.value oc_asAssociationWithKey:@([each.key unsignedIntegerValue] * 2)];
 	}];
 	XCTAssertTrue([result isKindOfClass:NSDictionary.class]);
 	XCTAssertEqual(result.count, 2);
@@ -47,7 +47,7 @@
 
 - (void)testMapOnMutableDictionary {
 	id result = [[NSMutableDictionary dictionary] map:^id(id each) {
-		return [@YES asAssociationWithKey:@0];
+		return [@YES oc_asAssociationWithKey:@0];
 	}];
 	XCTAssertTrue([result isKindOfClass:NSMutableDictionary.class]);
 }

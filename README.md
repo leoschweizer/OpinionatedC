@@ -210,12 +210,12 @@ __block NSMutableArray *array = [NSMutableArray array];
 }];
 // => @[@1, @2, @3, @4, @5, @6, @7, @8, @9, @10]
 
-[[@5 to: @7] map:^id(NSNumber *each) {
+[[@5 to:@7] map:^id(NSNumber *each) {
     return @([each integerValue] * 2);
 }];
 // => @[@10, @12, @14]
 
-[[@1 to: @10] select:^id(NSNumber *each) {
+[[@1 to:@10] select:^id(NSNumber *each) {
     return [each integerValue] % 2 == 0;
 }];
 // => @[@2, @4, @6, @8, @10]

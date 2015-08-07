@@ -65,7 +65,7 @@
 }
 
 - (void)testToHigherOrder {
-	NSArray *result = [[@5 to: @7] map:^id(NSNumber *each) {
+	NSArray *result = [[@5 to:@7] map:^id(NSNumber *each) {
 		return @([each integerValue] * 2);
 	}];
 	XCTAssertTrue([result isKindOfClass:NSArray.class]);

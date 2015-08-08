@@ -47,6 +47,7 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`timesRepeat:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`timesRepeatWithIndex:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`to:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`to:by:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
 * [**NSObject Extensions**](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions)
+  * [`asAssociationWithValue:`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions) / [`asAssociationWithKey:`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions)
   * [`isNull`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions) / [`isNotNull`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions)
 
 
@@ -227,6 +228,9 @@ __block NSMutableArray *array = [NSMutableArray array];
 
 #### NSObject Extensions
 ```objectivec
+[@"hello world" asAssociationWithKey:@1]
+// => an OCAssociation(key:@1, value:@"hello world")
+
 [@5 isNull]
 // => NO
 

@@ -13,7 +13,14 @@
 
 @interface NSObject (OCAssociationSupport)
 
+/**
+ * Answer a new OCAssociation with the receiver as the value and the argument as the key.
+ */
 - (OCAssociation *)asAssociationWithKey:(id)key;
+
+/**
+ * Answer a new OCAssociation with the receiver as the key and the argument as the value.
+ */
 - (OCAssociation *)asAssociationWithValue:(id)value;
 
 @end

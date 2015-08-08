@@ -46,6 +46,9 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`atRandom`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`timesRepeat:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`timesRepeatWithIndex:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`to:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`to:by:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
+* [**NSObject Extensions**](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions)
+  * [`isNull`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions) / [`isNotNull`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions)
+
 
 #### Collections
 Most of the collection extensions are implemented on the `NSObject` level, with refined behavior for different 
@@ -219,4 +222,14 @@ __block NSMutableArray *array = [NSMutableArray array];
     return [each integerValue] % 2 == 0;
 }];
 // => @[@2, @4, @6, @8, @10]
+```
+
+
+#### NSObject Extensions
+```objectivec
+[@5 isNull]
+// => NO
+
+[[NSNull null] isNotNull]
+// => NO
 ```

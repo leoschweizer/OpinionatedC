@@ -42,6 +42,10 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`UnsupportedOperation`](https://github.com/leoschweizer/OpinionatedC#error-handling) / [`ShouldNotOccur`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`NotYetImplemented`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`Error()`](https://github.com/leoschweizer/OpinionatedC#error-handling)
+* [**NSDictionary Extensions**](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
+  * [`add:` ¹](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
+  * [`associationEnumerator`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
+  * [`includesKey:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) / [`includesValue:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
 * [**NSNumber Extensions**](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`atRandom`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`timesRepeat:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions) / [`timesRepeatWithIndex:`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
@@ -50,6 +54,7 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`asAssociationWithValue:`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions) / [`asAssociationWithKey:`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions)
   * [`isNull`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions) / [`isNotNull`](https://github.com/leoschweizer/OpinionatedC#nsobject-extensions)
 
+¹ Extension is only available on mutable instances
 
 #### Collections
 Most of the collection extensions are implemented on the `NSObject` level, with refined behavior for different 
@@ -193,6 +198,27 @@ at all with `NSString`s).
 }
 
 @end
+```
+
+
+#### NSDictionary Extensions
+```objectivec
+NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+[dict add:[@1 asAssociationWithValue:@"foo"]];
+// => @{ @1 : @"foo" }
+
+[dict includesKey:@1];
+// => YES
+
+[dict includesValue:@"bar"];
+// => NO
+
+for (OCAssociation *each in [dict associationEnumerator]) {
+    NSLog(@"%@", each.value);
+}
+// => foo
+
 ```
 
 

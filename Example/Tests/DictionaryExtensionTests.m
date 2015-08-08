@@ -26,4 +26,26 @@
 	
 }
 
+- (void)testAdd {
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	[dict add:[@"hello world" asAssociationWithKey:@1]];
+	XCTAssertEqualObjects([dict objectForKey:@1], @"hello world");
+}
+
+- (void)testIncludesKey {
+	NSDictionary *sut = @{
+		@1 : @""
+	};
+	XCTAssertTrue([sut includesKey:@1]);
+	XCTAssertFalse([sut includesKey:@2]);
+}
+
+- (void)testIncludesValue {
+	NSDictionary *sut = @{
+		@1: @"hello world"
+	};
+	XCTAssertTrue([sut includesValue:@"hello world"]);
+	XCTAssertFalse([sut includesValue:@"foo"]);
+}
+
 @end

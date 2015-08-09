@@ -3,6 +3,7 @@
 
 typedef BOOL (^OCCountBlock)(id each);
 typedef NSNumber *(^OCNumericAggregationBlock)(id each);
+typedef id (^OCGroupByBlock)(id each);
 
 
 @interface NSObject (OpinionatedAggregating)
@@ -24,6 +25,8 @@ typedef NSNumber *(^OCNumericAggregationBlock)(id each);
  * Answer the number of elements that answered true.
  */
 - (NSUInteger)count:(OCCountBlock)countBlock;
+
+- (NSDictionary *)groupedBy:(OCGroupByBlock)groupByBlock;
 
 /**
  * Answer the maximum of each of the receiver's elements, which must support

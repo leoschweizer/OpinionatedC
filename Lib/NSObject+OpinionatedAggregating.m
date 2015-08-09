@@ -1,5 +1,7 @@
 #import "NSObject+OpinionatedAggregating.h"
 #import "OCCollectionCapabilities.h"
+#import "NSDictionary+OpinionatedExtensions.h"
+#import "OCAssociation.h"
 
 
 @implementation NSObject (OpinionatedAggregating)
@@ -38,6 +40,34 @@
 	}
 	
 	return countBlock(self) ? 1 : 0;
+	
+}
+
+- (NSDictionary *)groupedBy:(OCGroupByBlock)groupByBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
+		NSEnumerator *collectionEnumerator = [(id<OCEnumerableCollection>)self oc_collectionEnumerator];
+		NSMutableDictionary *groupedResult = [NSMutableDictionary dictionary];
+		
+		for (id each in collectionEnumerator) {
+			id group = groupByBlock(each);
+			id groupCollection = [groupedResult objectForKey:group];
+			if (!groupCollection) {
+				groupCollection = [this oc_createMutableInstanceOfMyKind];
+				[groupedResult setObject:groupCollection forKey:group];
+			}
+			[this oc_addObject:each toMutableCollection:groupCollection];
+		}
+		
+		for (OCAssociation *each in [groupedResult associationEnumerator]) {
+			[groupedResult setObject:[this oc_createCollectionOfMyKindFromMutableCollection:each.value] forKey:each.key];
+		}
+		
+		return groupedResult;
+	}
+	
+	return @{ groupByBlock(self) : self };
 	
 }
 

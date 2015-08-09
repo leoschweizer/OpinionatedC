@@ -28,7 +28,8 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
   * [Aggregating](https://github.com/leoschweizer/OpinionatedC#aggregating)
     * [`average`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`average:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
     * [`count:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
-    * [`max`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`max:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
+    * [`groupedBy:`]()
+	* [`max`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`max:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
 	* [`min`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`min:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
 	* [`sum`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`sum:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
   * [Enumerating](https://github.com/leoschweizer/OpinionatedC#enumerating)
@@ -86,6 +87,16 @@ at all with `NSString`s).
     return [each isKindOfClass:NSString.class];
 }];
 // => 2
+
+NSSet *set = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
+NSDictionary *grouped = [set groupedBy:^id(id each) {
+    return @([each length]);
+}];
+// => @{
+//        @3 : a NSSet(@"foo, bar"),
+//        @5 : a NSSet(@"hello"),
+//        @6 : a NSSet(@"world!")
+//    }
 
 [[@1, @2, @3] max]
 // => @3

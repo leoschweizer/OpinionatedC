@@ -39,6 +39,48 @@
 	XCTAssertEqual(count, 0);
 }
 
+- (void)testGroupedByOnObject {
+	NSDictionary *result = [@"foo" groupedBy:^id(id each) {
+		return @"bar";
+	}];
+	XCTAssertEqualObjects([result objectForKey:@"bar"], @"foo");
+}
+
+- (void)testGroupedByOnArray {
+	NSDictionary *result = [@[@1, @2, @3, @4] groupedBy:^id(id each) {
+		return @([each integerValue] % 2);
+	}];
+	XCTAssertNotNil([result objectForKey:@0]);
+	XCTAssertNotNil([result objectForKey:@1]);
+	XCTAssertEqualObjects([result objectForKey:@0], (@[@2, @4]));
+	XCTAssertEqualObjects([result objectForKey:@1], (@[@1, @3]));
+}
+
+- (void)testGroupedByOnDictionary {
+	NSDictionary *result = [@{ @1 : @"foo", @2 : @"bar"} groupedBy:^id(OCAssociation *each) {
+		return @([each.value length]);
+	}];
+ 	XCTAssertEqual(result.count, 1);
+	XCTAssertNotNil([result objectForKey:@3]);
+	id group = [result objectForKey:@3];
+	XCTAssertTrue([group isKindOfClass:NSDictionary.class]);
+	XCTAssertEqual([group count], 2);
+	XCTAssertEqualObjects([group objectForKey:@1], @"foo");
+	XCTAssertEqualObjects([group objectForKey:@2], @"bar");
+}
+
+- (void)testGroupedByOnSet {
+	NSSet *sut = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
+	NSDictionary *grouped = [sut groupedBy:^id(id each) {
+		return @([each length]);
+	}];
+	XCTAssertEqual(grouped.count, 3);
+	XCTAssertNotNil([grouped objectForKey:@3]);
+	XCTAssertNotNil([grouped objectForKey:@5]);
+	XCTAssertNotNil([grouped objectForKey:@6]);
+	XCTAssertTrue([[grouped objectForKey:@3] isKindOfClass:NSSet.class]);
+}
+
 - (void)testMaxOnObject {
 	id result = [@YES max:^NSNumber *(id each) {
 		return @0;

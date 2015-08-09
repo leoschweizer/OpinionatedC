@@ -25,13 +25,13 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
 
 ## Features
 * [**Collections**](https://github.com/leoschweizer/OpinionatedC#collections)
-   * [Aggregating](https://github.com/leoschweizer/OpinionatedC#aggregating)
+  * [Aggregating](https://github.com/leoschweizer/OpinionatedC#aggregating)
     * [`average`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`average:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
     * [`count:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
     * [`max`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`max:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
 	* [`min`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`min:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
 	* [`sum`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`sum:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
-   * [Enumerating](https://github.com/leoschweizer/OpinionatedC#enumerating)
+  * [Enumerating](https://github.com/leoschweizer/OpinionatedC#enumerating)
     * [`each:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
     * [`each:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
     * [`isEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`isNotEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating)

@@ -18,7 +18,7 @@ The easiest way to include OpinionatedC into your project is through [CocoaPods]
 ```
 pod 'OpinionatedC'
 ```
-Import the umbrella header everywhere you want to use the sweetness of OpinionatedC:
+Import the umbrella header everywhere you want to taste the sweetness of OpinionatedC:
 ```objectivec
 #import <OpinionatedC/OpinionatedC.h>
 ```
@@ -43,7 +43,7 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
   * [`NotYetImplemented`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`Error()`](https://github.com/leoschweizer/OpinionatedC#error-handling)
 * [**NSDictionary Extensions**](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
-  * [`add:` ¹](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
+  * [`add:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) ¹
   * [`associationEnumerator`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
   * [`includesKey:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) / [`includesValue:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
 * [**NSNumber Extensions**](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)

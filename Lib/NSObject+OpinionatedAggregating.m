@@ -43,7 +43,7 @@
 	
 }
 
-- (NSDictionary *)groupedBy:(OCGroupByBlock)groupByBlock {
+- (NSDictionary *)groupedBy:(OCGroupByBlock)groupedByBlock {
 	
 	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
 		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
@@ -51,7 +51,7 @@
 		NSMutableDictionary *groupedResult = [NSMutableDictionary dictionary];
 		
 		for (id each in collectionEnumerator) {
-			id group = groupByBlock(each);
+			id group = groupedByBlock(each);
 			id groupCollection = [groupedResult objectForKey:group];
 			if (!groupCollection) {
 				groupCollection = [this oc_createMutableInstanceOfMyKind];
@@ -67,7 +67,7 @@
 		return groupedResult;
 	}
 	
-	return @{ groupByBlock(self) : self };
+	return @{ groupedByBlock(self) : self };
 	
 }
 

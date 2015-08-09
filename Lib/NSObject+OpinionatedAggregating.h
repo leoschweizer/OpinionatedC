@@ -26,7 +26,12 @@ typedef id (^OCGroupByBlock)(id each);
  */
 - (NSUInteger)count:(OCCountBlock)countBlock;
 
-- (NSDictionary *)groupedBy:(OCGroupByBlock)groupByBlock;
+/**
+ * Return a dictionary whose keys are the result of evaluating groupedByBlock
+ * for all of the receiver's elements. The value for each key is the collection
+ * of elements that evaluated to that key.
+ */
+- (NSDictionary *)groupedBy:(OCGroupByBlock)groupedByBlock;
 
 /**
  * Answer the maximum of each of the receiver's elements, which must support

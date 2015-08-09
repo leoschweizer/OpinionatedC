@@ -74,10 +74,10 @@
 }
 
 - (void)testMinBlockOnArray {
-	id result = [@[@"hello", @"world!"] min:^NSNumber *(id each) {
+	id result = [@[@"hello", @"world!", @""] min:^NSNumber *(id each) {
 		return @([each length]);
 	}];
-	XCTAssertEqualObjects(result, @"hello");
+	XCTAssertEqualObjects(result, @"");
 }
 
 - (void)testMinOnEmptyArray {

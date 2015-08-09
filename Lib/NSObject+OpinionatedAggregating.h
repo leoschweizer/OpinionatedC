@@ -26,10 +26,10 @@ typedef NSNumber *(^OCNumericAggregationBlock)(id each);
 - (NSUInteger)count:(OCCountBlock)countBlock;
 
 /**
- * Answer the maximum of each of the receiver's elements, which have to be
- * NSNumber instances.
+ * Answer the maximum of each of the receiver's elements, which must support
+ * comparison through compare:.
  */
-- (NSNumber *)max;
+- (id)max;
 
 /**
  * Evaluate maxBlock with each of the receiver's elements as the argument.
@@ -38,10 +38,10 @@ typedef NSNumber *(^OCNumericAggregationBlock)(id each);
 - (id)max:(OCNumericAggregationBlock)maxBlock;
 
 /**
- * Answer the minimum of each of the receiver's elements, which have to be
- * NSNumber instances.
+ * Answer the minimum of each of the receiver's elements, which must support
+ * comparison through compare:.
  */
-- (NSNumber *)min;
+- (id)min;
 
 /**
  * Evaluate minBlock with each of the receiver's elements as the argument.

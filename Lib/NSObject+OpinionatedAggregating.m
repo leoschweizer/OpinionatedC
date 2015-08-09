@@ -41,7 +41,7 @@
 	
 }
 
-- (NSNumber *)max {
+- (id)max {
 	return [self valueForKeyPath:@"@max.self"];
 }
 
@@ -69,7 +69,7 @@
 	
 }
 
-- (NSNumber *)min {
+- (id)min {
 	return [self valueForKeyPath:@"@min.self"];
 }
 

@@ -40,10 +40,10 @@
 }
 
 - (void)testGroupedByOnObject {
-	NSDictionary *result = [@"foo" groupedBy:^id(id each) {
+	NSDictionary *result = [@42 groupedBy:^id(id each) {
 		return @"bar";
 	}];
-	XCTAssertEqualObjects([result objectForKey:@"bar"], @"foo");
+	XCTAssertEqualObjects([result objectForKey:@"bar"], @42);
 }
 
 - (void)testGroupedByOnArray {

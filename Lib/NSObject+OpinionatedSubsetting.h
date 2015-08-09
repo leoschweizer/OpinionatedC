@@ -19,12 +19,6 @@ typedef BOOL (^OCFilterBlock)(id each);
 - (BOOL)anySatisfy:(OCFilterBlock)satisfyBlock;
 
 /**
- * Evaluate countBlock with each of the receiver's elements as the argument.
- * Answer the number of elements that answered true.
- */
-- (NSUInteger)count:(OCFilterBlock)countBlock;
-
-/**
  * Evaluate detectBlock with each of the receiver's elements as the argument.
  * Answer the first element for which aBlock evaluates to true.
  */

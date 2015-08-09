@@ -37,23 +37,6 @@
 	
 }
 
-- (NSUInteger)count:(OCFilterBlock)countBlock {
-	
-	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {
-		NSEnumerator *collectionEnumerator = [(id<OCEnumerableCollection>)self oc_collectionEnumerator];
-		NSUInteger count = 0;
-		for (id each in collectionEnumerator) {
-			if (countBlock(each)) {
-				count++;
-			}
-		}
-		return count;
-	}
-	
-	return countBlock(self) ? 1 : 0;
-	
-}
-
 - (id)detect:(OCFilterBlock)detectBlock {
 	
 	if ([self conformsToProtocol:@protocol(OCEnumerableCollection)]) {

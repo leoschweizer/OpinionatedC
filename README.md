@@ -25,7 +25,13 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
 
 ## Features
 * [**Collections**](https://github.com/leoschweizer/OpinionatedC#collections)
-  * [Enumerating](https://github.com/leoschweizer/OpinionatedC#enumerating)
+   * [Aggregating](https://github.com/leoschweizer/OpinionatedC#aggregating)
+    * [`average`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`average:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
+    * [`count:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
+    * [`max`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`max:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
+	* [`min`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`min:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
+	* [`sum`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`sum:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
+   * [Enumerating](https://github.com/leoschweizer/OpinionatedC#enumerating)
     * [`each:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
     * [`each:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
     * [`isEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`isNotEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating)
@@ -34,7 +40,6 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
     * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`reduce:`](https://github.com/leoschweizer/OpinionatedC#mapping)
   * [Subsetting](https://github.com/leoschweizer/OpinionatedC#subsetting)
     * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 
-    * [`count:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
 	* [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
     * [`detect:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
 * [**Error Handling**](https://github.com/leoschweizer/OpinionatedC#error-handling)
@@ -65,6 +70,49 @@ OpinionatedC tries it's best to preserve the types you are operating on. Calling
 will yield an instance of `NSArray`. Likewise, doing the same on an `NSMutableArray` instance will yield a mutable
 array. However, this behavior is limited by the type system of Objective-C (for instance, this does not work
 at all with `NSString`s).
+
+##### Aggregating
+```objectivec
+
+[@[@2, @4] average]
+// => @3
+
+[@[@"hello", @"world!"] average:^NSNumber*(id each) { 
+    return @([each length]);
+}]
+// => @5.5
+
+[@[@"a", @5, @YES, @"b"] count:^BOOL(id each) {
+    return [each isKindOfClass:NSString.class];
+}];
+// => 2
+
+[[@1, @2, @3] max]
+// => @3
+
+[@[@"hello", @"world!"] max:^NSNumber*(id each) { 
+    return @([each length]);
+}]
+// => @"world!"
+
+[@[@1, @2, @3] min]
+// => @1
+
+[@[@"hello", @"world!"] min:^NSNumber*(id each) { 
+    return @([each length]);
+}]
+// => @"hello"
+
+[@[@1, @2, @3] sum]
+// => @6
+
+[@[@"hello", @"world!"] sum:^NSNumber*(id each) { 
+    return @([each length]);
+}]
+// => @11
+
+
+```
 
 ##### Enumerating
 ```objectivec
@@ -135,11 +183,6 @@ at all with `NSString`s).
     return [each isEqualToString:@"f"];
 }];
 // => YES
-
-[@[@"a", @5, @YES, @"b"] count:^BOOL(id each) {
-    return [each isKindOfClass:NSString.class];
-}];
-// => 2
 
 [@"abcdef" first:3]
 // => @"abc"

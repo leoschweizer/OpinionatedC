@@ -3,8 +3,9 @@
 #import <OpinionatedC/OCAssociation.h>
 #import <OpinionatedC/OCInterval.h>
 
-#import <OpinionatedC/NSObject+OpinionatedMapping.h>
+#import <OpinionatedC/NSObject+OpinionatedAggregating.h>
 #import <OpinionatedC/NSObject+OpinionatedEnumerating.h>
+#import <OpinionatedC/NSObject+OpinionatedMapping.h>
 #import <OpinionatedC/NSObject+OpinionatedSubsetting.h>
 
 #import <OpinionatedC/NSObject+OpinionatedExtensions.h>

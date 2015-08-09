@@ -63,20 +63,6 @@
 	XCTAssertEqual([@YES count:^BOOL(id each) { return NO; }], 0);
 }
 
-- (void)testCountOnArray {
-	NSUInteger count = [@[@"a", @5, @YES, @"b"] count:^BOOL(id each) {
-		return [each isKindOfClass:NSString.class];
-	}];
-	XCTAssertEqual(count, 2);
-}
-
-- (void)testCountOnEmptyString {
-	NSUInteger count = [@"" count:^BOOL(id each) {
-		return YES;
-	}];
-	XCTAssertEqual(count, 0);
-}
-
 - (void)testDetectOnObject {
 	id result = [@5 detect:^BOOL(id each) {
 		return YES;

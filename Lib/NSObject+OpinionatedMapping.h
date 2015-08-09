@@ -8,6 +8,11 @@ typedef id (^OCReduceBlock)(id running, id each);
 @interface NSObject (OpinionatedMapping)
 
 /**
+ * Identical to map:.
+ */
+- (id)collect:(OCMapBlock)collectBlock;
+
+/**
  * Accumulate a running value associated with evaluating the argument,
  * reduceBlock, with the current value and the receiver as block arguments.
  * The initial value is the value of the argument initialValue.

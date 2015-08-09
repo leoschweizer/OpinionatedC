@@ -110,4 +110,13 @@
 	XCTAssertEqualObjects(result, @"c");
 }
 
+- (void)testCollectAlias {
+	NSArray *result = [@[@1, @"foo", @YES, @[]] collect:^id(id each) {
+		return @([each isEmpty]);
+	}];
+	XCTAssertEqual(result.count, 4);
+	XCTAssertEqual([result firstObject], @NO);
+	XCTAssertEqual([result lastObject], @YES);
+}
+
 @end

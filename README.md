@@ -30,7 +30,7 @@ Import the umbrella header everywhere you want to use the sweetness of Opinionat
     * [`each:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`eachWithIndex:separatedBy:`](https://github.com/leoschweizer/OpinionatedC#enumerating)
     * [`isEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating) / [`isNotEmpty`](https://github.com/leoschweizer/OpinionatedC#enumerating)
   * [Mapping](https://github.com/leoschweizer/OpinionatedC#mapping)
-    * [`map:`](https://github.com/leoschweizer/OpinionatedC#mapping)
+    * [`collect:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`map:`](https://github.com/leoschweizer/OpinionatedC#mapping)
     * [`inject:into:`](https://github.com/leoschweizer/OpinionatedC#mapping) / [`reduce:`](https://github.com/leoschweizer/OpinionatedC#mapping)
   * [Subsetting](https://github.com/leoschweizer/OpinionatedC#subsetting)
     * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 

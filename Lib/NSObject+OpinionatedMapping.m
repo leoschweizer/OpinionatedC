@@ -5,6 +5,10 @@
 
 @implementation NSObject (OpinionatedMapping)
 
+- (id)collect:(OCMapBlock)collectBlock {
+	return [self map:collectBlock];
+}
+
 - (id)map:(OCMapBlock)mapBlock {
 	
 	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {

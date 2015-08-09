@@ -93,7 +93,7 @@ NSDictionary *grouped = [set groupedBy:^id(id each) {
     return @([each length]);
 }];
 // => @{
-//        @3 : a NSSet(@"foo, bar"),
+//        @3 : a NSSet(@"foo", @"bar"),
 //        @5 : a NSSet(@"hello"),
 //        @6 : a NSSet(@"world!")
 //    }

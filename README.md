@@ -24,11 +24,11 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
 ```
 
 ## Features
-* [**Collections**](https://github.com/leoschweizer/OpinionatedC#collections)
+* [**Collections**](https://github.com/leoschweizer/OpinionatedC#collections) (`NSArray`, `NSDictionary`, `NSSet`, `NSString`, ...)
   * [Aggregating](https://github.com/leoschweizer/OpinionatedC#aggregating)
     * [`average`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`average:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
     * [`count:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
-    * [`groupedBy:`]()
+    * [`groupedBy:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
 	* [`max`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`max:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
 	* [`min`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`min:`](https://github.com/leoschweizer/OpinionatedC#aggregating)
 	* [`sum`](https://github.com/leoschweizer/OpinionatedC#aggregating) / [`sum:`](https://github.com/leoschweizer/OpinionatedC#aggregating)

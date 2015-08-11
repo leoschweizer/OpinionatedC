@@ -1,5 +1,8 @@
 # Changelog
 
+##### 0.1.4 [2015-08-11]
+* Added `groupedBy:`
+
 ##### 0.1.3 [2015-08-09]
 * Added aggregation extensions (`average`, `max`, `min`, `sum`)
 * Added `OCInterval` and according `NSNumber` extensions (`to:`, `to:by:`)

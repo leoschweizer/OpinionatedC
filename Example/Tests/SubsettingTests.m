@@ -91,6 +91,28 @@
 	XCTAssertNil(result);
 }
 
+- (void)testDropWhileOnObject {
+	XCTAssertNil([@5 dropWhile:^BOOL(id each) { return YES; }]);
+	XCTAssertEqualObjects([@5 dropWhile:^BOOL(id each) { return NO; }], @5);
+}
+
+- (void)testDropWhileOnArray {
+	NSArray *result = [@[@2, @4, @6, @8, @10, @11, @12] dropWhile:^BOOL(id each) {
+		return [each integerValue] % 2 == 0;
+	}];
+	XCTAssertEqual(result.count, 2);
+	XCTAssertEqualObjects([result firstObject], @11);
+	XCTAssertEqualObjects([result lastObject], @12);
+}
+
+- (void)testDropWhileOnEmptyArray {
+	NSArray *result = [@[] dropWhile:^BOOL(id each) {
+		return YES;
+	}];
+	XCTAssertNotNil(result);
+	XCTAssertEqual(result.count, 0);
+}
+
 - (void)testFirstOnObject {
 	XCTAssertEqualObjects([self first], self);
 }
@@ -265,6 +287,7 @@
 	NSArray *result = [@[] takeWhile:^BOOL(id each) {
 		return YES;
 	}];
+	XCTAssertNotNil(result);
 	XCTAssertEqual(result.count, 0);
 }
 

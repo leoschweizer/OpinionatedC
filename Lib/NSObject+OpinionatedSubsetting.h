@@ -25,6 +25,13 @@ typedef BOOL (^OCFilterBlock)(id each);
 - (id)detect:(OCFilterBlock)detectBlock;
 
 /**
+ * Evaluate whileBlock with each of the receiver's elements as the argument
+ * until it answers NO. Answer a collection with the rest of the receiver's
+ * elements.
+ */
+- (id)dropWhile:(OCFilterBlock)whileBlock;
+
+/**
  * Answer the first element. If the receiver is empty, answer nil.
  */
 - (id)first;
@@ -53,7 +60,7 @@ typedef BOOL (^OCFilterBlock)(id each);
 /**
  * Evaluate whileBlock with each of the receiver's elements as the argument
  * until it answers NO. Answer a collection with all of the elements that
- * evaluated to YES.
+ * evaluated to YES up to that point.
  */
 - (id)takeWhile:(OCFilterBlock)whileBlock;
 

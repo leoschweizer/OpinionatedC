@@ -53,6 +53,29 @@
 	
 }
 
+- (id)dropWhile:(OCFilterBlock)whileBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
+		id newCollection = [this oc_createMutableInstanceOfMyKind];
+		BOOL keepDropping = YES;
+		for (id each in [this oc_collectionEnumerator]) {
+			if (keepDropping) {
+				keepDropping = whileBlock(each);
+			}
+			// Attention: this is not equivalent to an if / else - doing that
+			// would miss the first element of the new collection
+			if (!keepDropping) {
+				[this oc_addObject:each toMutableCollection:newCollection];
+			}
+		}
+		return [this oc_createCollectionOfMyKindFromMutableCollection:newCollection];
+	}
+	
+	return whileBlock(self) ? nil : self;
+	
+}
+
 - (id)first {
 	return self;
 }

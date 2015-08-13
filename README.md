@@ -43,7 +43,7 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
     * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 
 	* [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
     * [`detect:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
-	* [`takeWhile:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
+	* [`dropWhile:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`takeWhile:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
 * [**Error Handling**](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`SubclassResponsibility`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`UnsupportedOperation`](https://github.com/leoschweizer/OpinionatedC#error-handling) / [`ShouldNotOccur`](https://github.com/leoschweizer/OpinionatedC#error-handling)
@@ -213,6 +213,11 @@ NSSet *set = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
     return [each.key isEqualToNumber:@2];
 }];
 // => @{ @1 : @"foo" }
+
+[@[@2, @4, @6, @8, @10, @11, @12] dropWhile:^BOOL(id each) {
+    return [each integerValue] % 2 == 0;
+}];
+// => @[@11, @12]
 
 [@[@1, @2, @3, @4, @5] takeWhile:^BOOL(id each) {
     return [each integerValue] <= 3;

@@ -43,6 +43,7 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
     * [`allSatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`anySatisfy:`](https://github.com/leoschweizer/OpinionatedC#subsetting) 
 	* [`first`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`first:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
     * [`detect:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`reject:`](https://github.com/leoschweizer/OpinionatedC#subsetting) / [`select:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
+	* [`takeWhile:`](https://github.com/leoschweizer/OpinionatedC#subsetting)
 * [**Error Handling**](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`SubclassResponsibility`](https://github.com/leoschweizer/OpinionatedC#error-handling)
   * [`UnsupportedOperation`](https://github.com/leoschweizer/OpinionatedC#error-handling) / [`ShouldNotOccur`](https://github.com/leoschweizer/OpinionatedC#error-handling)
@@ -89,7 +90,7 @@ at all with `NSString`s).
 // => 2
 
 NSSet *set = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
-NSDictionary *grouped = [set groupedBy:^id(id each) {
+[set groupedBy:^id(id each) {
     return @([each length]);
 }];
 // => @{
@@ -212,6 +213,12 @@ NSDictionary *grouped = [set groupedBy:^id(id each) {
     return [each.key isEqualToNumber:@2];
 }];
 // => @{ @1 : @"foo" }
+
+[@[@1, @2, @3, @4, @5] takeWhile:^BOOL(id each) {
+    return [each integerValue] <= 3;
+}];
+// => @[@1, @2, @3]
+
 ```
 
 #### Error Handling

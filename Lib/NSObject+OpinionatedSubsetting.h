@@ -50,4 +50,11 @@ typedef BOOL (^OCFilterBlock)(id each);
  */
 - (id)select:(OCFilterBlock)selectBlock;
 
+/**
+ * Evaluate whileBlock with each of the receiver's elements as the argument
+ * until it answers NO. Answer a collection with all of the elements that
+ * evaluated to YES.
+ */
+- (id)takeWhile:(OCFilterBlock)whileBlock;
+
 @end

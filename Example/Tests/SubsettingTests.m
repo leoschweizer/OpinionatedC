@@ -238,4 +238,34 @@
 	XCTAssertEqualObjects(result, @"b");
 }
 
+- (void)testTakeWhileOnObject {
+	XCTAssertNil([@5 takeWhile:^BOOL(id each) { return NO; }]);
+	XCTAssertEqualObjects([@5 takeWhile:^BOOL(id each) { return YES; }], @5);
+}
+
+- (void)testTakeWhileOnArray1 {
+	NSArray *result = [@[@1, @2, @3, @4, @5] takeWhile:^BOOL(id each) {
+		return [each integerValue] <= 3;
+	}];
+	XCTAssertEqual(result.count, 3);
+	XCTAssertEqualObjects([result firstObject], @1);
+	XCTAssertEqualObjects([result lastObject], @3);
+}
+
+- (void)testTakeWhileOnArray2 {
+	NSArray *result = [@[@1, @2, @3, @4, @5] takeWhile:^BOOL(id each) {
+		return [each integerValue] <= 8;
+	}];
+	XCTAssertEqual(result.count, 5);
+	XCTAssertEqualObjects([result firstObject], @1);
+	XCTAssertEqualObjects([result lastObject], @5);
+}
+
+- (void)testTakeWhileOnEmptyArray {
+	NSArray *result = [@[] takeWhile:^BOOL(id each) {
+		return YES;
+	}];
+	XCTAssertEqual(result.count, 0);
+}
+
 @end

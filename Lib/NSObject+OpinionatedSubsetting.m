@@ -84,6 +84,25 @@
 	
 }
 
+- (id)takeWhile:(OCFilterBlock)whileBlock {
+	
+	if ([self conformsToProtocol:@protocol(OCMutableCollectionConstruction)]) {
+		id<OCMutableCollectionConstruction> this = (id<OCMutableCollectionConstruction>)self;
+		id newCollection = [this oc_createMutableInstanceOfMyKind];
+		for (id each in [this oc_collectionEnumerator]) {
+			if (whileBlock(each)) {
+				[this oc_addObject:each toMutableCollection:newCollection];
+			} else {
+				return [this oc_createCollectionOfMyKindFromMutableCollection:newCollection];
+			}
+		}
+		return [this oc_createCollectionOfMyKindFromMutableCollection:newCollection];
+	}
+	
+	return whileBlock(self) ? self : nil;
+	
+}
+
 @end
 
 

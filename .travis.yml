@@ -7,7 +7,7 @@ install:
   - cd ..
 
 xcode_workspace: Example/Example.xcworkspace
-xcode_scheme: OpinionatedC
+xcode_scheme: OpinionatedC-Example
 
 cache:
   - bundler

@@ -1,4 +1,6 @@
 # Changelog
+##### 0.1.5 [2015-08-20]
+* Added `takeWhile:` / `dropWhile:`
 
 ##### 0.1.4 [2015-08-11]
 * Added `groupedBy:`

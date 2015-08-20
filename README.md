@@ -22,6 +22,13 @@ Import the umbrella header everywhere you want to taste the sweetness of Opinion
 ```objectivec
 #import <OpinionatedC/OpinionatedC.h>
 ```
+#### A Note About Method Prefixes
+There is no doubt that the best practice for extension methods in categories is to include a vendor prefix 
+in the selector. Currently, OpinionatedC does not conform to that best practice, since having to write (and read)
+stuff like `oc_each:` instead of a plain `each:` does not really seem to contribute to readability.
+
+However, I'm currently looking for a method to allow optional, configurable method prefixes for users that
+want (or need) them. Feel free to add to the discussion in #1 if you have any ideas about this topic.
 
 ## Features
 * [**Collections**](https://github.com/leoschweizer/OpinionatedC#collections) (`NSArray`, `NSDictionary`, `NSSet`, `NSString`, ...)

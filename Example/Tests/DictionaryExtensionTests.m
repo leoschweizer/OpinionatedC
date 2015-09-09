@@ -32,6 +32,12 @@
 	XCTAssertEqualObjects([dict objectForKey:@1], @"hello world");
 }
 
+- (void)testAt {
+	NSDictionary *dict = @{ @1 : @"w00t" };
+	XCTAssertNil([dict at:@2]);
+	XCTAssertEqualObjects([dict at:@1], @"w00t");
+}
+
 - (void)testAtIfAbsent {
 	NSDictionary *dict = @{ @1 : @"w00t" };
 	id r1 = [dict at:@1 ifAbsent:^id{

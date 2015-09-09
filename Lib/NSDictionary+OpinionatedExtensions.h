@@ -17,6 +17,11 @@ typedef id (^OCPresentBlock)(id element);
 - (NSEnumerator *)associationEnumerator;
 
 /**
+ * Answer the value at aKey.
+ */
+- (id)at:(id)aKey;
+
+/**
  * Answer the value at aKey. If aKey is not found, answer the
  * result of evaluating aBlock.
  */

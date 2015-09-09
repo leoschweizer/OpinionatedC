@@ -9,6 +9,10 @@
 	return [[OCAssociationEnumerator alloc] initWithDictionary:self];
 }
 
+- (id)at:(id)aKey {
+	return [self objectForKey:aKey];
+}
+
 - (id)at:(id)aKey ifAbsent:(OCAbsentBlock)aBlock {
 	id value = [self objectForKey:aKey];
 	return value ?: aBlock();

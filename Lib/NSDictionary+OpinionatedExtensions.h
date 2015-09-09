@@ -54,4 +54,10 @@ typedef id (^OCPresentBlock)(id element);
  */
 - (id)at:(id)aKey put:(id)aValue;
 
+/**
+ * Answer the value at aKey. If aKey is not found, set its value to the result
+ * of evaluating aBlock, and answer that value.
+ */
+- (id)at:(id)aKey ifAbsentPut:(OCAbsentBlock)aBlock;
+
 @end

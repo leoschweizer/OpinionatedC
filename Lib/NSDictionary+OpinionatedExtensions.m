@@ -42,4 +42,10 @@
 	return aValue;
 }
 
+- (id)at:(id)aKey ifAbsentPut:(OCAbsentBlock)aBlock {
+	return [self at:aKey ifAbsent:^id{
+		return [self at:aKey put:aBlock()];
+	}];
+}
+
 @end

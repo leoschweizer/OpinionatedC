@@ -4,6 +4,9 @@
 @class OCAssociation;
 
 
+typedef id (^OCAbsentBlock)(void);
+
+
 @interface NSDictionary (OpinionatedExtensions)
 
 /**
@@ -11,6 +14,12 @@
  * as OCAssociation instances.
  */
 - (NSEnumerator *)associationEnumerator;
+
+/**
+ * Answer the value at aKey.  If aKey is not found, answer the
+ * result of evaluating aBlock.
+ */
+- (id)at:(id)aKey ifAbsent:(OCAbsentBlock)aBlock;
 
 /**
  * Answer whether the receiver has a key equal to aKey.

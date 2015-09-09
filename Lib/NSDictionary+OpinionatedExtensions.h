@@ -33,4 +33,9 @@
  */
 - (OCAssociation *)add:(OCAssociation *)anAssociation;
 
+/**
+ * Set the value at aKey to be aValue. Answer aValue.
+ */
+- (id)at:(id)aKey put:(id)aValue;
+
 @end

@@ -32,6 +32,12 @@
 	XCTAssertEqualObjects([dict objectForKey:@1], @"hello world");
 }
 
+- (void)testAtPut {
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	[dict at:@1 put:@"foo"];
+	XCTAssertEqualObjects([dict objectForKey:@1], @"foo");
+}
+
 - (void)testIncludesKey {
 	NSDictionary *sut = @{
 		@1 : @""

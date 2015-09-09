@@ -27,4 +27,9 @@
 	return anAssociation;
 }
 
+- (id)at:(id)aKey put:(id)aValue {
+	[self setObject:aValue forKey:aKey];
+	return aValue;
+}
+
 @end

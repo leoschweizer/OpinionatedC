@@ -1,4 +1,9 @@
 # Changelog
+
+##### 0.1.6 [2015-09-09]
+* Added `at:` / `at:ifAbsent:` / `at:ifPresent:`
+* Added `at:put:` / `at:ifAbsentPut:`
+
 ##### 0.1.5 [2015-08-20]
 * Added `takeWhile:` / `dropWhile:`
 

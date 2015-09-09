@@ -14,6 +14,11 @@
 	return value ?: aBlock();
 }
 
+- (id)at:(id)aKey ifPresent:(OCPresentBlock)aBlock {
+	id value = [self objectForKey:aKey];
+	return value ? aBlock(value) : nil;
+}
+
 - (BOOL)includesKey:(id)aKey {
 	return [self objectForKey:aKey] != nil;
 }

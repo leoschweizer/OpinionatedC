@@ -5,6 +5,7 @@
 
 
 typedef id (^OCAbsentBlock)(void);
+typedef id (^OCPresentBlock)(id element);
 
 
 @interface NSDictionary (OpinionatedExtensions)
@@ -16,10 +17,16 @@ typedef id (^OCAbsentBlock)(void);
 - (NSEnumerator *)associationEnumerator;
 
 /**
- * Answer the value at aKey.  If aKey is not found, answer the
+ * Answer the value at aKey. If aKey is not found, answer the
  * result of evaluating aBlock.
  */
 - (id)at:(id)aKey ifAbsent:(OCAbsentBlock)aBlock;
+
+/**
+ * Answer the value at aKey. If a value is found, answer the result of evaluating
+ * aBlock with the corresponding value.
+ */
+- (id)at:(id)aKey ifPresent:(OCPresentBlock)aBlock;
 
 /**
  * Answer whether the receiver has a key equal to aKey.

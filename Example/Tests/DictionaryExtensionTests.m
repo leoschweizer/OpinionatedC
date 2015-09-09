@@ -44,6 +44,18 @@
 	XCTAssertEqualObjects(r2, @42);
 }
 
+- (void)testAtIfPresent {
+	NSDictionary *dict = @{ @1 : @"w00t" };
+	id r1 = [dict at:@1 ifPresent:^id(id element) {
+		return [NSString stringWithFormat:@"%@ %@", element, element];
+	}];
+	XCTAssertEqualObjects(r1, @"w00t w00t");
+	id r2 = [dict at:@2 ifPresent:^id(id element) {
+		return element;
+	}];
+	XCTAssertNil(r2);
+}
+
 - (void)testAtPut {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 	[dict at:@1 put:@"foo"];

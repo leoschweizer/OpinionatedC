@@ -59,6 +59,8 @@ want (or need) them. Feel free to add to the discussion in [#1](https://github.c
 * [**NSDictionary Extensions**](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
   * [`add:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) ¹
   * [`associationEnumerator`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
+  * [`at:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) / [`at:ifAbsent:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) / [`at:ifPresent:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
+  * [`at:put:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) ¹ / [`at:ifAbsentPut:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) ¹
   * [`includesKey:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions) / [`includesValue:`](https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions)
 * [**NSNumber Extensions**](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
   * [`atRandom`](https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions)
@@ -281,7 +283,25 @@ NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 [dict add:[@1 asAssociationWithValue:@"foo"]];
 // => @{ @1 : @"foo" }
 
-[dict includesKey:@1];
+[dict at:@1 put:@"foo"];
+// => @{ @1 : @"foo" }
+
+[dict at:@2 ifAbsent:^id{
+    return @"bar";
+}];
+// => @"bar"
+
+[dict at:@1 ifPresent:^id(id element) {
+    return @"bar";
+}];
+// => @"bar"
+
+[dict at:@2 ifAbsentPut:^id{
+    return @"hello world";
+}];
+// => @"hello world"
+
+[dict includesKey:@2];
 // => YES
 
 [dict includesValue:@"bar"];

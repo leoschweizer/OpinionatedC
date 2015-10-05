@@ -305,4 +305,18 @@
 	XCTAssertEqual(result.count, 0);
 }
 
+- (void)testTakeWhileOnHashTable {
+	id o1 = @1;
+	id o2 = @2;
+	NSHashTable *sut = [NSHashTable weakObjectsHashTable];
+	[sut addObject:o1];
+	[sut addObject:o2];
+	NSHashTable *result = [sut takeWhile:^BOOL(id each) {
+		return YES;
+	}];
+	XCTAssertEqual(result.count, 2);
+	XCTAssertTrue([result containsObject:@1]);
+	XCTAssertTrue([result containsObject:@2]);
+}
+
 @end

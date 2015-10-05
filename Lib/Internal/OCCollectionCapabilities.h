@@ -27,6 +27,11 @@
 @end
 
 
+@interface NSHashTable (OCCollectionCapabilities) <OCEnumerableCollection, OCMutableCollectionConstruction>
+
+@end
+
+
 @interface NSMapTable (OCCollectionCapabilities) <OCEnumerableCollection, OCMutableCollectionConstruction>
 
 @end

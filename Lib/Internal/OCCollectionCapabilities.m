@@ -57,6 +57,30 @@
 @end
 
 
+@implementation NSHashTable (OCCollectionCapabilities)
+
+- (id)oc_createMutableInstanceOfMyKind {
+	return [[NSHashTable alloc] initWithPointerFunctions:self.pointerFunctions capacity:self.count];
+}
+
+- (NSEnumerator *)oc_collectionEnumerator {
+	return [self objectEnumerator];
+}
+
+- (void)oc_addObject:(id)obj toMutableCollection:(id)collection {
+	NSHashTable *hashTable = collection;
+	[hashTable addObject:obj];
+}
+
+- (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
+	// there are no mutable/immutable variants of NSHashTable, so it is
+	// safe to just return collection here
+	return collection;
+}
+
+@end
+
+
 @implementation NSMapTable (OCCollectionCapabilities)
 
 - (id)oc_createMutableInstanceOfMyKind {
@@ -75,7 +99,7 @@
 
 - (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
 	// there are no mutable/immutable variants of NSMapTable, so it is
-	// safe to just return colleciton here
+	// safe to just return collection here
 	return collection;
 }
 
@@ -103,7 +127,7 @@
 
 - (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
 	// there are no mutable/immutable variants of NSPointerArray, so it is
-	// safe to just return colleciton here
+	// safe to just return collection here
 	return collection;
 }
 

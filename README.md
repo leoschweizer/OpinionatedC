@@ -75,7 +75,7 @@ want (or need) them. Feel free to add to the discussion in [#1](https://github.c
 #### Collections
 Most of the collection extensions are implemented on the `NSObject` level, with refined behavior for different 
 collection types. Non-collection objects thereby behave like collections with a single element, and `[NSNull null]`
-bahaves like an empty collection.
+behaves like an empty collection.
 
 OpinionatedC tries it's best to preserve the types you are operating on. Calling `select:` on an (immutable) `NSArray`
 will yield an instance of `NSArray`. Likewise, doing the same on an `NSMutableArray` instance will yield a mutable

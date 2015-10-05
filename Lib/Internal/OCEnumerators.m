@@ -6,8 +6,7 @@
 @interface OCAssociationEnumerator ()
 
 @property (nonatomic, readonly) NSDictionary *backingDictionary;
-@property (nonatomic, readonly) NSArray *allKeys;
-@property (nonatomic, readwrite) NSUInteger currentIndex;
+@property (nonatomic, readonly) NSEnumerator *keyEnumerator;
 
 @end
 
@@ -17,24 +16,20 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
 	if (self = [super init]) {
 		_backingDictionary = dictionary;
-		_allKeys = [dictionary allKeys];
-		_currentIndex = 0;
+		_keyEnumerator = [_backingDictionary keyEnumerator];
 	}
 	return self;
 }
 
 - (id)nextObject {
 	
-	if (self.currentIndex >= self.allKeys.count) {
+	id nextKey = [self.keyEnumerator nextObject];
+	if (!nextKey) {
 		return nil;
 	}
 	
-	id currentKey = [self.allKeys objectAtIndex:self.currentIndex];
-	id currentValue = [self.backingDictionary objectForKey:currentKey];
-	
-	self.currentIndex++;
-	
-	return [currentKey asAssociationWithValue:currentValue];
+	id nextValue = [self.backingDictionary objectForKey:nextKey];
+	return [nextKey asAssociationWithValue:nextValue];
 	
 }
 

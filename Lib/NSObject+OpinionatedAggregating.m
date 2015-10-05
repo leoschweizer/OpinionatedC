@@ -60,11 +60,12 @@
 			[this oc_addObject:each toMutableCollection:groupCollection];
 		}
 		
+		NSMutableDictionary *finalResult = [NSMutableDictionary dictionaryWithCapacity:groupedResult.count];
 		for (OCAssociation *each in [groupedResult associationEnumerator]) {
-			[groupedResult setObject:[this oc_createCollectionOfMyKindFromMutableCollection:each.value] forKey:each.key];
+			[finalResult setObject:[this oc_createCollectionOfMyKindFromMutableCollection:each.value] forKey:each.key];
 		}
 		
-		return groupedResult;
+		return finalResult;
 	}
 	
 	return @{ groupedByBlock(self) : self };

@@ -57,6 +57,34 @@
 @end
 
 
+@implementation NSPointerArray (OCCollectionCapabilities)
+
+- (void)oc_addObject:(id)object {
+	[self addPointer:(__bridge void *)object];
+}
+
+- (id)oc_createMutableInstanceOfMyKind {
+	return [NSPointerArray pointerArrayWithPointerFunctions:self.pointerFunctions];
+}
+
+- (NSEnumerator *)oc_collectionEnumerator {
+	return [self.allObjects objectEnumerator];
+}
+
+- (void)oc_addObject:(id)obj toMutableCollection:(id)collection {
+	NSPointerArray *other = collection;
+	[other oc_addObject:obj];
+}
+
+- (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
+	// there are no mutable/immutable variants of NSPointerArray, so it is
+	// safe to just return colleciton here
+	return collection;
+}
+
+@end
+
+
 @implementation NSSet (OCCollectionCapabilities)
 
 - (id)oc_createMutableInstanceOfMyKind {

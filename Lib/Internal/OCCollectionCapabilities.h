@@ -32,6 +32,11 @@
 @end
 
 
+@interface NSPointerArray (OCCollectionCapabilities) <OCEnumerableCollection, OCMutableCollectionConstruction>
+
+@end
+
+
 @interface NSSet (OCCollectionCapabilities) <OCEnumerableCollection, OCMutableCollectionConstruction>
 
 @end

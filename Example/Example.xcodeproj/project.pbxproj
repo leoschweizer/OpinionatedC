@@ -139,7 +139,7 @@
 		B32F1A401B6EABDA00D25836 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					B32F1A491B6EAC7D00D25836 = {
 						CreatedOnToolsVersion = 6.4;
@@ -230,8 +230,10 @@
 		B32F1A441B6EABDA00D25836 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};

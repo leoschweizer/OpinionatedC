@@ -224,10 +224,11 @@
 - (void)testSelectOnSet {
 	NSSet *sut = [NSSet setWithObjects:@1, @2, @3, @4, nil];
 	NSSet *result = [sut select:^BOOL(id each) {
-		return [each unsignedIntegerValue] == 3;
+		return [each unsignedIntegerValue] % 2 != 0;
 	}];
 	XCTAssertTrue([result isMemberOfClass:sut.class]);
-	XCTAssertEqual(result.count, 1);
+	XCTAssertEqual(result.count, 2);
+	XCTAssertTrue([result containsObject:@1]);
 	XCTAssertTrue([result containsObject:@3]);
 }
 
@@ -258,6 +259,19 @@
 	}];
 	XCTAssertTrue([result isKindOfClass:NSMutableString.class]);
 	XCTAssertEqualObjects(result, @"b");
+}
+
+- (void)testSelectOnPointerArray {
+	NSPointerArray *sut = [NSPointerArray strongObjectsPointerArray];
+	[sut addPointer:(__bridge void *)@5];
+	[sut addPointer:(__bridge void *)@6];
+	[sut addPointer:(__bridge void *)@7];
+	[sut addPointer:(__bridge void *)@8];
+	NSPointerArray *oddNumbers = [sut select:^BOOL(NSNumber *each) {
+		return [each integerValue] % 2 != 0;
+	}];
+	XCTAssertTrue([oddNumbers count] == 2);
+	XCTAssertEqualObjects([oddNumbers allObjects], (@[@5, @7]));
 }
 
 - (void)testTakeWhileOnObject {

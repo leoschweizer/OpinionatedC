@@ -57,6 +57,31 @@
 @end
 
 
+@implementation NSMapTable (OCCollectionCapabilities)
+
+- (id)oc_createMutableInstanceOfMyKind {
+	return [[NSMapTable alloc] initWithKeyPointerFunctions:self.keyPointerFunctions valuePointerFunctions:self.valuePointerFunctions capacity:self.count];
+}
+
+- (NSEnumerator *)oc_collectionEnumerator {
+	return [[OCMapTableEnumerator alloc] initWithMapTable:self];
+}
+
+- (void)oc_addObject:(id)obj toMutableCollection:(id)collection {
+	NSMapTable *mapTable = collection;
+	OCAssociation *association = obj;
+	[mapTable setObject:association.value forKey:association.key];
+}
+
+- (id)oc_createCollectionOfMyKindFromMutableCollection:(id)collection {
+	// there are no mutable/immutable variants of NSMapTable, so it is
+	// safe to just return colleciton here
+	return collection;
+}
+
+@end
+
+
 @implementation NSPointerArray (OCCollectionCapabilities)
 
 - (void)oc_addObject:(id)object {

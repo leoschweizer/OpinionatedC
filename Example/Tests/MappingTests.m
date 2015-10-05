@@ -75,6 +75,19 @@
 	XCTAssertEqualObjects(result, @"ABC");
 }
 
+- (void)testMapOnMapTable {
+	NSMapTable *sut = [NSMapTable strongToStrongObjectsMapTable];
+	[sut setObject:@1 forKey:@"foo"];
+	[sut setObject:@2 forKey:@"bar"];
+	NSMapTable *result = [sut map:^id(OCAssociation *each) {
+		return [@([each.value integerValue] * 2) asAssociationWithKey:each.key];
+	}];
+	XCTAssertTrue([result isKindOfClass:sut.class]);
+	XCTAssertEqual(result.count, 2);
+	XCTAssertEqualObjects([result objectForKey:@"foo"], @2);
+	XCTAssertEqualObjects([result objectForKey:@"bar"], @4);
+}
+
 - (void)testInjectIntoOnArray {
 	id result = [@[@1, @2, @3] inject:@0 into:^id(id running, id each) {
 		return @([running integerValue] + [each integerValue]);

@@ -25,6 +25,13 @@
 @end
 
 
+@interface OCMapTableEnumerator : NSEnumerator
+
+- (instancetype)initWithMapTable:(NSMapTable *)mapTable;
+
+@end
+
+
 @interface OCNullEnumerator : NSEnumerator
 
 @end

@@ -125,6 +125,39 @@
 @end
 
 
+@interface OCMapTableEnumerator ()
+
+@property (nonatomic, readonly) NSMapTable *mapTable;
+@property (nonatomic, readonly) NSEnumerator *keyEnumerator;
+
+@end
+
+
+@implementation OCMapTableEnumerator
+
+- (instancetype)initWithMapTable:(NSMapTable *)mapTable {
+	if (self = [super init]) {
+		_mapTable = mapTable;
+		_keyEnumerator = [_mapTable keyEnumerator];
+	}
+	return self;
+}
+
+- (id)nextObject {
+	
+	id nextKey = [self.keyEnumerator nextObject];
+	if (!nextKey) {
+		return nil;
+	}
+	
+	id nextValue = [self.mapTable objectForKey:nextKey];
+	return [nextKey asAssociationWithValue:nextValue];
+	
+}
+
+@end
+
+
 @implementation OCNullEnumerator
 
 - (id)nextObject {

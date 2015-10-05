@@ -27,6 +27,11 @@
 @end
 
 
+@interface NSMapTable (OCCollectionCapabilities) <OCEnumerableCollection, OCMutableCollectionConstruction>
+
+@end
+
+
 @interface NSNull (OCCollectionCapabilities) <OCEnumerableCollection>
 
 @end

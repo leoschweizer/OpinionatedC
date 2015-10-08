@@ -1,5 +1,10 @@
 # Changelog
 
+##### 0.1.7 [2015-10-08]
+* Added support for `NSMapTable`
+* Added support for `NSHashTable`
+* Added support for `NSPointerArray`
+
 ##### 0.1.6 [2015-09-09]
 * Added `at:` / `at:ifAbsent:` / `at:ifPresent:`
 * Added `at:put:` / `at:ifAbsentPut:`

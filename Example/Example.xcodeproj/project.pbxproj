@@ -17,6 +17,7 @@
 		B30F6D211BD928B000E680F0 /* ObjectExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D181BD928B000E680F0 /* ObjectExtensionTests.m */; };
 		B30F6D221BD928B000E680F0 /* StringExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D191BD928B000E680F0 /* StringExtensionTests.m */; };
 		B30F6D231BD928B000E680F0 /* SubsettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D1A1BD928B000E680F0 /* SubsettingTests.m */; };
+		B30F6DE41BD93B2300E680F0 /* OCEnumerableMockCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6DE31BD93B2300E680F0 /* OCEnumerableMockCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		B30F6D181BD928B000E680F0 /* ObjectExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectExtensionTests.m; sourceTree = "<group>"; };
 		B30F6D191BD928B000E680F0 /* StringExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTests.m; sourceTree = "<group>"; };
 		B30F6D1A1BD928B000E680F0 /* SubsettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubsettingTests.m; sourceTree = "<group>"; };
+		B30F6DE21BD93B2300E680F0 /* OCEnumerableMockCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCEnumerableMockCollection.h; sourceTree = "<group>"; };
+		B30F6DE31BD93B2300E680F0 /* OCEnumerableMockCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCEnumerableMockCollection.m; sourceTree = "<group>"; };
 		B32F1A4A1B6EAC7D00D25836 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +67,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B30F6DE11BD93B2300E680F0 /* Mock Collections */ = {
+			isa = PBXGroup;
+			children = (
+				B30F6DE21BD93B2300E680F0 /* OCEnumerableMockCollection.h */,
+				B30F6DE31BD93B2300E680F0 /* OCEnumerableMockCollection.m */,
+			);
+			path = "Mock Collections";
+			sourceTree = "<group>";
+		};
 		B32F1A3F1B6EABDA00D25836 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +97,7 @@
 		B32F1A4C1B6EAC7D00D25836 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B30F6DE11BD93B2300E680F0 /* Mock Collections */,
 				B30F6D121BD928B000E680F0 /* AggregatingTests.m */,
 				B30F6D131BD928B000E680F0 /* DictionaryExtensionTests.m */,
 				B30F6D141BD928B000E680F0 /* EnumeratingTests.m */,
@@ -206,6 +219,7 @@
 				B30F6D1E1BD928B000E680F0 /* IntervalTests.m in Sources */,
 				B30F6D1F1BD928B000E680F0 /* MappingTests.m in Sources */,
 				B30F6D201BD928B000E680F0 /* NumberExtensionTests.m in Sources */,
+				B30F6DE41BD93B2300E680F0 /* OCEnumerableMockCollection.m in Sources */,
 				B30F6D1B1BD928B000E680F0 /* AggregatingTests.m in Sources */,
 				B30F6D1D1BD928B000E680F0 /* EnumeratingTests.m in Sources */,
 			);

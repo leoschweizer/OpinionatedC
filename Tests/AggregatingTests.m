@@ -1,6 +1,6 @@
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <OpinionatedC/OpinionatedC.h>
+#import "NSobject+OpinionatedAggregating.h"
+#import "OCAssociation.h"
 
 
 @interface AggregatingTests : XCTestCase
@@ -37,6 +37,11 @@
 		return YES;
 	}];
 	XCTAssertEqual(count, 0);
+}
+
+- (void)testCountOnObject {
+	XCTAssertEqual([@5 count:^BOOL(id each) { return YES; }], 1);
+	XCTAssertEqual([@YES count:^BOOL(id each) { return NO; }], 0);
 }
 
 - (void)testGroupedByOnObject {

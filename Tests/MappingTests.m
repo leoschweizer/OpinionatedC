@@ -1,6 +1,6 @@
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <OpinionatedC/OpinionatedC.h>
+#import "NSObject+OpinionatedMapping.h"
+#import "OCAssociation.h"
 
 
 @interface MappingTests : XCTestCase

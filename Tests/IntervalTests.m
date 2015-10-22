@@ -1,6 +1,7 @@
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <OpinionatedC/OpinionatedC.h>
+#import "OCInterval.h"
+#import "NSObject+OpinionatedSubsetting.h"
+#import "NSObject+OpinionatedEnumerating.h"
 
 
 @interface IntervalTests : XCTestCase

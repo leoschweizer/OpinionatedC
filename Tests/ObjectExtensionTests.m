@@ -1,6 +1,5 @@
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <OpinionatedC/OpinionatedC.h>
+#import "NSObject+OpinionatedExtensions.h"
 
 
 @interface ObjectExtensionTests : XCTestCase

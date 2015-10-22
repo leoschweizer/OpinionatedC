@@ -17,7 +17,6 @@
 		B30F6D211BD928B000E680F0 /* ObjectExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D181BD928B000E680F0 /* ObjectExtensionTests.m */; };
 		B30F6D221BD928B000E680F0 /* StringExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D191BD928B000E680F0 /* StringExtensionTests.m */; };
 		B30F6D231BD928B000E680F0 /* SubsettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D1A1BD928B000E680F0 /* SubsettingTests.m */; };
-		B3E3CE211B73915F00281F20 /* OCEnumerableMockCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +33,6 @@
 		B30F6D191BD928B000E680F0 /* StringExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTests.m; sourceTree = "<group>"; };
 		B30F6D1A1BD928B000E680F0 /* SubsettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubsettingTests.m; sourceTree = "<group>"; };
 		B32F1A4A1B6EAC7D00D25836 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E3CE1F1B73915F00281F20 /* OCEnumerableMockCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCEnumerableMockCollection.h; path = "Mock Collections/OCEnumerableMockCollection.h"; sourceTree = "<group>"; };
-		B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCEnumerableMockCollection.m; path = "Mock Collections/OCEnumerableMockCollection.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +67,6 @@
 		B32F1A3F1B6EABDA00D25836 = {
 			isa = PBXGroup;
 			children = (
-				B3E3CE1E1B73914900281F20 /* Mock Collections */,
 				B32F1A4C1B6EAC7D00D25836 /* Tests */,
 				B32F1A4B1B6EAC7D00D25836 /* Products */,
 				64FC7F3A5A6D7C0E27F1D50D /* Pods */,
@@ -101,15 +97,6 @@
 			);
 			name = Tests;
 			path = ../Tests;
-			sourceTree = "<group>";
-		};
-		B3E3CE1E1B73914900281F20 /* Mock Collections */ = {
-			isa = PBXGroup;
-			children = (
-				B3E3CE1F1B73915F00281F20 /* OCEnumerableMockCollection.h */,
-				B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */,
-			);
-			name = "Mock Collections";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +207,6 @@
 				B30F6D1F1BD928B000E680F0 /* MappingTests.m in Sources */,
 				B30F6D201BD928B000E680F0 /* NumberExtensionTests.m in Sources */,
 				B30F6D1B1BD928B000E680F0 /* AggregatingTests.m in Sources */,
-				B3E3CE211B73915F00281F20 /* OCEnumerableMockCollection.m in Sources */,
 				B30F6D1D1BD928B000E680F0 /* EnumeratingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

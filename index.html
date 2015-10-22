@@ -19,13 +19,11 @@
     </section>
 
     <section class="main-content">
-      <p>Undoubtedly, Objective-C has been influenced significantly by Smalltalk. Unfortunately, the forefathers of 
-Objective-C stopped inheriting concepts where stuff gets really interesting (and a pleasure to work with).</p>
+      <p>Sometimes, Objective-C just is overly verbose. Life is too short to <code>enumerateObjectsUsingBlock</code> and who has the
+time to create sub-arrays with <code>filteredArrayUsingPredicate</code> anyway?</p>
 
-<p>OpinionatedC is here to fix that.</p>
-
-<p>Note: This library is pretty much a work in progress. However, it is well tested and already used in production
-as well as in App Store submitted apps.</p>
+<p>OpinionatedC is here to fix that. It offers a ton of Smalltalk-style convenience extension methods that make
+writing concise, easily readable Objective-C code a pleasure.</p>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
@@ -42,149 +40,20 @@ as well as in App Store submitted apps.</p>
 <h2>
 <a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
 
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#collections"><strong>Collections</strong></a> (<code>NSArray</code>, <code>NSDictionary</code>, <code>NSSet</code>, <code>NSString</code>, ...)
+<h3>
+<a id="collections-nsarray-nsdictionary-nsset-nsstring-" class="anchor" href="#collections-nsarray-nsdictionary-nsset-nsstring-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collections (<code>NSArray</code>, <code>NSDictionary</code>, <code>NSSet</code>, <code>NSString</code>, ...)</h3>
 
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#aggregating">Aggregating</a>
-
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>average</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>average:</code></a>
-</li>
-<li><a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>count:</code></a></li>
-<li><a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>groupedBy:</code></a></li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>max</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>max:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>min</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>min:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>sum</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#aggregating"><code>sum:</code></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#enumerating">Enumerating</a>
-
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#enumerating"><code>each:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#enumerating"><code>eachWithIndex:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#enumerating"><code>each:separatedBy:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#enumerating"><code>eachWithIndex:separatedBy:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#enumerating"><code>isEmpty</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#enumerating"><code>isNotEmpty</code></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#mapping">Mapping</a>
-
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#mapping"><code>collect:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#mapping"><code>map:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#mapping"><code>inject:into:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#mapping"><code>reduce:</code></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#subsetting">Subsetting</a>
-
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>allSatisfy:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>anySatisfy:</code></a> </li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>first</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>first:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>detect:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>reject:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>select:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>dropWhile:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#subsetting"><code>takeWhile:</code></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#error-handling"><strong>Error Handling</strong></a>
-
-<ul>
-<li><a href="https://github.com/leoschweizer/OpinionatedC#error-handling"><code>SubclassResponsibility</code></a></li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#error-handling"><code>UnsupportedOperation</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#error-handling"><code>ShouldNotOccur</code></a>
-</li>
-<li><a href="https://github.com/leoschweizer/OpinionatedC#error-handling"><code>NotYetImplemented</code></a></li>
-<li><a href="https://github.com/leoschweizer/OpinionatedC#error-handling"><code>Error()</code></a></li>
-</ul>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><strong>NSDictionary Extensions</strong></a>
-
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>add:</code></a> ¹</li>
-<li><a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>associationEnumerator</code></a></li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>at:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>at:ifAbsent:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>at:ifPresent:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>at:put:</code></a> ¹ / <a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>at:ifAbsentPut:</code></a> ¹</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>includesKey:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#nsdictionary-extensions"><code>includesValue:</code></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions"><strong>NSNumber Extensions</strong></a>
-
-<ul>
-<li><a href="https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions"><code>atRandom</code></a></li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions"><code>timesRepeat:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions"><code>timesRepeatWithIndex:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions"><code>to:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#nsnumber-extensions"><code>to:by:</code></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsobject-extensions"><strong>NSObject Extensions</strong></a>
-
-<ul>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsobject-extensions"><code>asAssociationWithValue:</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#nsobject-extensions"><code>asAssociationWithKey:</code></a>
-</li>
-<li>
-<a href="https://github.com/leoschweizer/OpinionatedC#nsobject-extensions"><code>isNull</code></a> / <a href="https://github.com/leoschweizer/OpinionatedC#nsobject-extensions"><code>isNotNull</code></a>
-</li>
-</ul>
-</li>
-</ul>
-
-<p>¹ Extension is only available on mutable instances</p>
-
-<h4>
-<a id="collections" class="anchor" href="#collections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collections</h4>
-
-<p>Most of the collection extensions are implemented on the <code>NSObject</code> level, with refined behavior for different 
+<p>Most of the collection extensions are implemented on the <code>NSObject</code> level, with refined behaviour for different 
 collection types. Non-collection objects thereby behave like collections with a single element, and <code>[NSNull null]</code>
 behaves like an empty collection.</p>
 
 <p>OpinionatedC tries it's best to preserve the types you are operating on. Calling <code>select:</code> on an (immutable) <code>NSArray</code>
 will yield an instance of <code>NSArray</code>. Likewise, doing the same on an <code>NSMutableArray</code> instance will yield a mutable
-array. However, this behavior is limited by the type system of Objective-C (for instance, this does not work
+array. However, this behaviour is limited by the type system of Objective-C (for instance, this does not work
 at all with <code>NSString</code>s).</p>
 
-<h5>
-<a id="aggregating" class="anchor" href="#aggregating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aggregating</h5>
+<h4>
+<a id="aggregating" class="anchor" href="#aggregating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aggregating</h4>
 
 <div class="highlight highlight-source-objc"><pre>
 [@[@<span class="pl-c1">2</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">average</span>]
@@ -236,8 +105,8 @@ at all with <code>NSString</code>s).</p>
 
 </pre></div>
 
-<h5>
-<a id="enumerating" class="anchor" href="#enumerating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enumerating</h5>
+<h4>
+<a id="enumerating" class="anchor" href="#enumerating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enumerating</h4>
 
 <div class="highlight highlight-source-objc"><pre>
 [@[<span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>] <span class="pl-c1">each:</span>^(<span class="pl-c1">NSString</span> *each) {
@@ -271,8 +140,8 @@ at all with <code>NSString</code>s).</p>
 <span class="pl-c">// =&gt; YES</span>
 </pre></div>
 
-<h5>
-<a id="mapping" class="anchor" href="#mapping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mapping</h5>
+<h4>
+<a id="mapping" class="anchor" href="#mapping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mapping</h4>
 
 <div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">1</span>, @<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>] <span class="pl-c1">map:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> @([each <span class="pl-c1">integerValue</span>] * <span class="pl-c1">2</span>);
@@ -294,8 +163,8 @@ at all with <code>NSString</code>s).</p>
 }];
 <span class="pl-c">// =&gt; @6</span></pre></div>
 
-<h5>
-<a id="subsetting" class="anchor" href="#subsetting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subsetting</h5>
+<h4>
+<a id="subsetting" class="anchor" href="#subsetting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subsetting</h4>
 
 <div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">1</span>, @<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">allSatisfy:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> [each <span class="pl-c1">integerValue</span>] % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>;
@@ -336,8 +205,8 @@ at all with <code>NSString</code>s).</p>
 <span class="pl-c">// =&gt; @[@1, @2, @3]</span>
 </pre></div>
 
-<h4>
-<a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling</h4>
+<h3>
+<a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling</h3>
 
 <div class="highlight highlight-source-objc"><pre><span class="pl-k">@implementation</span> <span class="pl-en">MyAbstractClass</span>
 
@@ -376,8 +245,8 @@ at all with <code>NSString</code>s).</p>
 
 <span class="pl-k">@end</span></pre></div>
 
-<h4>
-<a id="nsdictionary-extensions" class="anchor" href="#nsdictionary-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSDictionary Extensions</h4>
+<h3>
+<a id="nsdictionary-extensions" class="anchor" href="#nsdictionary-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSDictionary Extensions</h3>
 
 <div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSMutableDictionary</span> *dict = [<span class="pl-c1">NSMutableDictionary</span> <span class="pl-c1">dictionary</span>];
 
@@ -414,8 +283,8 @@ at all with <code>NSString</code>s).</p>
 <span class="pl-c">// =&gt; foo</span>
 </pre></div>
 
-<h4>
-<a id="nsnumber-extensions" class="anchor" href="#nsnumber-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSNumber Extensions</h4>
+<h3>
+<a id="nsnumber-extensions" class="anchor" href="#nsnumber-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSNumber Extensions</h3>
 
 <div class="highlight highlight-source-objc"><pre>[@<span class="pl-c1">100</span> <span class="pl-c1">atRandom</span>];
 <span class="pl-c">// =&gt; 77</span>
@@ -443,8 +312,8 @@ __block <span class="pl-c1">NSMutableArray</span> *array = [<span class="pl-c1">
 }];
 <span class="pl-c">// =&gt; @[@2, @4, @6, @8, @10]</span></pre></div>
 
-<h4>
-<a id="nsobject-extensions" class="anchor" href="#nsobject-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSObject Extensions</h4>
+<h3>
+<a id="nsobject-extensions" class="anchor" href="#nsobject-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSObject Extensions</h3>
 
 <div class="highlight highlight-source-objc"><pre>[<span class="pl-s"><span class="pl-pds">@"</span>hello world<span class="pl-pds">"</span></span> <span class="pl-c1">asAssociationWithKey:</span>@<span class="pl-c1">1</span>]
 <span class="pl-c">// =&gt; an OCAssociation(key:@1, value:@"hello world")</span>

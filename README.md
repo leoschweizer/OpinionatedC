@@ -31,7 +31,9 @@ However, I'm currently looking for a method to allow optional, configurable meth
 want (or need) them. Feel free to add to the discussion in [#1](https://github.com/leoschweizer/OpinionatedC/issues/1) if you have any ideas about this topic.
 
 ## Features
-The **[complete list of features](http://opinionatedc.xyz)** is available on the [official OpinionatedC website](http://opinionatedc.xyz). Here is a small potpourri of what is possible with OpinionatedC:
+#### The **[complete list of features](http://opinionatedc.xyz)** is available on the [official OpinionatedC website](http://opinionatedc.xyz). 
+
+Here is a small potpourri of what is possible with OpinionatedC:
 
 ```objectivec
 [@[@"hello", @"world!"] average:^NSNumber*(id each) { 
@@ -113,6 +115,15 @@ NSSet *set = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
 }];
 // => @[@2, @4, @6, @8, @10]
 ```
+
+## Contributing
+If you have any questions, remarks, ideas or suggestions for improvement, don't hesitate to [open an issue](https://github.com/leoschweizer/OpinionatedC/issues). If you are about to create a pull request, there are only a few things to consider:
+* open an issue first if you are not sure if your idea will be appreciated
+* indent with tabs, not spaces
+* write unit tests, aim for 100% coverage
+
+## Contributors
+* [Leo Schweizer](https://github.com/leoschweizer)
 
 ## License
 ```

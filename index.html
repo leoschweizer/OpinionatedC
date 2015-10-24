@@ -178,7 +178,7 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 }];
 <span class="pl-c">// =&gt; @[@2, @4, @6]</span>
 
-[<span class="pl-s"><span class="pl-pds">@"</span>hello world<span class="pl-pds">"</span></span> <span class="pl-c1">map:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSString</span> *each) { 
+[<span class="pl-s"><span class="pl-pds">@"</span>hello world<span class="pl-pds">"</span></span> <span class="pl-c1">collect:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSString</span> *each) { 
     <span class="pl-k">return</span> [each <span class="pl-c1">capitalizedString</span>];
 }];
 <span class="pl-c">// =&gt; @"HELLO WORLD"</span>
@@ -194,7 +194,12 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">1</span>, @<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>] <span class="pl-c1">inject:</span>@<span class="pl-c1">0</span> <span class="pl-c1">into:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *running, <span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> @([running <span class="pl-c1">integerValue</span>] + [each <span class="pl-c1">integerValue</span>]);
 }];
-<span class="pl-c">// =&gt; @6</span></pre></div>
+<span class="pl-c">// =&gt; @6</span>
+
+[@[@<span class="pl-c1">4</span>, @<span class="pl-c1">5</span>, @<span class="pl-c1">6</span>] <span class="pl-c1">reduce:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *running, <span class="pl-c1">NSNumber</span> *each) {
+    <span class="pl-k">return</span> @([running <span class="pl-c1">integerValue</span>] * [each <span class="pl-c1">integerValue</span>]);
+}];
+<span class="pl-c">// =&gt; @120</span></pre></div>
 
 <h3>
 <a id="sub-collections" class="anchor" href="#sub-collections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-Collections</h3>
@@ -222,7 +227,7 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <span class="pl-c">// =&gt; @"abc"</span></pre></div>
 
 <h4>
-<a id="detext-detect" class="anchor" href="#detext-detect" aria-hidden="true"><span class="octicon octicon-link"></span></a>Detext (<code>detect:</code>)</h4>
+<a id="detect-detect" class="anchor" href="#detect-detect" aria-hidden="true"><span class="octicon octicon-link"></span></a>Detect (<code>detect:</code>)</h4>
 
 <div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">detect:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-c1">NSNumber</span> *first) {
     <span class="pl-k">return</span> [each <span class="pl-c1">integerValue</span>] % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>;
@@ -335,18 +340,23 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <span class="pl-k">for</span> (OCAssociation *each in [dict <span class="pl-c1">associationEnumerator</span>]) {
     <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, each.<span class="pl-smi">value</span>);
 }
-<span class="pl-c">// =&gt; foo</span>
-</pre></div>
+<span class="pl-c">// =&gt; foo</span></pre></div>
 
 <h2>
 <a id="nsnumber-extensions" class="anchor" href="#nsnumber-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSNumber Extensions</h2>
 
-<div class="highlight highlight-source-objc"><pre>[@<span class="pl-c1">100</span> <span class="pl-c1">atRandom</span>];
-<span class="pl-c">// =&gt; 77</span>
+<h3>
+<a id="random-number-generation-atrandom" class="anchor" href="#random-number-generation-atrandom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Random Number Generation (<code>atRandom</code>)</h3>
 
-[@<span class="pl-c1">3</span> <span class="pl-c1">timesRepeat:</span>^{ 
+<div class="highlight highlight-source-objc"><pre>[@<span class="pl-c1">100</span> <span class="pl-c1">atRandom</span>]
+<span class="pl-c">// =&gt; 77</span></pre></div>
+
+<h3>
+<a id="repetition-timesrepeat--timesrepeatwithindex" class="anchor" href="#repetition-timesrepeat--timesrepeatwithindex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repetition (<code>timesRepeat:</code> / <code>timesRepeatWithIndex:</code>)</h3>
+
+<div class="highlight highlight-source-objc"><pre>[@<span class="pl-c1">3</span> <span class="pl-c1">timesRepeat:</span>^{ 
    <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>hooray!<span class="pl-pds">"</span></span>); 
-}];
+}]
 <span class="pl-c">// =&gt; hooray</span>
 <span class="pl-c">// =&gt; hooray</span>
 <span class="pl-c">// =&gt; hooray</span>
@@ -354,17 +364,20 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 __block <span class="pl-c1">NSMutableArray</span> *array = [<span class="pl-c1">NSMutableArray</span> <span class="pl-c1">array</span>];
 [@<span class="pl-c1">10</span> <span class="pl-c1">timesRepeatWithIndex:</span>^(<span class="pl-k">NSUInteger</span> idx) {
     [array <span class="pl-c1">addObject:</span>@(idx)];
-}];
-<span class="pl-c">// =&gt; @[@1, @2, @3, @4, @5, @6, @7, @8, @9, @10]</span>
+}]
+<span class="pl-c">// =&gt; @[@1, @2, @3, @4, @5, @6, @7, @8, @9, @10]</span></pre></div>
 
-[[@<span class="pl-c1">5</span> <span class="pl-c1">to:</span>@<span class="pl-c1">7</span>] <span class="pl-c1">map:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *each) {
+<h3>
+<a id="intervals-to--toby" class="anchor" href="#intervals-to--toby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intervals (<code>to:</code> / <code>to:by:</code>)</h3>
+
+<div class="highlight highlight-source-objc"><pre>[[@<span class="pl-c1">5</span> <span class="pl-c1">to:</span>@<span class="pl-c1">7</span>] <span class="pl-c1">map:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> @([each <span class="pl-c1">integerValue</span>] * <span class="pl-c1">2</span>);
-}];
+}]
 <span class="pl-c">// =&gt; @[@10, @12, @14]</span>
 
-[[@<span class="pl-c1">1</span> <span class="pl-c1">to:</span>@<span class="pl-c1">10</span>] <span class="pl-c1">select</span>:^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *each) {
+[[@<span class="pl-c1">1</span> <span class="pl-c1">to:</span>@<span class="pl-c1">10</span> <span class="pl-c1">by:</span>@<span class="pl-c1">1</span>] <span class="pl-c1">select</span>:^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> [each <span class="pl-c1">integerValue</span>] % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>;
-}];
+}]
 <span class="pl-c">// =&gt; @[@2, @4, @6, @8, @10]</span></pre></div>
 
 <h2>

@@ -41,19 +41,24 @@ writing <strong>concise, easily readable</strong> Objective-C code a pleasure.</
 <a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
 
 <h3>
-<a id="collections-nsarray-nsdictionary-nsset-nsstring-" class="anchor" href="#collections-nsarray-nsdictionary-nsset-nsstring-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collections (<code>NSArray</code>, <code>NSDictionary</code>, <code>NSSet</code>, <code>NSString</code>, ...)</h3>
+<a id="collection-extensions" class="anchor" href="#collection-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collection Extensions</h3>
 
-<p>Most of the collection extensions are implemented on the <code>NSObject</code> level, with refined behaviour for different 
+<p>Currently, the collection extensions offered by OpinionatedC are available on all instances of the following classes:
+<code>NSArray</code>, <code>NSMutableArray</code>, <code>NSDictionary</code>, <code>NSMutableDictionary</code>, <code>NSSet</code>, <code>NSMutableSet</code>, <code>NSString</code>, <code>NSMutableString</code>,
+<code>NSMapTable</code>, <code>NSHashTable</code>, <code>NSPointerArray</code>.</p>
+
+<p>The collection extensions are implemented on the <code>NSObject</code> level, with refined behaviour for the different 
 collection types. Non-collection objects thereby behave like collections with a single element, and <code>[NSNull null]</code>
 behaves like an empty collection.</p>
 
 <p>OpinionatedC tries it's best to preserve the types you are operating on. Calling <code>select:</code> on an (immutable) <code>NSArray</code>
 will yield an instance of <code>NSArray</code>. Likewise, doing the same on an <code>NSMutableArray</code> instance will yield a mutable
 array. However, this behaviour is limited by the type system of Objective-C (for instance, this does not work
-at all with <code>NSString</code>s).</p>
+at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 
 <h4>
-<a id="aggregating" class="anchor" href="#aggregating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aggregating</h4>
+<a id="average--average" class="anchor" href="#average--average" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>average</code> / <code>average:</code>
+</h4>
 
 <div class="highlight highlight-source-objc"><pre>
 [@[@<span class="pl-c1">2</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">average</span>]
@@ -61,9 +66,12 @@ at all with <code>NSString</code>s).</p>
 
 [@[<span class="pl-s"><span class="pl-pds">@"</span>hello<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>world!<span class="pl-pds">"</span></span>] <span class="pl-c1">average:</span>^<span class="pl-c1">NSNumber</span>*(<span class="pl-k">id</span> each) { 
     <span class="pl-k">return</span> @([each <span class="pl-c1">length</span>]);
-}]
-<span class="pl-c">// =&gt; @5.5</span>
+}]</pre></div>
 
+<h4>
+<a id="aggregating" class="anchor" href="#aggregating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aggregating</h4>
+
+<div class="highlight highlight-source-objc"><pre>
 [@[<span class="pl-s"><span class="pl-pds">@"</span>a<span class="pl-pds">"</span></span>, @<span class="pl-c1">5</span>, @<span class="pl-c1">YES</span>, <span class="pl-s"><span class="pl-pds">@"</span>b<span class="pl-pds">"</span></span>] <span class="pl-c1">count:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-k">id</span> each) {
     <span class="pl-k">return</span> [each <span class="pl-c1">isKindOfClass:</span><span class="pl-c1">NSString</span>.class];
 }];

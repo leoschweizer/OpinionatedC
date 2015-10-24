@@ -22,7 +22,7 @@
 - (void)timesRepeatWithIndex:(OCRepeatWithIndexBlock)repeatBlock {
 	NSAssert([self integerValue] >= 0, @"cannot repeat things a negative number of times");
 	NSUInteger count = [self unsignedIntegerValue];
-	for (NSUInteger idx = 1; idx <= count; idx++) {
+	for (NSUInteger idx = 0; idx < count; idx++) {
 		repeatBlock(idx);
 	}
 }

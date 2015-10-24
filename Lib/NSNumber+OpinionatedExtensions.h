@@ -22,7 +22,7 @@ typedef void (^OCRepeatWithIndexBlock)(NSUInteger idx);
 
 /**
  * Evaluate repeatBlock the numer of times represented by the receiver,
- * passing the number of the current repetition as argument.
+ * passing the index of the current repetition as argument.
  */
 - (void)timesRepeatWithIndex:(OCRepeatWithIndexBlock)repeatBlock;
 

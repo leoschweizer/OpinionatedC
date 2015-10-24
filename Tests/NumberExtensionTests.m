@@ -54,8 +54,8 @@
 		[probeArray addObject:@(idx)];
 	}];
 	XCTAssertEqual(probeArray.count, 10);
-	XCTAssertEqualObjects([probeArray firstObject], @1);
-	XCTAssertEqualObjects([probeArray lastObject], @10);
+	XCTAssertEqualObjects([probeArray first], @0);
+	XCTAssertEqualObjects([probeArray lastObject], @9);
 }
 
 - (void)testTo {

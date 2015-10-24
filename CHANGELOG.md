@@ -1,5 +1,8 @@
 # Changelog
 
+##### 0.2.0 [2015-10-24]
+* Changed timesRepeat indexing (was 1-based, now is 0-based)
+
 ##### 0.1.7 [2015-10-08]
 * Added support for `NSMapTable`
 * Added support for `NSHashTable`

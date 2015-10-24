@@ -25,8 +25,8 @@ time to create sub-arrays with <code>filteredArrayUsingPredicate</code> anyway?<
 <p>OpinionatedC is here to fix that. It offers a ton of <strong>Smalltalk-style</strong> convenience extension methods that make
 writing <strong>concise, easily readable</strong> Objective-C code a pleasure.</p>
 
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
 
 <p>The easiest way to include OpinionatedC into your project is through <a href="http://cocoapods.org/">CocoaPods</a>:</p>
 
@@ -37,11 +37,11 @@ writing <strong>concise, easily readable</strong> Objective-C code a pleasure.</
 
 <div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">&lt;</span>OpinionatedC/OpinionatedC.h<span class="pl-pds">&gt;</span></span></pre></div>
 
-<h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
 
-<h3>
-<a id="collection-extensions" class="anchor" href="#collection-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collection Extensions</h3>
+<h2>
+<a id="collection-extensions" class="anchor" href="#collection-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collection Extensions</h2>
 
 <p>Currently, the collection extensions offered by OpinionatedC are available on all instances of the following classes:
 <code>NSArray</code>, <code>NSMutableArray</code>, <code>NSDictionary</code>, <code>NSMutableDictionary</code>, <code>NSSet</code>, <code>NSMutableSet</code>, <code>NSString</code>, <code>NSMutableString</code>,
@@ -56,12 +56,13 @@ will yield an instance of <code>NSArray</code>. Likewise, doing the same on an <
 array. However, this behaviour is limited by the type system of Objective-C (for instance, this does not work
 at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 
-<h4>
-<a id="average--average" class="anchor" href="#average--average" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>average</code> / <code>average:</code>
-</h4>
+<h3>
+<a id="aggregation" class="anchor" href="#aggregation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aggregation</h3>
 
-<div class="highlight highlight-source-objc"><pre>
-[@[@<span class="pl-c1">2</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">average</span>]
+<h4>
+<a id="average-average--average" class="anchor" href="#average-average--average" aria-hidden="true"><span class="octicon octicon-link"></span></a>Average (<code>average</code> / <code>average:</code>)</h4>
+
+<div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">2</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">average</span>]
 <span class="pl-c">// =&gt; @3</span>
 
 [@[<span class="pl-s"><span class="pl-pds">@"</span>hello<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>world!<span class="pl-pds">"</span></span>] <span class="pl-c1">average:</span>^<span class="pl-c1">NSNumber</span>*(<span class="pl-k">id</span> each) { 
@@ -69,7 +70,12 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 }]</pre></div>
 
 <h4>
-<a id="aggregating" class="anchor" href="#aggregating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aggregating</h4>
+<a id="count-count" class="anchor" href="#count-count" aria-hidden="true"><span class="octicon octicon-link"></span></a>Count (<code>count:</code>)</h4>
+
+<div class="highlight highlight-source-objc"><pre>[@[<span class="pl-s"><span class="pl-pds">@"</span>a<span class="pl-pds">"</span></span>, @<span class="pl-c1">5</span>, @<span class="pl-c1">YES</span>, <span class="pl-s"><span class="pl-pds">@"</span>b<span class="pl-pds">"</span></span>] <span class="pl-c1">count:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-k">id</span> each) {
+    <span class="pl-k">return</span> [each <span class="pl-c1">isKindOfClass:</span><span class="pl-c1">NSString</span>.class];
+}];
+<span class="pl-c">// =&gt; 2</span></pre></div>
 
 <div class="highlight highlight-source-objc"><pre>
 [@[<span class="pl-s"><span class="pl-pds">@"</span>a<span class="pl-pds">"</span></span>, @<span class="pl-c1">5</span>, @<span class="pl-c1">YES</span>, <span class="pl-s"><span class="pl-pds">@"</span>b<span class="pl-pds">"</span></span>] <span class="pl-c1">count:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-k">id</span> each) {

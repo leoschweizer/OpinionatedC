@@ -40,6 +40,8 @@ writing <strong>concise, easily readable</strong> Objective-C code a pleasure.</
 <h1>
 <a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
 
+<hr>
+
 <h2>
 <a id="collection-extensions" class="anchor" href="#collection-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collection Extensions</h2>
 
@@ -127,10 +129,13 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <h3>
 <a id="enumeration" class="anchor" href="#enumeration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enumeration</h3>
 
+<h4>
+<a id="each-each--eachwithindex--eachseparatedby--eachwithindexseparatedby" class="anchor" href="#each-each--eachwithindex--eachseparatedby--eachwithindexseparatedby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Each (<code>each:</code> / <code>eachWithIndex:</code> / <code>each:separatedBy:</code> / <code>eachWithIndex:separatedBy:</code>)</h4>
+
 <div class="highlight highlight-source-objc"><pre>
 [@[<span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>] <span class="pl-c1">each:</span>^(<span class="pl-c1">NSString</span> *each) {
     <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, each);
-}];
+}]
 <span class="pl-c">// =&gt; foo</span>
 <span class="pl-c">// =&gt; bar</span>
 
@@ -140,24 +145,29 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
     }
     separatedBy:^{
         <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span>w00t<span class="pl-pds">"</span></span>);
-    }];
+    }]
 <span class="pl-c">// =&gt; foo</span>
 <span class="pl-c">// =&gt; w00t</span>
 <span class="pl-c">// =&gt; bar</span>
 
 [<span class="pl-s"><span class="pl-pds">@"</span>abc<span class="pl-pds">"</span></span> <span class="pl-c1">eachWithIndex:</span>^(<span class="pl-c1">NSString</span> *each, <span class="pl-k">NSUInteger</span> idx) {
     <span class="pl-c1">NSLog</span>(<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-c1">%@</span> - <span class="pl-c1">%@</span><span class="pl-pds">"</span></span>, each, @(idx));
-}];
+}]
 <span class="pl-c">// =&gt; a - 0</span>
 <span class="pl-c">// =&gt; b - 1</span>
-<span class="pl-c">// =&gt; c - 2</span>
+<span class="pl-c">// =&gt; c - 2</span></pre></div>
 
-[@[<span class="pl-s"><span class="pl-pds">@"</span>a<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>b<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>c<span class="pl-pds">"</span></span>] <span class="pl-c1">isEmpty</span>];
+<h4>
+<a id="is-empty-isempty--isnotempty" class="anchor" href="#is-empty-isempty--isnotempty" aria-hidden="true"><span class="octicon octicon-link"></span></a>Is Empty (<code>isEmpty</code> / <code>isNotEmpty</code>)</h4>
+
+<div class="highlight highlight-source-objc"><pre>[@[<span class="pl-s"><span class="pl-pds">@"</span>a<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>b<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>c<span class="pl-pds">"</span></span>] <span class="pl-c1">isEmpty</span>]
 <span class="pl-c">// =&gt; NO</span>
 
-[<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-pds">"</span></span> <span class="pl-c1">isEmpty</span>];
+[<span class="pl-s"><span class="pl-pds">@"</span><span class="pl-pds">"</span></span> <span class="pl-c1">isEmpty</span>]
 <span class="pl-c">// =&gt; YES</span>
-</pre></div>
+
+[<span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span> <span class="pl-c1">isEmpty</span>]
+<span class="pl-c">// =&gt; NO</span></pre></div>
 
 <h4>
 <a id="mapping" class="anchor" href="#mapping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mapping</h4>
@@ -224,8 +234,10 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <span class="pl-c">// =&gt; @[@1, @2, @3]</span>
 </pre></div>
 
-<h3>
-<a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling</h3>
+<hr>
+
+<h2>
+<a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling</h2>
 
 <div class="highlight highlight-source-objc"><pre><span class="pl-k">@implementation</span> <span class="pl-en">MyAbstractClass</span>
 
@@ -264,8 +276,10 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 
 <span class="pl-k">@end</span></pre></div>
 
-<h3>
-<a id="nsdictionary-extensions" class="anchor" href="#nsdictionary-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSDictionary Extensions</h3>
+<hr>
+
+<h2>
+<a id="nsdictionary-extensions" class="anchor" href="#nsdictionary-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSDictionary Extensions</h2>
 
 <div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSMutableDictionary</span> *dict = [<span class="pl-c1">NSMutableDictionary</span> <span class="pl-c1">dictionary</span>];
 
@@ -302,8 +316,10 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <span class="pl-c">// =&gt; foo</span>
 </pre></div>
 
-<h3>
-<a id="nsnumber-extensions" class="anchor" href="#nsnumber-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSNumber Extensions</h3>
+<hr>
+
+<h2>
+<a id="nsnumber-extensions" class="anchor" href="#nsnumber-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSNumber Extensions</h2>
 
 <div class="highlight highlight-source-objc"><pre>[@<span class="pl-c1">100</span> <span class="pl-c1">atRandom</span>];
 <span class="pl-c">// =&gt; 77</span>
@@ -331,8 +347,10 @@ __block <span class="pl-c1">NSMutableArray</span> *array = [<span class="pl-c1">
 }];
 <span class="pl-c">// =&gt; @[@2, @4, @6, @8, @10]</span></pre></div>
 
-<h3>
-<a id="nsobject-extensions" class="anchor" href="#nsobject-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSObject Extensions</h3>
+<hr>
+
+<h2>
+<a id="nsobject-extensions" class="anchor" href="#nsobject-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSObject Extensions</h2>
 
 <div class="highlight highlight-source-objc"><pre>[<span class="pl-s"><span class="pl-pds">@"</span>hello world<span class="pl-pds">"</span></span> <span class="pl-c1">asAssociationWithKey:</span>@<span class="pl-c1">1</span>]
 <span class="pl-c">// =&gt; an OCAssociation(key:@1, value:@"hello world")</span>
@@ -343,8 +361,8 @@ __block <span class="pl-c1">NSMutableArray</span> *array = [<span class="pl-c1">
 [[<span class="pl-c1">NSNull</span> <span class="pl-c1">null</span>] <span class="pl-c1">isNotNull</span>]
 <span class="pl-c">// =&gt; NO</span></pre></div>
 
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
 
 <pre><code>The MIT License (MIT)
 

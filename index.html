@@ -197,46 +197,68 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <span class="pl-c">// =&gt; @6</span></pre></div>
 
 <h3>
-<a id="subsetting" class="anchor" href="#subsetting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subsetting</h3>
+<a id="sub-collections" class="anchor" href="#sub-collections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-Collections</h3>
+
+<h4>
+<a id="all--any-satisfy-allsatisfy--anysatisfy" class="anchor" href="#all--any-satisfy-allsatisfy--anysatisfy" aria-hidden="true"><span class="octicon octicon-link"></span></a>All &amp; Any Satisfy (<code>allSatisfy:</code> / <code>anySatisfy:</code>)</h4>
 
 <div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">1</span>, @<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">allSatisfy:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> [each <span class="pl-c1">integerValue</span>] % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>;
-}];
+}]
 <span class="pl-c">// =&gt; NO</span>
 
 [<span class="pl-s"><span class="pl-pds">@"</span>abcdef<span class="pl-pds">"</span></span> <span class="pl-c1">anySatisfy:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-c1">NSString</span> *each) { 
     <span class="pl-k">return</span> [each <span class="pl-c1">isEqualToString:</span><span class="pl-s"><span class="pl-pds">@"</span>f<span class="pl-pds">"</span></span>];
-}];
-<span class="pl-c">// =&gt; YES</span>
+}]
+<span class="pl-c">// =&gt; YES</span></pre></div>
+
+<h4>
+<a id="first-first--first" class="anchor" href="#first-first--first" aria-hidden="true"><span class="octicon octicon-link"></span></a>First (<code>first</code> / <code>first:</code>)</h4>
+
+<div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">5</span>, @<span class="pl-c1">6</span>] <span class="pl-c1">first</span>]
+<span class="pl-c">// =&gt; @5</span>
 
 [<span class="pl-s"><span class="pl-pds">@"</span>abcdef<span class="pl-pds">"</span></span> <span class="pl-c1">first:</span><span class="pl-c1">3</span>]
-<span class="pl-c">// =&gt; @"abc"</span>
+<span class="pl-c">// =&gt; @"abc"</span></pre></div>
 
-[@{ @<span class="pl-c1">1</span> : <span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, @<span class="pl-c1">2</span> : <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>} detect:^<span class="pl-c1">BOOL</span>(OCAssociation *each) {
-    <span class="pl-k">return</span> [each.key <span class="pl-c1">isEqualToNumber:</span>@<span class="pl-c1">2</span>];
-}];
-<span class="pl-c">// =&gt; an OCAssociation(@2, @"bar")</span>
+<h4>
+<a id="detext-detect" class="anchor" href="#detext-detect" aria-hidden="true"><span class="octicon octicon-link"></span></a>Detext (<code>detect:</code>)</h4>
 
-[@{ @<span class="pl-c1">1</span> : <span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, @<span class="pl-c1">2</span> : <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>} <span class="pl-c1">select</span>:^<span class="pl-c1">BOOL</span>(OCAssociation *each) {
+<div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>, @<span class="pl-c1">4</span>] <span class="pl-c1">detect:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-c1">NSNumber</span> *first) {
+    <span class="pl-k">return</span> [each <span class="pl-c1">integerValue</span>] % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>;
+}]
+<span class="pl-c">// =&gt; @2</span>
+
+[@{ @<span class="pl-c1">1</span> : <span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, @<span class="pl-c1">2</span> : <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>} detect:^<span class="pl-c1">BOOL</span>(OCAssociation *first) {
+    <span class="pl-k">return</span> [first.key <span class="pl-c1">isEqualToNumber:</span>@<span class="pl-c1">2</span>];
+}]
+<span class="pl-c">// =&gt; an OCAssociation(@2, @"bar")</span></pre></div>
+
+<h4>
+<a id="select--reject-select--reject" class="anchor" href="#select--reject-select--reject" aria-hidden="true"><span class="octicon octicon-link"></span></a>Select &amp; Reject (<code>select:</code> / <code>reject:</code>)</h4>
+
+<div class="highlight highlight-source-objc"><pre>[@{ @<span class="pl-c1">1</span> : <span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, @<span class="pl-c1">2</span> : <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>} <span class="pl-c1">select</span>:^<span class="pl-c1">BOOL</span>(OCAssociation *each) {
     <span class="pl-k">return</span> [each.key <span class="pl-c1">isEqualToNumber:</span>@<span class="pl-c1">2</span>];
-}];
+}]
 <span class="pl-c">// =&gt; @{ @2 : @"bar" }</span>
 
 [@{ @<span class="pl-c1">1</span> : <span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, @<span class="pl-c1">2</span> : <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>} reject:^<span class="pl-c1">BOOL</span>(OCAssociation *each) {
     <span class="pl-k">return</span> [each.key <span class="pl-c1">isEqualToNumber:</span>@<span class="pl-c1">2</span>];
-}];
-<span class="pl-c">// =&gt; @{ @1 : @"foo" }</span>
+}]
+<span class="pl-c">// =&gt; @{ @1 : @"foo" }</span></pre></div>
 
-[@[@<span class="pl-c1">2</span>, @<span class="pl-c1">4</span>, @<span class="pl-c1">6</span>, @<span class="pl-c1">8</span>, @<span class="pl-c1">10</span>, @<span class="pl-c1">11</span>, @<span class="pl-c1">12</span>] <span class="pl-c1">dropWhile:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-k">id</span> each) {
+<h4>
+<a id="drop--take-while-dropwhile--takewhile" class="anchor" href="#drop--take-while-dropwhile--takewhile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drop &amp; Take While (<code>dropWhile:</code> / <code>takeWhile:</code>)</h4>
+
+<div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">2</span>, @<span class="pl-c1">4</span>, @<span class="pl-c1">6</span>, @<span class="pl-c1">8</span>, @<span class="pl-c1">10</span>, @<span class="pl-c1">11</span>, @<span class="pl-c1">12</span>] <span class="pl-c1">dropWhile:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-k">id</span> each) {
     <span class="pl-k">return</span> [each <span class="pl-c1">integerValue</span>] % <span class="pl-c1">2</span> == <span class="pl-c1">0</span>;
-}];
+}]
 <span class="pl-c">// =&gt; @[@11, @12]</span>
 
 [@[@<span class="pl-c1">1</span>, @<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>, @<span class="pl-c1">4</span>, @<span class="pl-c1">5</span>] <span class="pl-c1">takeWhile:</span>^<span class="pl-c1">BOOL</span>(<span class="pl-k">id</span> each) {
     <span class="pl-k">return</span> [each <span class="pl-c1">integerValue</span>] &lt;= <span class="pl-c1">3</span>;
-}];
-<span class="pl-c">// =&gt; @[@1, @2, @3]</span>
-</pre></div>
+}]
+<span class="pl-c">// =&gt; @[@1, @2, @3]</span></pre></div>
 
 <h2>
 <a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling</h2>

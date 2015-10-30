@@ -2,8 +2,8 @@
 [![Build Status](https://travis-ci.org/leoschweizer/OpinionatedC.svg?branch=master)](https://travis-ci.org/leoschweizer/OpinionatedC)
 [![Coverage Status](https://coveralls.io/repos/leoschweizer/OpinionatedC/badge.svg?branch=master&service=github)](https://coveralls.io/github/leoschweizer/OpinionatedC?branch=master)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
-[![License](https://img.shields.io/cocoapods/l/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
-[![Platforms](https://img.shields.io/cocoapods/p/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
+![License](https://img.shields.io/cocoapods/l/OpinionatedC.svg)
+![Platforms](https://img.shields.io/cocoapods/p/OpinionatedC.svg)
 
 Sometimes, Objective-C is just overly verbose. Life is too short to `enumerateObjectsUsingBlock` and who has the time to create sub-arrays with `filteredArrayUsingPredicate` anyway?
 
@@ -40,7 +40,7 @@ Here is a small potpourri of what is possible with OpinionatedC:
 NSSet *set = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
 [set groupedBy:^id(id each) {
     return @([each length]);
-}];
+}]
 // => @{
 //        @3 : a NSSet(@"foo", @"bar"),
 //        @5 : a NSSet(@"hello"),
@@ -49,33 +49,33 @@ NSSet *set = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
 
 [@[@"foo", @"bar"] each:^(NSString *each) {
     NSLog(@"%@", each);
-}];
+}]
 // => foo
 // => bar
 
 [@"abc" eachWithIndex:^(NSString *each, NSUInteger idx) {
     NSLog(@"%@ - %@", each, @(idx));
-}];
+}]
 // => a - 0
 // => b - 1
 // => c - 2
 
-[@[@"a", @"b", @"c"] isEmpty];
+[@[@"a", @"b", @"c"] isEmpty]
 // => NO
 
 [@[@1, @2, @3] map:^id(NSNumber *each) {
     return @([each integerValue] * 2);
-}];
+}]
 // => @[@2, @4, @6]
 
 [@[@1, @2, @3] inject:@0 into:^id(NSNumber *running, NSNumber *each) {
     return @([running integerValue] + [each integerValue]);
-}];
+}]
 // => @6
 
 [@[@1, @2, @3, @4] allSatisfy:^BOOL(NSNumber *each) {
     return [each integerValue] % 2 == 0;
-}];
+}]
 // => NO
 
 [@"abcdef" first:3]
@@ -83,32 +83,32 @@ NSSet *set = [NSSet setWithObjects:@"foo", @"bar", @"hello", @"world!", nil];
 
 [@{ @1 : @"foo", @2 : @"bar"} detect:^BOOL(OCAssociation *each) {
     return [each.key isEqualToNumber:@2];
-}];
+}]
 // => an OCAssociation(@2, @"bar")
 
 [@{ @1 : @"foo", @2 : @"bar"} select:^BOOL(OCAssociation *each) {
     return [each.key isEqualToNumber:@2];
-}];
+}]
 // => @{ @2 : @"bar" }
 
 [@{ @1 : @"foo", @2 : @"bar"} reject:^BOOL(OCAssociation *each) {
     return [each.key isEqualToNumber:@2];
-}];
+}]
 // => @{ @1 : @"foo" }
 
-[@100 atRandom];
+[@100 atRandom]
 // => 77
 
 [@3 timesRepeat:^{ 
    NSLog(@"hooray!"); 
-}];
+}]
 // => hooray
 // => hooray
 // => hooray
 
 [[@1 to:@10] select:^id(NSNumber *each) {
     return [each integerValue] % 2 == 0;
-}];
+}]
 // => @[@2, @4, @6, @8, @10]
 ```
 

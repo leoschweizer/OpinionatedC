@@ -84,7 +84,7 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSSet</span> *set = [<span class="pl-c1">NSSet</span> <span class="pl-c1">setWithObjects:</span><span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>hello<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">@"</span>world!<span class="pl-pds">"</span></span>, <span class="pl-c1">nil</span>];
 [set <span class="pl-c1">groupedBy:</span>^<span class="pl-c1">id</span>(<span class="pl-k">id</span> each) {
     <span class="pl-k">return</span> @([each <span class="pl-c1">length</span>]);
-}];
+}]
 <span class="pl-c">// =&gt; @{</span>
 <span class="pl-c">//        @3 : a NSSet(@"foo", @"bar"),</span>
 <span class="pl-c">//        @5 : a NSSet(@"hello"),</span>
@@ -175,17 +175,17 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 
 <div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">1</span>, @<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>] <span class="pl-c1">map:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> @([each <span class="pl-c1">integerValue</span>] * <span class="pl-c1">2</span>);
-}];
+}]
 <span class="pl-c">// =&gt; @[@2, @4, @6]</span>
 
 [<span class="pl-s"><span class="pl-pds">@"</span>hello world<span class="pl-pds">"</span></span> <span class="pl-c1">collect:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSString</span> *each) { 
     <span class="pl-k">return</span> [each <span class="pl-c1">capitalizedString</span>];
-}];
+}]
 <span class="pl-c">// =&gt; @"HELLO WORLD"</span>
 
 [@{ @<span class="pl-c1">1</span> : @<span class="pl-c1">YES</span> } map:^<span class="pl-c1">id</span>(OCAssociation *each) { 
     <span class="pl-k">return</span> [each.key <span class="pl-c1">asAssociationWithValue:</span>@<span class="pl-c1">NO</span>];
-}];
+}]
 <span class="pl-c">// =&gt; @{ @1 : @NO }</span></pre></div>
 
 <h4>
@@ -193,12 +193,12 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 
 <div class="highlight highlight-source-objc"><pre>[@[@<span class="pl-c1">1</span>, @<span class="pl-c1">2</span>, @<span class="pl-c1">3</span>] <span class="pl-c1">inject:</span>@<span class="pl-c1">0</span> <span class="pl-c1">into:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *running, <span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> @([running <span class="pl-c1">integerValue</span>] + [each <span class="pl-c1">integerValue</span>]);
-}];
+}]
 <span class="pl-c">// =&gt; @6</span>
 
 [@[@<span class="pl-c1">4</span>, @<span class="pl-c1">5</span>, @<span class="pl-c1">6</span>] <span class="pl-c1">reduce:</span>^<span class="pl-c1">id</span>(<span class="pl-c1">NSNumber</span> *running, <span class="pl-c1">NSNumber</span> *each) {
     <span class="pl-k">return</span> @([running <span class="pl-c1">integerValue</span>] * [each <span class="pl-c1">integerValue</span>]);
-}];
+}]
 <span class="pl-c">// =&gt; @120</span></pre></div>
 
 <h3>
@@ -308,33 +308,33 @@ at all with <code>NSString</code> and <code>NSMutableString</code>).</p>
 <h2>
 <a id="nsdictionary-extensions" class="anchor" href="#nsdictionary-extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>NSDictionary Extensions</h2>
 
-<div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSMutableDictionary</span> *dict = [<span class="pl-c1">NSMutableDictionary</span> <span class="pl-c1">dictionary</span>];
+<div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSMutableDictionary</span> *dict = [<span class="pl-c1">NSMutableDictionary</span> <span class="pl-c1">dictionary</span>]
 
-[dict <span class="pl-c1">add:</span>[@<span class="pl-c1">1</span> <span class="pl-c1">asAssociationWithValue:</span><span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>]];
+[dict <span class="pl-c1">add:</span>[@<span class="pl-c1">1</span> <span class="pl-c1">asAssociationWithValue:</span><span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>]]
 <span class="pl-c">// =&gt; @{ @1 : @"foo" }</span>
 
-[dict <span class="pl-c1">at:</span>@<span class="pl-c1">1</span> <span class="pl-c1">put:</span><span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>];
+[dict <span class="pl-c1">at:</span>@<span class="pl-c1">1</span> <span class="pl-c1">put:</span><span class="pl-s"><span class="pl-pds">@"</span>foo<span class="pl-pds">"</span></span>]
 <span class="pl-c">// =&gt; @{ @1 : @"foo" }</span>
 
 [dict <span class="pl-c1">at:</span>@<span class="pl-c1">2</span> <span class="pl-c1">ifAbsent:</span>^<span class="pl-k">id</span>{
     <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>;
-}];
+}]
 <span class="pl-c">// =&gt; @"bar"</span>
 
 [dict <span class="pl-c1">at:</span>@<span class="pl-c1">1</span> <span class="pl-c1">ifPresent:</span>^<span class="pl-c1">id</span>(<span class="pl-k">id</span> element) {
     <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>;
-}];
+}]
 <span class="pl-c">// =&gt; @"bar"</span>
 
 [dict <span class="pl-c1">at:</span>@<span class="pl-c1">2</span> <span class="pl-c1">ifAbsentPut:</span>^<span class="pl-k">id</span>{
     <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">@"</span>hello world<span class="pl-pds">"</span></span>;
-}];
+}]
 <span class="pl-c">// =&gt; @"hello world"</span>
 
-[dict <span class="pl-c1">includesKey:</span>@<span class="pl-c1">2</span>];
+[dict <span class="pl-c1">includesKey:</span>@<span class="pl-c1">2</span>]
 <span class="pl-c">// =&gt; YES</span>
 
-[dict <span class="pl-c1">includesValue:</span><span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>];
+[dict <span class="pl-c1">includesValue:</span><span class="pl-s"><span class="pl-pds">@"</span>bar<span class="pl-pds">"</span></span>]
 <span class="pl-c">// =&gt; NO</span>
 
 <span class="pl-k">for</span> (OCAssociation *each in [dict <span class="pl-c1">associationEnumerator</span>]) {

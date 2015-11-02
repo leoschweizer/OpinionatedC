@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B30F6D391BD92A8100E680F0 /* OpinionatedC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30F6D2E1BD92A8100E680F0 /* OpinionatedC.framework */; };
-		B30F6D641BD92AE100E680F0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4A1BD92AE100E680F0 /* OCCollectionCapabilities.h */; };
+		B30F6D641BD92AE100E680F0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4A1BD92AE100E680F0 /* OCCollectionCapabilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6D651BD92AE100E680F0 /* OCCollectionCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D4B1BD92AE100E680F0 /* OCCollectionCapabilities.m */; };
-		B30F6D661BD92AE100E680F0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4C1BD92AE100E680F0 /* OCEnumerators.h */; };
+		B30F6D661BD92AE100E680F0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4C1BD92AE100E680F0 /* OCEnumerators.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6D671BD92AE100E680F0 /* OCEnumerators.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D4D1BD92AE100E680F0 /* OCEnumerators.m */; };
 		B30F6D681BD92AE100E680F0 /* NSDictionary+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4E1BD92AE100E680F0 /* NSDictionary+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6D691BD92AE100E680F0 /* NSDictionary+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D4F1BD92AE100E680F0 /* NSDictionary+OpinionatedExtensions.m */; };
@@ -75,9 +75,9 @@
 		B30F6DD21BD92BE000E680F0 /* OCInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D611BD92AE100E680F0 /* OCInterval.m */; };
 		B30F6DD31BD92BE000E680F0 /* OpinionatedC.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D621BD92AE100E680F0 /* OpinionatedC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6DD41BD92BE000E680F0 /* OpinionatedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D631BD92AE100E680F0 /* OpinionatedMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B30F6DD51BD92BE400E680F0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4A1BD92AE100E680F0 /* OCCollectionCapabilities.h */; };
+		B30F6DD51BD92BE400E680F0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4A1BD92AE100E680F0 /* OCCollectionCapabilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6DD61BD92BE400E680F0 /* OCCollectionCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D4B1BD92AE100E680F0 /* OCCollectionCapabilities.m */; };
-		B30F6DD71BD92BE400E680F0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4C1BD92AE100E680F0 /* OCEnumerators.h */; };
+		B30F6DD71BD92BE400E680F0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4C1BD92AE100E680F0 /* OCEnumerators.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6DD81BD92BE400E680F0 /* OCEnumerators.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D4D1BD92AE100E680F0 /* OCEnumerators.m */; };
 		B30F6DDE1BD92D7400E680F0 /* OCEnumerableMockCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6DDB1BD92D6B00E680F0 /* OCEnumerableMockCollection.m */; };
 		B30F6DDF1BD92D7500E680F0 /* OCEnumerableMockCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6DDB1BD92D6B00E680F0 /* OCEnumerableMockCollection.m */; };

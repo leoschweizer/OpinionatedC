@@ -20,7 +20,7 @@
 		B30F6D6D1BD92AE100E680F0 /* NSObject+OpinionatedAggregating.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D531BD92AE100E680F0 /* NSObject+OpinionatedAggregating.m */; };
 		B30F6D6E1BD92AE100E680F0 /* NSObject+OpinionatedEnumerating.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D541BD92AE100E680F0 /* NSObject+OpinionatedEnumerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6D6F1BD92AE100E680F0 /* NSObject+OpinionatedEnumerating.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D551BD92AE100E680F0 /* NSObject+OpinionatedEnumerating.m */; };
-		B30F6D701BD92AE100E680F0 /* NSObject+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D561BD92AE100E680F0 /* NSObject+OpinionatedExtensions.h */; };
+		B30F6D701BD92AE100E680F0 /* NSObject+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D561BD92AE100E680F0 /* NSObject+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6D711BD92AE100E680F0 /* NSObject+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D571BD92AE100E680F0 /* NSObject+OpinionatedExtensions.m */; };
 		B30F6D721BD92AE100E680F0 /* NSObject+OpinionatedMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D581BD92AE100E680F0 /* NSObject+OpinionatedMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6D731BD92AE100E680F0 /* NSObject+OpinionatedMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D591BD92AE100E680F0 /* NSObject+OpinionatedMapping.m */; };
@@ -61,7 +61,7 @@
 		B30F6DC41BD92BE000E680F0 /* NSObject+OpinionatedAggregating.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D531BD92AE100E680F0 /* NSObject+OpinionatedAggregating.m */; };
 		B30F6DC51BD92BE000E680F0 /* NSObject+OpinionatedEnumerating.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D541BD92AE100E680F0 /* NSObject+OpinionatedEnumerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6DC61BD92BE000E680F0 /* NSObject+OpinionatedEnumerating.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D551BD92AE100E680F0 /* NSObject+OpinionatedEnumerating.m */; };
-		B30F6DC71BD92BE000E680F0 /* NSObject+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D561BD92AE100E680F0 /* NSObject+OpinionatedExtensions.h */; };
+		B30F6DC71BD92BE000E680F0 /* NSObject+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D561BD92AE100E680F0 /* NSObject+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6DC81BD92BE000E680F0 /* NSObject+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D571BD92AE100E680F0 /* NSObject+OpinionatedExtensions.m */; };
 		B30F6DC91BD92BE000E680F0 /* NSObject+OpinionatedMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D581BD92AE100E680F0 /* NSObject+OpinionatedMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30F6DCA1BD92BE000E680F0 /* NSObject+OpinionatedMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D591BD92AE100E680F0 /* NSObject+OpinionatedMapping.m */; };

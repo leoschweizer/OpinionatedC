@@ -1,17 +1,14 @@
 language: objective-c
 
 install:
-  - bundle install --without=documentation --path=${BUNDLE_PATH:-vendor/bundle} 
-  - cd Example
-  - bundle exec pod install
-  - cd ..
+  - bundle install --without=documentation --path=${BUNDLE_PATH:-vendor/bundle}
+  - bundle exec slather setup OpinionatedC.xcodeproj
 
-xcode_workspace: Example/Example.xcworkspace
-xcode_scheme: OpinionatedC-Example
+xcode_project: OpinionatedC.xcworkspace
+xcode_scheme: OpinionatedC-Mac
 
 cache:
   - bundler
-  - cocoapods
 
 after_success:
   - bundle exec slather

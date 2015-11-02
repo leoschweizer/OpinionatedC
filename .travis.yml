@@ -4,7 +4,7 @@ install:
   - bundle install --without=documentation --path=${BUNDLE_PATH:-vendor/bundle}
   - bundle exec slather setup OpinionatedC.xcodeproj
 
-xcode_project: OpinionatedC.xcworkspace
+xcode_project: OpinionatedC.xcodeproj
 xcode_scheme: OpinionatedC-Mac
 
 cache:

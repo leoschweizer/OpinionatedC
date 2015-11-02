@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B30F6D391BD92A8100E680F0 /* OpinionatedCMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30F6D2E1BD92A8100E680F0 /* OpinionatedCMac.framework */; };
+		B30F6D391BD92A8100E680F0 /* OpinionatedC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30F6D2E1BD92A8100E680F0 /* OpinionatedC.framework */; };
 		B30F6D641BD92AE100E680F0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4A1BD92AE100E680F0 /* OCCollectionCapabilities.h */; };
 		B30F6D651BD92AE100E680F0 /* OCCollectionCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D4B1BD92AE100E680F0 /* OCCollectionCapabilities.m */; };
 		B30F6D661BD92AE100E680F0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D4C1BD92AE100E680F0 /* OCEnumerators.h */; };
@@ -34,7 +34,7 @@
 		B30F6D7B1BD92AE100E680F0 /* OCInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D611BD92AE100E680F0 /* OCInterval.m */; };
 		B30F6D7C1BD92AE100E680F0 /* OpinionatedC.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D621BD92AE100E680F0 /* OpinionatedC.h */; };
 		B30F6D7D1BD92AE100E680F0 /* OpinionatedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B30F6D631BD92AE100E680F0 /* OpinionatedMacros.h */; };
-		B30F6D8D1BD92B7100E680F0 /* OpinionatedCiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30F6D831BD92B7100E680F0 /* OpinionatedCiOS.framework */; };
+		B30F6D8D1BD92B7100E680F0 /* OpinionatedC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30F6D831BD92B7100E680F0 /* OpinionatedC.framework */; };
 		B30F6DAD1BD92BD500E680F0 /* AggregatingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D9B1BD92BC200E680F0 /* AggregatingTests.m */; };
 		B30F6DAE1BD92BD500E680F0 /* DictionaryExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D9C1BD92BC200E680F0 /* DictionaryExtensionTests.m */; };
 		B30F6DAF1BD92BD500E680F0 /* EnumeratingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D9D1BD92BC200E680F0 /* EnumeratingTests.m */; };
@@ -101,7 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B30F6D2E1BD92A8100E680F0 /* OpinionatedCMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpinionatedCMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30F6D2E1BD92A8100E680F0 /* OpinionatedC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpinionatedC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30F6D381BD92A8100E680F0 /* OpinionatedC-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpinionatedC-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30F6D4A1BD92AE100E680F0 /* OCCollectionCapabilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCCollectionCapabilities.h; sourceTree = "<group>"; };
 		B30F6D4B1BD92AE100E680F0 /* OCCollectionCapabilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCCollectionCapabilities.m; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		B30F6D611BD92AE100E680F0 /* OCInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCInterval.m; sourceTree = "<group>"; };
 		B30F6D621BD92AE100E680F0 /* OpinionatedC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpinionatedC.h; sourceTree = "<group>"; };
 		B30F6D631BD92AE100E680F0 /* OpinionatedMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpinionatedMacros.h; sourceTree = "<group>"; };
-		B30F6D831BD92B7100E680F0 /* OpinionatedCiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpinionatedCiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30F6D831BD92B7100E680F0 /* OpinionatedC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpinionatedC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30F6D8C1BD92B7100E680F0 /* OpinionatedC-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpinionatedC-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30F6D9B1BD92BC200E680F0 /* AggregatingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AggregatingTests.m; sourceTree = "<group>"; };
 		B30F6D9C1BD92BC200E680F0 /* DictionaryExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExtensionTests.m; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30F6D391BD92A8100E680F0 /* OpinionatedCMac.framework in Frameworks */,
+				B30F6D391BD92A8100E680F0 /* OpinionatedC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30F6D8D1BD92B7100E680F0 /* OpinionatedCiOS.framework in Frameworks */,
+				B30F6D8D1BD92B7100E680F0 /* OpinionatedC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +190,9 @@
 		B30F6D2F1BD92A8100E680F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B30F6D2E1BD92A8100E680F0 /* OpinionatedCMac.framework */,
+				B30F6D2E1BD92A8100E680F0 /* OpinionatedC.framework */,
 				B30F6D381BD92A8100E680F0 /* OpinionatedC-MacTests.xctest */,
-				B30F6D831BD92B7100E680F0 /* OpinionatedCiOS.framework */,
+				B30F6D831BD92B7100E680F0 /* OpinionatedC.framework */,
 				B30F6D8C1BD92B7100E680F0 /* OpinionatedC-iOSTests.xctest */,
 			);
 			name = Products;
@@ -328,7 +328,7 @@
 			);
 			name = "OpinionatedC-Mac";
 			productName = OpinionatedC;
-			productReference = B30F6D2E1BD92A8100E680F0 /* OpinionatedCMac.framework */;
+			productReference = B30F6D2E1BD92A8100E680F0 /* OpinionatedC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B30F6D371BD92A8100E680F0 /* OpinionatedC-MacTests */ = {
@@ -364,7 +364,7 @@
 			);
 			name = "OpinionatedC-iOS";
 			productName = "OpinionatedC-iOS";
-			productReference = B30F6D831BD92B7100E680F0 /* OpinionatedCiOS.framework */;
+			productReference = B30F6D831BD92B7100E680F0 /* OpinionatedC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B30F6D8B1BD92B7100E680F0 /* OpinionatedC-iOSTests */ = {
@@ -642,8 +642,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = OpinionatedC.modulemap;
-				PRODUCT_NAME = OpinionatedCMac;
+				PRODUCT_NAME = OpinionatedC;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -656,8 +655,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = OpinionatedC.modulemap;
-				PRODUCT_NAME = OpinionatedCMac;
+				PRODUCT_NAME = OpinionatedC;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -691,8 +689,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = OpinionatedC.modulemap;
-				PRODUCT_NAME = OpinionatedCiOS;
+				PRODUCT_NAME = OpinionatedC;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -708,8 +705,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = OpinionatedC.modulemap;
-				PRODUCT_NAME = OpinionatedCiOS;
+				PRODUCT_NAME = OpinionatedC;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

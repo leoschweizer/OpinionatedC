@@ -11,28 +11,28 @@
 		B3BE1ECD1C481AAB00BC1DA0 /* OCCollectionCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA71C481AAB00BC1DA0 /* OCCollectionCapabilities.m */; };
 		B3BE1ECE1C481AAB00BC1DA0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA81C481AAB00BC1DA0 /* OCEnumerators.h */; };
 		B3BE1ECF1C481AAB00BC1DA0 /* OCEnumerators.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA91C481AAB00BC1DA0 /* OCEnumerators.m */; };
-		B3BE1ED01C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAA1C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.h */; };
+		B3BE1ED01C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAA1C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1ED11C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EAB1C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.m */; };
-		B3BE1ED21C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAC1C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.h */; };
+		B3BE1ED21C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAC1C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1ED31C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EAD1C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.m */; };
-		B3BE1ED41C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAE1C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.h */; };
+		B3BE1ED41C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAE1C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1ED51C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EAF1C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.m */; };
-		B3BE1ED61C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB01C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.h */; };
+		B3BE1ED61C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB01C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1ED71C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB11C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.m */; };
-		B3BE1ED81C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB21C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.h */; };
+		B3BE1ED81C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB21C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1ED91C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB31C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.m */; };
-		B3BE1EDA1C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB41C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.h */; };
+		B3BE1EDA1C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB41C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1EDB1C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB51C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.m */; };
-		B3BE1EDC1C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB61C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.h */; };
+		B3BE1EDC1C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB61C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1EDD1C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB71C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.m */; };
-		B3BE1EDE1C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB81C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.h */; };
+		B3BE1EDE1C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB81C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1EDF1C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB91C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.m */; };
-		B3BE1EE01C481AAB00BC1DA0 /* OCAssociation.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBA1C481AAB00BC1DA0 /* OCAssociation.h */; };
+		B3BE1EE01C481AAB00BC1DA0 /* OCAssociation.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBA1C481AAB00BC1DA0 /* OCAssociation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1EE11C481AAB00BC1DA0 /* OCAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EBB1C481AAB00BC1DA0 /* OCAssociation.m */; };
-		B3BE1EE21C481AAB00BC1DA0 /* OCInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBC1C481AAB00BC1DA0 /* OCInterval.h */; };
+		B3BE1EE21C481AAB00BC1DA0 /* OCInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBC1C481AAB00BC1DA0 /* OCInterval.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1EE31C481AAB00BC1DA0 /* OCInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EBD1C481AAB00BC1DA0 /* OCInterval.m */; };
 		B3BE1EE41C481AAB00BC1DA0 /* OpinionatedC.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBE1C481AAB00BC1DA0 /* OpinionatedC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3BE1EE51C481AAB00BC1DA0 /* OpinionatedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBF1C481AAB00BC1DA0 /* OpinionatedMacros.h */; };
+		B3BE1EE51C481AAB00BC1DA0 /* OpinionatedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBF1C481AAB00BC1DA0 /* OpinionatedMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1EF31C481AEF00BC1DA0 /* AggregatingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EC11C481AAB00BC1DA0 /* AggregatingTests.m */; };
 		B3BE1EF41C481AEF00BC1DA0 /* DictionaryExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EC21C481AAB00BC1DA0 /* DictionaryExtensionTests.m */; };
 		B3BE1EF51C481AEF00BC1DA0 /* EnumeratingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EC31C481AAB00BC1DA0 /* EnumeratingTests.m */; };
@@ -44,6 +44,32 @@
 		B3BE1EFB1C481AEF00BC1DA0 /* StringExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1ECA1C481AAB00BC1DA0 /* StringExtensionTests.m */; };
 		B3BE1EFC1C481AEF00BC1DA0 /* SubsettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1ECB1C481AAB00BC1DA0 /* SubsettingTests.m */; };
 		B3BE1EFD1C481AFC00BC1DA0 /* OpinionatedC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BE1E8A1C481A8200BC1DA0 /* OpinionatedC.framework */; };
+		B3BE1F361C481E8600BC1DA0 /* OCInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBC1C481AAB00BC1DA0 /* OCInterval.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F371C481E9200BC1DA0 /* NSDictionary+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAA1C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F381C481E9200BC1DA0 /* NSDictionary+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EAB1C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.m */; };
+		B3BE1F391C481E9200BC1DA0 /* NSNumber+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAC1C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F3A1C481E9200BC1DA0 /* NSNumber+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EAD1C481AAB00BC1DA0 /* NSNumber+OpinionatedExtensions.m */; };
+		B3BE1F3B1C481E9200BC1DA0 /* NSObject+OpinionatedAggregating.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAE1C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F3C1C481E9200BC1DA0 /* NSObject+OpinionatedAggregating.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EAF1C481AAB00BC1DA0 /* NSObject+OpinionatedAggregating.m */; };
+		B3BE1F3D1C481E9200BC1DA0 /* NSObject+OpinionatedEnumerating.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB01C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F3E1C481E9200BC1DA0 /* NSObject+OpinionatedEnumerating.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB11C481AAB00BC1DA0 /* NSObject+OpinionatedEnumerating.m */; };
+		B3BE1F3F1C481E9200BC1DA0 /* NSObject+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB21C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F401C481E9200BC1DA0 /* NSObject+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB31C481AAB00BC1DA0 /* NSObject+OpinionatedExtensions.m */; };
+		B3BE1F411C481E9200BC1DA0 /* NSObject+OpinionatedMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB41C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F421C481E9200BC1DA0 /* NSObject+OpinionatedMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB51C481AAB00BC1DA0 /* NSObject+OpinionatedMapping.m */; };
+		B3BE1F431C481E9200BC1DA0 /* NSObject+OpinionatedSubsetting.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB61C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F441C481E9200BC1DA0 /* NSObject+OpinionatedSubsetting.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB71C481AAB00BC1DA0 /* NSObject+OpinionatedSubsetting.m */; };
+		B3BE1F451C481E9200BC1DA0 /* NSString+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EB81C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F461C481E9200BC1DA0 /* NSString+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EB91C481AAB00BC1DA0 /* NSString+OpinionatedExtensions.m */; };
+		B3BE1F471C481E9200BC1DA0 /* OCAssociation.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBA1C481AAB00BC1DA0 /* OCAssociation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F481C481E9200BC1DA0 /* OCAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EBB1C481AAB00BC1DA0 /* OCAssociation.m */; };
+		B3BE1F491C481E9500BC1DA0 /* OCInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EBD1C481AAB00BC1DA0 /* OCInterval.m */; };
+		B3BE1F4A1C481E9800BC1DA0 /* OpinionatedC.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBE1C481AAB00BC1DA0 /* OpinionatedC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F4B1C481E9C00BC1DA0 /* OpinionatedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBF1C481AAB00BC1DA0 /* OpinionatedMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F4C1C481EA200BC1DA0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA61C481AAB00BC1DA0 /* OCCollectionCapabilities.h */; };
+		B3BE1F4D1C481EA200BC1DA0 /* OCCollectionCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA71C481AAB00BC1DA0 /* OCCollectionCapabilities.m */; };
+		B3BE1F4E1C481EA200BC1DA0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA81C481AAB00BC1DA0 /* OCEnumerators.h */; };
+		B3BE1F4F1C481EA200BC1DA0 /* OCEnumerators.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA91C481AAB00BC1DA0 /* OCEnumerators.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +257,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BE1F4E1C481EA200BC1DA0 /* OCEnumerators.h in Headers */,
+				B3BE1F3D1C481E9200BC1DA0 /* NSObject+OpinionatedEnumerating.h in Headers */,
+				B3BE1F411C481E9200BC1DA0 /* NSObject+OpinionatedMapping.h in Headers */,
+				B3BE1F3B1C481E9200BC1DA0 /* NSObject+OpinionatedAggregating.h in Headers */,
+				B3BE1F4C1C481EA200BC1DA0 /* OCCollectionCapabilities.h in Headers */,
+				B3BE1F4A1C481E9800BC1DA0 /* OpinionatedC.h in Headers */,
+				B3BE1F4B1C481E9C00BC1DA0 /* OpinionatedMacros.h in Headers */,
+				B3BE1F3F1C481E9200BC1DA0 /* NSObject+OpinionatedExtensions.h in Headers */,
+				B3BE1F471C481E9200BC1DA0 /* OCAssociation.h in Headers */,
+				B3BE1F371C481E9200BC1DA0 /* NSDictionary+OpinionatedExtensions.h in Headers */,
+				B3BE1F451C481E9200BC1DA0 /* NSString+OpinionatedExtensions.h in Headers */,
+				B3BE1F391C481E9200BC1DA0 /* NSNumber+OpinionatedExtensions.h in Headers */,
+				B3BE1F431C481E9200BC1DA0 /* NSObject+OpinionatedSubsetting.h in Headers */,
+				B3BE1F361C481E8600BC1DA0 /* OCInterval.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +435,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BE1F4D1C481EA200BC1DA0 /* OCCollectionCapabilities.m in Sources */,
+				B3BE1F461C481E9200BC1DA0 /* NSString+OpinionatedExtensions.m in Sources */,
+				B3BE1F401C481E9200BC1DA0 /* NSObject+OpinionatedExtensions.m in Sources */,
+				B3BE1F421C481E9200BC1DA0 /* NSObject+OpinionatedMapping.m in Sources */,
+				B3BE1F3E1C481E9200BC1DA0 /* NSObject+OpinionatedEnumerating.m in Sources */,
+				B3BE1F4F1C481EA200BC1DA0 /* OCEnumerators.m in Sources */,
+				B3BE1F3C1C481E9200BC1DA0 /* NSObject+OpinionatedAggregating.m in Sources */,
+				B3BE1F441C481E9200BC1DA0 /* NSObject+OpinionatedSubsetting.m in Sources */,
+				B3BE1F491C481E9500BC1DA0 /* OCInterval.m in Sources */,
+				B3BE1F3A1C481E9200BC1DA0 /* NSNumber+OpinionatedExtensions.m in Sources */,
+				B3BE1F481C481E9200BC1DA0 /* OCAssociation.m in Sources */,
+				B3BE1F381C481E9200BC1DA0 /* NSDictionary+OpinionatedExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

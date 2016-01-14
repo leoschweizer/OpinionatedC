@@ -1,7 +1,7 @@
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <OpinionatedC/OpinionatedC.h>
+#import "NSObject+OpinionatedEnumerating.h"
 #import "OCEnumerableMockCollection.h"
+#import "OCAssociation.h"
 
 
 @interface EnumeratingTests : XCTestCase

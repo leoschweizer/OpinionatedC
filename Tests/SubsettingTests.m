@@ -1,6 +1,6 @@
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <OpinionatedC/OpinionatedC.h>
+#import "NSobject+OpinionatedSubsetting.h"
+#import "OCAssociation.h"
 
 
 @interface SubsettingTests : XCTestCase
@@ -56,11 +56,6 @@
 	XCTAssertFalse([@[] anySatisfy:^BOOL(id each) {
 		return YES;
 	}]);
-}
-
-- (void)testCountOnObject {
-	XCTAssertEqual([@5 count:^BOOL(id each) { return YES; }], 1);
-	XCTAssertEqual([@YES count:^BOOL(id each) { return NO; }], 0);
 }
 
 - (void)testDetectOnObject {

@@ -1,6 +1,7 @@
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <OpinionatedC/OpinionatedC.h>
+#import "NSNumber+OpinionatedExtensions.h"
+#import "OCInterval.h"
+#import "NSObject+OpinionatedMapping.h"
 
 
 @interface NumberExtensionTests : XCTestCase
@@ -53,7 +54,7 @@
 		[probeArray addObject:@(idx)];
 	}];
 	XCTAssertEqual(probeArray.count, 10);
-	XCTAssertEqualObjects([probeArray first], @0);
+	XCTAssertEqualObjects([probeArray firstObject], @0);
 	XCTAssertEqualObjects([probeArray lastObject], @9);
 }
 
@@ -70,7 +71,7 @@
 	}];
 	XCTAssertTrue([result isKindOfClass:NSArray.class]);
 	XCTAssertEqual(result.count, 3);
-	XCTAssertEqualObjects([result first], @10);
+	XCTAssertEqualObjects([result firstObject], @10);
 	XCTAssertEqualObjects([result lastObject], @14);
 }
 

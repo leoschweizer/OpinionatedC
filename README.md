@@ -1,9 +1,8 @@
 # OpinionatedC
 [![Build Status](https://travis-ci.org/leoschweizer/OpinionatedC.svg?branch=master)](https://travis-ci.org/leoschweizer/OpinionatedC)
 [![Coverage Status](https://coveralls.io/repos/leoschweizer/OpinionatedC/badge.svg?branch=master&service=github)](https://coveralls.io/github/leoschweizer/OpinionatedC?branch=master)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/OpinionatedC.svg)](https://cocoapods.org/pods/OpinionatedC)
-![License](https://img.shields.io/cocoapods/l/OpinionatedC.svg)
-![Platforms](https://img.shields.io/cocoapods/p/OpinionatedC.svg)
 
 Sometimes, Objective-C is just overly verbose. Life is too short to `enumerateObjectsUsingBlock` and who has the time to create sub-arrays with `filteredArrayUsingPredicate` anyway?
 

@@ -8,34 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		596DAAABC5D2A909BB970B77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050E40281C62F5DB0B766AF1 /* libPods.a */; };
-		B32F1A501B6EAC7D00D25836 /* EnumeratingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */; };
-		B36B77FE1B748D2D0023BC1D /* NumberExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B36B77FD1B748D2D0023BC1D /* NumberExtensionTests.m */; };
-		B388B2F31B74DE40006FA81D /* IntervalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B388B2F21B74DE40006FA81D /* IntervalTests.m */; };
-		B388B2F91B777051006FA81D /* AggregatingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B388B2F81B777051006FA81D /* AggregatingTests.m */; };
-		B3E3CDE01B6F9D0600281F20 /* SubsettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */; };
-		B3E3CDEF1B70B8FE00281F20 /* StringExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */; };
-		B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDF31B70C64E00281F20 /* MappingTests.m */; };
-		B3E3CDF91B70CEA600281F20 /* DictionaryExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */; };
-		B3E3CE1D1B7380F100281F20 /* ObjectExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */; };
-		B3E3CE211B73915F00281F20 /* OCEnumerableMockCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */; };
+		B30F6D1B1BD928B000E680F0 /* AggregatingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D121BD928B000E680F0 /* AggregatingTests.m */; };
+		B30F6D1C1BD928B000E680F0 /* DictionaryExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D131BD928B000E680F0 /* DictionaryExtensionTests.m */; };
+		B30F6D1D1BD928B000E680F0 /* EnumeratingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D141BD928B000E680F0 /* EnumeratingTests.m */; };
+		B30F6D1E1BD928B000E680F0 /* IntervalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D151BD928B000E680F0 /* IntervalTests.m */; };
+		B30F6D1F1BD928B000E680F0 /* MappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D161BD928B000E680F0 /* MappingTests.m */; };
+		B30F6D201BD928B000E680F0 /* NumberExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D171BD928B000E680F0 /* NumberExtensionTests.m */; };
+		B30F6D211BD928B000E680F0 /* ObjectExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D181BD928B000E680F0 /* ObjectExtensionTests.m */; };
+		B30F6D221BD928B000E680F0 /* StringExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D191BD928B000E680F0 /* StringExtensionTests.m */; };
+		B30F6D231BD928B000E680F0 /* SubsettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6D1A1BD928B000E680F0 /* SubsettingTests.m */; };
+		B30F6DE41BD93B2300E680F0 /* OCEnumerableMockCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B30F6DE31BD93B2300E680F0 /* OCEnumerableMockCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		050E40281C62F5DB0B766AF1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		650234C8FBB7F356F0066346 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CFD71EAB2A52080E26679CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B30F6D121BD928B000E680F0 /* AggregatingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AggregatingTests.m; sourceTree = "<group>"; };
+		B30F6D131BD928B000E680F0 /* DictionaryExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExtensionTests.m; sourceTree = "<group>"; };
+		B30F6D141BD928B000E680F0 /* EnumeratingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumeratingTests.m; sourceTree = "<group>"; };
+		B30F6D151BD928B000E680F0 /* IntervalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalTests.m; sourceTree = "<group>"; };
+		B30F6D161BD928B000E680F0 /* MappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTests.m; sourceTree = "<group>"; };
+		B30F6D171BD928B000E680F0 /* NumberExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberExtensionTests.m; sourceTree = "<group>"; };
+		B30F6D181BD928B000E680F0 /* ObjectExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectExtensionTests.m; sourceTree = "<group>"; };
+		B30F6D191BD928B000E680F0 /* StringExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTests.m; sourceTree = "<group>"; };
+		B30F6D1A1BD928B000E680F0 /* SubsettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubsettingTests.m; sourceTree = "<group>"; };
+		B30F6DE21BD93B2300E680F0 /* OCEnumerableMockCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCEnumerableMockCollection.h; sourceTree = "<group>"; };
+		B30F6DE31BD93B2300E680F0 /* OCEnumerableMockCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCEnumerableMockCollection.m; sourceTree = "<group>"; };
 		B32F1A4A1B6EAC7D00D25836 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumeratingTests.m; sourceTree = "<group>"; };
-		B36B77FD1B748D2D0023BC1D /* NumberExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberExtensionTests.m; sourceTree = "<group>"; };
-		B388B2F21B74DE40006FA81D /* IntervalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalTests.m; sourceTree = "<group>"; };
-		B388B2F81B777051006FA81D /* AggregatingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AggregatingTests.m; sourceTree = "<group>"; };
-		B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubsettingTests.m; sourceTree = "<group>"; };
-		B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTests.m; sourceTree = "<group>"; };
-		B3E3CDF31B70C64E00281F20 /* MappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTests.m; sourceTree = "<group>"; };
-		B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExtensionTests.m; sourceTree = "<group>"; };
-		B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectExtensionTests.m; sourceTree = "<group>"; };
-		B3E3CE1F1B73915F00281F20 /* OCEnumerableMockCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCEnumerableMockCollection.h; path = "Mock Collections/OCEnumerableMockCollection.h"; sourceTree = "<group>"; };
-		B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCEnumerableMockCollection.m; path = "Mock Collections/OCEnumerableMockCollection.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +67,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B30F6DE11BD93B2300E680F0 /* Mock Collections */ = {
+			isa = PBXGroup;
+			children = (
+				B30F6DE21BD93B2300E680F0 /* OCEnumerableMockCollection.h */,
+				B30F6DE31BD93B2300E680F0 /* OCEnumerableMockCollection.m */,
+			);
+			path = "Mock Collections";
+			sourceTree = "<group>";
+		};
 		B32F1A3F1B6EABDA00D25836 = {
 			isa = PBXGroup;
 			children = (
-				B3E3CE1E1B73914900281F20 /* Mock Collections */,
 				B32F1A4C1B6EAC7D00D25836 /* Tests */,
 				B32F1A4B1B6EAC7D00D25836 /* Products */,
 				64FC7F3A5A6D7C0E27F1D50D /* Pods */,
@@ -89,26 +97,19 @@
 		B32F1A4C1B6EAC7D00D25836 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B388B2F81B777051006FA81D /* AggregatingTests.m */,
-				B3E3CDF81B70CEA600281F20 /* DictionaryExtensionTests.m */,
-				B32F1A4F1B6EAC7D00D25836 /* EnumeratingTests.m */,
-				B388B2F21B74DE40006FA81D /* IntervalTests.m */,
-				B3E3CDF31B70C64E00281F20 /* MappingTests.m */,
-				B36B77FD1B748D2D0023BC1D /* NumberExtensionTests.m */,
-				B3E3CE1C1B7380F100281F20 /* ObjectExtensionTests.m */,
-				B3E3CDEE1B70B8FE00281F20 /* StringExtensionTests.m */,
-				B3E3CDDF1B6F9D0600281F20 /* SubsettingTests.m */,
+				B30F6DE11BD93B2300E680F0 /* Mock Collections */,
+				B30F6D121BD928B000E680F0 /* AggregatingTests.m */,
+				B30F6D131BD928B000E680F0 /* DictionaryExtensionTests.m */,
+				B30F6D141BD928B000E680F0 /* EnumeratingTests.m */,
+				B30F6D151BD928B000E680F0 /* IntervalTests.m */,
+				B30F6D161BD928B000E680F0 /* MappingTests.m */,
+				B30F6D171BD928B000E680F0 /* NumberExtensionTests.m */,
+				B30F6D181BD928B000E680F0 /* ObjectExtensionTests.m */,
+				B30F6D191BD928B000E680F0 /* StringExtensionTests.m */,
+				B30F6D1A1BD928B000E680F0 /* SubsettingTests.m */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		B3E3CE1E1B73914900281F20 /* Mock Collections */ = {
-			isa = PBXGroup;
-			children = (
-				B3E3CE1F1B73915F00281F20 /* OCEnumerableMockCollection.h */,
-				B3E3CE201B73915F00281F20 /* OCEnumerableMockCollection.m */,
-			);
-			name = "Mock Collections";
+			name = Tests;
+			path = ../Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,16 +212,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E3CE1D1B7380F100281F20 /* ObjectExtensionTests.m in Sources */,
-				B3E3CDF41B70C64E00281F20 /* MappingTests.m in Sources */,
-				B36B77FE1B748D2D0023BC1D /* NumberExtensionTests.m in Sources */,
-				B3E3CE211B73915F00281F20 /* OCEnumerableMockCollection.m in Sources */,
-				B388B2F91B777051006FA81D /* AggregatingTests.m in Sources */,
-				B32F1A501B6EAC7D00D25836 /* EnumeratingTests.m in Sources */,
-				B3E3CDEF1B70B8FE00281F20 /* StringExtensionTests.m in Sources */,
-				B388B2F31B74DE40006FA81D /* IntervalTests.m in Sources */,
-				B3E3CDF91B70CEA600281F20 /* DictionaryExtensionTests.m in Sources */,
-				B3E3CDE01B6F9D0600281F20 /* SubsettingTests.m in Sources */,
+				B30F6D211BD928B000E680F0 /* ObjectExtensionTests.m in Sources */,
+				B30F6D231BD928B000E680F0 /* SubsettingTests.m in Sources */,
+				B30F6D221BD928B000E680F0 /* StringExtensionTests.m in Sources */,
+				B30F6D1C1BD928B000E680F0 /* DictionaryExtensionTests.m in Sources */,
+				B30F6D1E1BD928B000E680F0 /* IntervalTests.m in Sources */,
+				B30F6D1F1BD928B000E680F0 /* MappingTests.m in Sources */,
+				B30F6D201BD928B000E680F0 /* NumberExtensionTests.m in Sources */,
+				B30F6DE41BD93B2300E680F0 /* OCEnumerableMockCollection.m in Sources */,
+				B30F6D1B1BD928B000E680F0 /* AggregatingTests.m in Sources */,
+				B30F6D1D1BD928B000E680F0 /* EnumeratingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

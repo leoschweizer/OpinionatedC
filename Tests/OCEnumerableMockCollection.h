@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <OpinionatedC/OCCollectionCapabilities.h>
+#import "OCCollectionCapabilities.h"
 
 
 @interface OCEnumerableMockCollection : NSObject <OCEnumerableCollection>

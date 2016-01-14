@@ -84,7 +84,7 @@
 
 /* Begin PBXFileReference section */
 		B3BE1E8A1C481A8200BC1DA0 /* OpinionatedC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpinionatedC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3BE1E941C481A8200BC1DA0 /* OpinionatedCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpinionatedCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3BE1E941C481A8200BC1DA0 /* OpinionatedC-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpinionatedC-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BE1EA61C481AAB00BC1DA0 /* OCCollectionCapabilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCCollectionCapabilities.h; sourceTree = "<group>"; };
 		B3BE1EA71C481AAB00BC1DA0 /* OCCollectionCapabilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCCollectionCapabilities.m; sourceTree = "<group>"; };
 		B3BE1EA81C481AAB00BC1DA0 /* OCEnumerators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCEnumerators.h; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				B3BE1E8A1C481A8200BC1DA0 /* OpinionatedC.framework */,
-				B3BE1E941C481A8200BC1DA0 /* OpinionatedCTests.xctest */,
+				B3BE1E941C481A8200BC1DA0 /* OpinionatedC-Tests.xctest */,
 				B3BE1F1F1C481C1300BC1DA0 /* OpinionatedC.framework */,
 			);
 			name = Products;
@@ -295,9 +295,9 @@
 			productReference = B3BE1E8A1C481A8200BC1DA0 /* OpinionatedC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B3BE1E931C481A8200BC1DA0 /* OpinionatedCTests */ = {
+		B3BE1E931C481A8200BC1DA0 /* OpinionatedC-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3BE1EA11C481A8200BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedCTests" */;
+			buildConfigurationList = B3BE1EA11C481A8200BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedC-Tests" */;
 			buildPhases = (
 				B3BE1E901C481A8200BC1DA0 /* Sources */,
 				B3BE1E911C481A8200BC1DA0 /* Frameworks */,
@@ -308,14 +308,14 @@
 			dependencies = (
 				B3BE1E971C481A8200BC1DA0 /* PBXTargetDependency */,
 			);
-			name = OpinionatedCTests;
+			name = "OpinionatedC-Tests";
 			productName = OpinionatedCTests;
-			productReference = B3BE1E941C481A8200BC1DA0 /* OpinionatedCTests.xctest */;
+			productReference = B3BE1E941C481A8200BC1DA0 /* OpinionatedC-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B3BE1F1E1C481C1300BC1DA0 /* OpinionatedCIOS */ = {
+		B3BE1F1E1C481C1300BC1DA0 /* OpinionatedC-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3BE1F301C481C1400BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedCIOS" */;
+			buildConfigurationList = B3BE1F301C481C1400BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedC-iOS" */;
 			buildPhases = (
 				B3BE1F1A1C481C1300BC1DA0 /* Sources */,
 				B3BE1F1B1C481C1300BC1DA0 /* Frameworks */,
@@ -326,7 +326,7 @@
 			);
 			dependencies = (
 			);
-			name = OpinionatedCIOS;
+			name = "OpinionatedC-iOS";
 			productName = OpinionatedCIOS;
 			productReference = B3BE1F1F1C481C1300BC1DA0 /* OpinionatedC.framework */;
 			productType = "com.apple.product-type.framework";
@@ -364,8 +364,8 @@
 			projectRoot = "";
 			targets = (
 				B3BE1E891C481A8200BC1DA0 /* OpinionatedC */,
-				B3BE1E931C481A8200BC1DA0 /* OpinionatedCTests */,
-				B3BE1F1E1C481C1300BC1DA0 /* OpinionatedCIOS */,
+				B3BE1E931C481A8200BC1DA0 /* OpinionatedC-Tests */,
+				B3BE1F1E1C481C1300BC1DA0 /* OpinionatedC-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -662,7 +662,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3BE1EA11C481A8200BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedCTests" */ = {
+		B3BE1EA11C481A8200BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedC-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3BE1EA21C481A8200BC1DA0 /* Debug */,
@@ -671,7 +671,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3BE1F301C481C1400BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedCIOS" */ = {
+		B3BE1F301C481C1400BC1DA0 /* Build configuration list for PBXNativeTarget "OpinionatedC-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3BE1F311C481C1400BC1DA0 /* Debug */,

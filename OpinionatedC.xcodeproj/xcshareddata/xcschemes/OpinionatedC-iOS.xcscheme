@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3BE1F1E1C481C1300BC1DA0"
                BuildableName = "OpinionatedC.framework"
-               BlueprintName = "OpinionatedCIOS"
+               BlueprintName = "OpinionatedC-iOS"
                ReferencedContainer = "container:OpinionatedC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3BE1F1E1C481C1300BC1DA0"
             BuildableName = "OpinionatedC.framework"
-            BlueprintName = "OpinionatedCIOS"
+            BlueprintName = "OpinionatedC-iOS"
             ReferencedContainer = "container:OpinionatedC.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +66,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3BE1F1E1C481C1300BC1DA0"
             BuildableName = "OpinionatedC.framework"
-            BlueprintName = "OpinionatedCIOS"
+            BlueprintName = "OpinionatedC-iOS"
             ReferencedContainer = "container:OpinionatedC.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,7 +84,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3BE1F1E1C481C1300BC1DA0"
             BuildableName = "OpinionatedC.framework"
-            BlueprintName = "OpinionatedCIOS"
+            BlueprintName = "OpinionatedC-iOS"
             ReferencedContainer = "container:OpinionatedC.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

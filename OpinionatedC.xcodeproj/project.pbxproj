@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B3BE1ECC1C481AAB00BC1DA0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA61C481AAB00BC1DA0 /* OCCollectionCapabilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1ECD1C481AAB00BC1DA0 /* OCCollectionCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA71C481AAB00BC1DA0 /* OCCollectionCapabilities.m */; };
-		B3BE1ECE1C481AAB00BC1DA0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA81C481AAB00BC1DA0 /* OCEnumerators.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1ECE1C481AAB00BC1DA0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA81C481AAB00BC1DA0 /* OCEnumerators.h */; };
 		B3BE1ECF1C481AAB00BC1DA0 /* OCEnumerators.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA91C481AAB00BC1DA0 /* OCEnumerators.m */; };
 		B3BE1ED01C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EAA1C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1ED11C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EAB1C481AAB00BC1DA0 /* NSDictionary+OpinionatedExtensions.m */; };
@@ -68,7 +68,7 @@
 		B3BE1F4B1C481E9C00BC1DA0 /* OpinionatedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EBF1C481AAB00BC1DA0 /* OpinionatedMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1F4C1C481EA200BC1DA0 /* OCCollectionCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA61C481AAB00BC1DA0 /* OCCollectionCapabilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BE1F4D1C481EA200BC1DA0 /* OCCollectionCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA71C481AAB00BC1DA0 /* OCCollectionCapabilities.m */; };
-		B3BE1F4E1C481EA200BC1DA0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA81C481AAB00BC1DA0 /* OCEnumerators.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3BE1F4E1C481EA200BC1DA0 /* OCEnumerators.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BE1EA81C481AAB00BC1DA0 /* OCEnumerators.h */; };
 		B3BE1F4F1C481EA200BC1DA0 /* OCEnumerators.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE1EA91C481AAB00BC1DA0 /* OCEnumerators.m */; };
 /* End PBXBuildFile section */
 

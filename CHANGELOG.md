@@ -1,5 +1,8 @@
 # Changelog
 
+##### 0.3.0 [2016-01-14]
+* Carthage support
+
 ##### 0.2.0 [2015-10-24]
 * Changed timesRepeat indexing (was 1-based, now is 0-based)
 

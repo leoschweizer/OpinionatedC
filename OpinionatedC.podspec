@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name         = 'OpinionatedC'
-  s.version      = '0.2.0'
+  s.version      = '0.3.0'
   s.summary      = 'Because Objective-C should have inherited more from Smalltalk'
   s.description  = <<-DESC
                      OpinionatedC provides a number of categories that allow to write

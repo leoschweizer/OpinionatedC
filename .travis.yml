@@ -5,7 +5,7 @@ install:
   - bundle exec slather setup OpinionatedC.xcodeproj
 
 xcode_project: OpinionatedC.xcodeproj
-xcode_scheme: OpinionatedC-Mac
+xcode_scheme: OpinionatedC
 
 cache:
   - bundler

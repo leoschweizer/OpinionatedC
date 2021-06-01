@@ -26,7 +26,7 @@ However, I'm currently looking for a method to allow optional, configurable meth
 want (or need) them. Feel free to add to the discussion in [#1](https://github.com/leoschweizer/OpinionatedC/issues/1) if you have any ideas about this topic.
 
 ## Features
-#### The **[complete list of features](http://opinionatedc.xyz)** is available on the [official OpinionatedC website](http://opinionatedc.xyz). 
+#### The **[complete list of features](https://leoschweizer.github.io/OpinionatedC/)** is available on the [official OpinionatedC website](https://leoschweizer.github.io/OpinionatedC/). 
 
 Here is a small potpourri of what is possible with OpinionatedC:
 
